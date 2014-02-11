@@ -155,7 +155,7 @@ html,body,#container{height:100%}
     transition:transform .2s cubic-bezier(0.2,0.3,0.25,0.9)
 }
 
-.screen-content{outline:0}
+.screen-content{outline:0;}
 
 
 /*------------------*/
@@ -327,7 +327,7 @@ a{color:#000;text-decoration:none}
 .cover-bestof .cover-actions{color:#fff;text-shadow:0 1px 3px rgba(0,0,0,0.3)}.cover-bestof .icons{-webkit-transition:color .2s ease;-moz-transition:color .2s ease;-ms-transition:color .2s ease;-o-transition:color .2s ease;transition:color .2s ease;position:absolute;font-size:18px;color:rgba(255,255,255,0.7)}.cover-bestof .icons-arrow-right,.cover-bestof .icons-arrow-left{width:60px}.cover-bestof .icons:hover{color:#fff}.cover-bestof .icons-arrow-left{left:0;text-align:left}.cover-bestof .icons-arrow-right{text-align:right;right:0}.cover-bestof .month-year-name{text-transform:capitalize}.wf-loading .cover-title,.wf-loading .cover-description,.wf-loading .cover-meta{visibility:hidden}
 
 @media all and (max-width:1300px){
-    .backend {width: 0;left: -10%;} /*<==== Important ==<*/
+    .backend {width: 0;left: -100%;} /*<==== Important ==<*/
     .backend-cover-img{width: 0;} /*<==== Important ==<*/
 }
 
