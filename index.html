@@ -7,15 +7,30 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<<<<<<< HEAD
     <title></title>
 
+=======
+    <title>UCF College of Business Administration</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+>>>>>>> EOD Updates
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-precomposed-144.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-precomposed-114.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-precomposed-72.png">
     <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
 
     <!-- BEGIN: Styles -->
+<<<<<<< HEAD
     <!-- FINIS: Styles -->
+=======
+    <link rel="stylesheet" href="/styles/site.css">
+    <!--[if IE 8]>
+    <link rel="stylesheet" href="/styles/ie8.css">
+    <!--<![endif]-->
+    <!-- FINIS: Styles -->
+
+    <!-- Google Analytics Code -->
+>>>>>>> EOD Updates
 
 </head>
 <body>
@@ -24,10 +39,39 @@
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
 
+<<<<<<< HEAD
     Hello World!
 
     <!-- BEGIN: Scripts -->
     <!-- FINIS: Scripts -->
             
+=======
+    <div id="site-container">
+        <section></section>
+        <section>
+            <div>Hello World! <span id="foo"></span></div>
+        </section>
+        <section></section>
+    </div>
+
+    <!-- BEGIN: Scripts -->
+    <script data-main="/scripts/main" src="/scripts/require.min.js"></script>
+    <script>
+        require(['main'], function ()
+        {
+            // Once the 'main' script is loaded, load up scripts specific to this page
+            require(['pages/home'], function (Y)
+            {
+                Y.doSomething();
+            });
+
+            require(['pages/about'], function (Application)
+            {
+                console.log(new Application());
+            });
+        });
+    </script>
+    <!-- FINIS: Scripts -->
+>>>>>>> EOD Updates
 </body>
 </html>

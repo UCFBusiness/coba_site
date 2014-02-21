@@ -1,0 +1,9 @@
+html.lt-ie9 {
+  /* Classes for IE8 styles */
+}
+html.lt-ie9 body {
+  background: #333;
+}
+html.lt-ie9 .class {
+  color: red;
+}
