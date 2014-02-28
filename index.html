@@ -18,7 +18,6 @@
 
     <!-- BEGIN: Styles -->
     <link rel="stylesheet" href="/styles/site.css">
-    <link rel="stylesheet" href="/styles/iscroll.css">
     <!--[if IE 8]>
     <link rel="stylesheet" href="/styles/ie8.css">
     <!--<![endif]-->
@@ -32,7 +31,8 @@
     <!--[if lt IE 7]>
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
-    
+    <h1>Home  Page</h1>
+
     <div id="site-container">
         <section class="cover wrapper">
             <div class="scroller">
@@ -41,12 +41,12 @@
         </section>
         <section class="main wrapper">
             <div class="scroller">
-                <div class="wrapper-inner" style="padding:15px 30px;">
+                <div class="wrapper-inner">
                     Hello World!<span id="foo"></span>
                 </div>
             </div>
         </section>
-        <section class="rear wrapper">
+        <section class="aft wrapper">
             <div class="scroller">
                 <div class="wrapper-inner"></div>
             </div>
@@ -63,58 +63,7 @@
             {
                 Y.doSomething();
             });
-
-            require(['pages/about'], function (Application)
-            {
-                console.log(new Application());
-            });
         });
-    </script>
-    <script type="text/javascript" src="/scripts/iscroll.js"></script>
-    <script type="text/javascript">
-        
-        var myScroll;
-        
-        function loaded() {
-            myScroll = new iScroll('wrapper');
-            wrapperNested = new iScroll('wrapperNested',{
-                onBeforeScrollMove: function (e) { 
-                    e.preventDefault(); 
-                    e.stopPropagation();
-                    
-                    console.warn("e: ",e );
-                }
-            });
-        }
-        
-        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-        
-        /* * * * * * * *
-         *
-         * Use this for high compatibility (iDevice + Android)
-         *
-         */
-        document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
-        /*
-         * * * * * * * */
-        
-        /* * * * * * * *
-         *
-         * Use this for iDevice only
-         *
-         */
-        //document.addEventListener('DOMContentLoaded', loaded, false);
-        /*
-         * * * * * * * */
-        
-        /* * * * * * * *
-         *
-         * Use this if nothing else works
-         *
-         */
-        //window.addEventListener('load', setTimeout(function () { loaded(); }, 200), false);
-        /*
-         * * * * * * * */
     </script>
     <!-- FINIS: Scripts -->
 </body>

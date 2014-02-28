@@ -1,6 +1,13 @@
 // Compass
 @import "compass";
 
+// Modules and Variables
+$mobile:420px;
+$tablet:768px;
+$notebook:1300px;
+$sm-desktop:1000px;
+$lg-desktop:1600px;
+
 html, body {
     height:100%;
 }

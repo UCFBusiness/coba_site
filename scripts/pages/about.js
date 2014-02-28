@@ -9,12 +9,13 @@ define([], function ()
 
     var Application = function ()
     {
+        
         this.id = 123;
     };
 
     Application.prototype.toString = function ()
     {
-        // alert(toPrivateMessage());
+        alert(toPrivateMessage());
         return this.id;
     };
 

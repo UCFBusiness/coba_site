@@ -1,13 +1,13 @@
 define(['jquery'], function ($)
 {
-    $('#foo').text('runs on JQuery');
+    $('#foo').text(' runs on JQuery');
 
-    var Methods = {
+    var PrivateMethods = {
         doSomething: function ()
         {
-            // alert('I Did Something');
+            alert('I Did Something');
         }
     };
 
-    return Methods;
+    return PrivateMethods;
 });
