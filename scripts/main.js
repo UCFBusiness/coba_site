@@ -24,9 +24,9 @@ requirejs.config({
             // If CDN fails, load from this location
             'libs/bootstrap.min'
         ],
-        'debounce': 'libs/jquery.debounce-resize',
+        'debounced': 'libs/jquery.debounced-resize',
         'underscore': 'libs/underscore.min',
-        'classie': 'libs/classie'
+        'modernizr': 'libs/modernizr-2.6.2'
     },
     shim: 
     {

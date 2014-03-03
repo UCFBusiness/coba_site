@@ -1,12 +1,12 @@
-/* line 1, scss/ie8.scss */
+/* line 1, scss/ie.scss */
 html.lt-ie9 {
   /* Classes for IE8 styles */
 }
-/* line 3, scss/ie8.scss */
+/* line 3, scss/ie.scss */
 html.lt-ie9 body {
   background: #333;
 }
-/* line 7, scss/ie8.scss */
+/* line 7, scss/ie.scss */
 html.lt-ie9 .class {
   color: red;
 }
