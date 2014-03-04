@@ -1,35 +1,27 @@
 // Media-Queries
 
-/* Apply to all resolutions. Inherits to all layouts. */
-
-
-/* Tablet(lanscape) */
+/* Tablet */
 @media screen and (max-width: 999px) {
     
 }
 
-/* Mobile(landscape) & Tablet(portrait) */
-@media screen and (max-width: 768px) {
-    
-}
-
-/* Mobile (portrait) */
-@media screen and (max-width: 380px) {
+/* Mobile*/
+@media screen and (max-width: 480px) {
     
 }
 
 /* Small Desktop */
-@media screen and (min-width:1000px){
+@media screen and (min-width: 1000px){
     
 }
 
 /* NoteBook */
-@media screen and (min-width:1300px){
+@media screen and (min-width: 1300px){
     
 }
 
 /* Large Desktop */
-@media screen and (min-width:1600px){
+@media screen and (min-width: 1600px){
     
 }
 

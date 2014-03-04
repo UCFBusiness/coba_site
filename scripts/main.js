@@ -10,9 +10,9 @@ requirejs.config({
     paths: {
         // The Libraries used
         'jquery': [
-            '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min',
+            '//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min',
             // If CDN fails, load from this location
-            'libs/jquery-1.9.1.min'
+            'libs/jquery-2.0.3.min'
         ],
         'modernizer': [
             '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min',
@@ -24,16 +24,16 @@ requirejs.config({
             // If CDN fails, load from this location
             'libs/bootstrap.min'
         ],
-        'debounced': 'libs/jquery.debounced-resize',
+        'debouncedresize': 'libs/jquery.debounced-resize',
         'underscore': 'libs/underscore.min',
         'modernizr': 'libs/modernizr-2.6.2'
     },
     shim: 
     {
-        'debounce':
+        'debouncedresize':
         {
             deps: ['jquery'],
-            exports: 'Debounce'
+            exports: 'debounced'
         },
         'underscore': 
         {
