@@ -1,22 +1,26 @@
+// Compass
 @import "compass";
+@import "compass/reset";
+
 
 // Sprites
 @import "icon/*.png";
 @include all-icon-sprites;
 
+
 // Partials
 // @import "typography";
 
+
 // Modules and Variables
-$mobile:420px;
-$tablet:768px;
-$notebook:1300px;
-$sm-desktop:1000px;
-$lg-desktop:1600px;
+$tablet: 999px;
+$mobile: 480px;
+$notebook: 1300px;
+$sm-desktop: 1000px;
+$lg-desktop: 1600px;
 
 
 // Primary Styles
-
 html, body {
     height: 100%;
 }
@@ -36,3 +40,10 @@ body {
     color: #333;
     z-index: 0;
 }
+
+.site-container {
+    background: #fff;
+}
+
+// IE
+@import "ie";
