@@ -9,7 +9,6 @@ define([], function ()
 
     var Application = function ()
     {
-        
         this.id = 123;
     };
 

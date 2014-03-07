@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8" />
     <!--
@@ -11,15 +11,15 @@
 
     -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>UCF College of Business Administration</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>UCF College of Business Administration</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-precomposed-144.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-precomposed-114.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-precomposed-72.png">
     <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <!-- BEGIN: Styles -->
     <link rel="stylesheet" href="/styles/site.css">
     <!-- FINIS: Styles -->
@@ -27,41 +27,107 @@
 </head>
 <body>
     <a id="top"></a>
+
     <!--[if lt IE 7]>
         <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+
     <div class="site-container">
-        <section class="cover wrapper">
-            <div class="scroller">
-                <div class="wrapper-inner"></div>
-            </div>
-        </section>
-        <section class="main wrapper">
-            <div class="scroller">
-                <div class="wrapper-inner">
-                    <h1>Home Page</h1>
-                    <p>Hello World! <span id="foo"></span></p>
+
+        <div class="clearfix">
+            <ul id="menav" class="pt-menu"></ul>
+        </div>
+
+		<div id="pt-main" class="pt-perspective">
+			<section class="pt-page pt-page-1" id="page0">
+                <div class="scroll-pane">
+
+                    <div class="clearfix">
+                        <ul class="pt-menu" style="float: right">
+                            <li><a class="btnNext"> Next >> </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="container">
+                        <h1>Cover Page</h1>
+                        <p>Message: <span id="msg"></span></p>
+                        <p><a href="#" class="btn btn-primary btn-lg">Click Me</a></p>
+                        <p><img class="panel-img" src="/images/blank.gif" alt="..." data-echo="/images/blank.jpg" width="100%" height="100%"></p>
+                        <p><img class="panel-img" src="/images/blank.gif" alt="..." data-echo="/images/blank.jpg" width="100%" height="100%"></p>
+                        <p><img class="panel-img" src="/images/blank.gif" alt="..." data-echo="/images/blank.jpg" width="100%" height="100%"></p>
+                    </div>
+
                 </div>
-            </div>
-        </section>
-        <section class="aft wrapper">
-            <div class="scroller">
-                <div class="wrapper-inner"></div>
-            </div>
-        </section>
+            </section>
+			<section class="pt-page pt-page-2" id="page1">
+                <div class="scroll-pane">
+
+                    <div class="clearfix">
+                        <ul class="pt-menu" style="float: right">
+                            <li><a class="btnPrev"> << Previous </a></li>
+                            <li><a class="btnNext"> Next >> </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="container">
+                        <h1>Panel Page 1</h1>
+                        <p>&nbsp;</p>
+                    </div>
+
+                </div>
+            </section>
+            <section class="pt-page pt-page-3" id="page2">
+                <div class="scroll-pane">
+
+                    <div class="clearfix">
+                        <ul class="pt-menu" style="float: right">
+                            <li><a class="btnPrev"> << Previous </a></li>
+                            <li><a class="btnNext"> Next >> </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="container">
+                        <h1>Panel Page 2</h1>
+                        <p>&nbsp;</p>
+                    </div>
+
+                </div>
+            </section>
+			<section class="pt-page pt-page-4" id="page3">
+                <div class="scroll-pane">
+
+                    <div class="clearfix">
+                        <ul class="pt-menu" style="float: right">
+                            <li><a class="btnPrev"> << Previous </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="container">
+                        <h1>Aft Page</h1>
+                        <p>&nbsp;</p>
+                    </div>
+
+                </div>
+            </section>
+            <section class="pt-page"></section> <!-- end marker (required) -->
+		</div>
+
     </div>
+
     <!-- BEGIN: Scripts -->
-    <script data-main="/scripts/main" src="/scripts/require.min.js"></script>
+    <script data-main="/scripts/main" src="/scripts/require.min.js"></script> <!--// local development -->
     <script>
         require(['main'], function ()
         {
             // Once the 'main' script is loaded, load up scripts specific to this page
-            require(['pages/home'], function (Y)
+            require(['pages/home', 'debounced'], function (Page)
             {
-                Y.doSomething();
+                Page.onLoad();
+                Page.onResize();
             });
         });
     </script>
     <!-- FINIS: Scripts -->
+
 </body>
 </html>

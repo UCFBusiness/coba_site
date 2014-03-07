@@ -1,31 +1,44 @@
+//
 // Media-Queries
+// --------------------------------------------------
 
-/* Tablet */
-@media screen and (max-width: 999px) {
-    
-}
 
-/* Mobile*/
-@media screen and (max-width: 480px) {
-    
-}
+// Base styles
+// --------------------------------------------------
+$media: screen;
+$tablet: 999px;
 
-/* Small Desktop */
-@media screen and (min-width: 1000px){
-    
-}
+.classname {
+    /*global styles*/
 
-/* NoteBook */
-@media screen and (min-width: 1300px){
+    /* Tablet */
+    @media $media and (max-width: 999px) {
     
-}
+    }
 
-/* Large Desktop */
-@media screen and (min-width: 1600px){
+    /* Mobile*/
+    @media $media and (max-width: 480px) {
     
-}
+    }
 
-/* Print Layout */
-@media print {
+    /* Small Desktop */
+    @media $media and (min-width: 1000px){
     
+    }
+
+    /* NoteBook */
+    @media $media and (min-width: 1300px){
+    
+    }
+
+    /* Large Desktop */
+    @media $media and (min-width: 1600px){
+    
+    }
+
+    /* Print Layout */
+    @media print {
+    
+    }
+
 }
