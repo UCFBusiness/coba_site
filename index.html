@@ -27,92 +27,95 @@
 </head>
 <body>
     <a id="top"></a>
-
     <!--[if lt IE 7]>
         <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="site-container">
+    <div class="clearfix" style="background: #333;">
+        <ul id="menav" class="pt-menu"></ul>
+    </div>
 
-        <div class="clearfix">
-            <ul id="menav" class="pt-menu"></ul>
+	<div id="pt-main" class="pt-perspective">
+
+		<div id="page0" class="pt-page pt-page-1">
+            <div class="scroll-pane">
+                <div class="clearfix">
+                    <ul class="pt-menu" style="float: right">
+                        <li><a class="btnNext"> Next >> </a></li>
+                    </ul>
+                </div>
+                <div class="container">
+                    <h1>Cover Page</h1>
+                    <p>Message: <span id="msg"></span></p>
+                    <p><a href="#" class="btn btn-primary btn-lg">Click Me</a></p>
+                </div>
+            </div>
         </div>
 
-		<div id="pt-main" class="pt-perspective">
-			<section class="pt-page pt-page-1" id="page0">
-                <div class="scroll-pane">
-
-                    <div class="clearfix">
-                        <ul class="pt-menu" style="float: right">
-                            <li><a class="btnNext"> Next >> </a></li>
-                        </ul>
-                    </div>
-
-                    <div class="container">
-                        <h1>Cover Page</h1>
-                        <p>Message: <span id="msg"></span></p>
-                        <p><a href="#" class="btn btn-primary btn-lg">Click Me</a></p>
+		<div id="page1" class="pt-page pt-page-2">
+            <div class="scroll-pane">
+                <div class="clearfix">
+                    <ul class="pt-menu" style="float: right">
+                        <li><a class="btnPrev"> << Previous </a></li>
+                        <li><a class="btnNext"> Next >> </a></li>
+                    </ul>
+                </div>
+                <div class="container">
+                    <h1>Panels - Page 1</h1>
+                    <div class="row">
                         <p><img class="panel-img" src="/images/blank.gif" alt="..." data-echo="/images/blank.jpg" width="100%" height="100%"></p>
                         <p><img class="panel-img" src="/images/blank.gif" alt="..." data-echo="/images/blank.jpg" width="100%" height="100%"></p>
                         <p><img class="panel-img" src="/images/blank.gif" alt="..." data-echo="/images/blank.jpg" width="100%" height="100%"></p>
                     </div>
-
+                    <div class="row">
+                        <p><img class="panel-img" src="/images/blank.gif" alt="..." data-echo="/images/blank.jpg" width="100%" height="100%"></p>
+                        <p><img class="panel-img" src="/images/blank.gif" alt="..." data-echo="/images/blank.jpg" width="100%" height="100%"></p>
+                        <p><img class="panel-img" src="/images/blank.gif" alt="..." data-echo="/images/blank.jpg" width="100%" height="100%"></p>
+                    </div>
                 </div>
-            </section>
-			<section class="pt-page pt-page-2" id="page1">
-                <div class="scroll-pane">
+            </div>
+        </div>
 
-                    <div class="clearfix">
-                        <ul class="pt-menu" style="float: right">
-                            <li><a class="btnPrev"> << Previous </a></li>
-                            <li><a class="btnNext"> Next >> </a></li>
-                        </ul>
-                    </div>
-
-                    <div class="container">
-                        <h1>Panel Page 1</h1>
-                        <p>&nbsp;</p>
-                    </div>
-
+        <div id="page2" class="pt-page pt-page-3">
+            <div class="scroll-pane">
+                <div class="clearfix">
+                    <ul class="pt-menu" style="float: right">
+                        <li><a class="btnPrev"> << Previous </a></li>
+                        <li><a class="btnNext"> Next >> </a></li>
+                    </ul>
                 </div>
-            </section>
-            <section class="pt-page pt-page-3" id="page2">
-                <div class="scroll-pane">
-
-                    <div class="clearfix">
-                        <ul class="pt-menu" style="float: right">
-                            <li><a class="btnPrev"> << Previous </a></li>
-                            <li><a class="btnNext"> Next >> </a></li>
-                        </ul>
+                <div class="container">
+                    <h1>Panels - Page 2</h1>
+                    <div class="row">
+                        <p><img class="panel-img" src="/images/blank.gif" alt="..." data-echo="/images/blank.jpg" width="100%" height="100%"></p>
+                        <p><img class="panel-img" src="/images/blank.gif" alt="..." data-echo="/images/blank.jpg" width="100%" height="100%"></p>
+                        <p><img class="panel-img" src="/images/blank.gif" alt="..." data-echo="/images/blank.jpg" width="100%" height="100%"></p>
                     </div>
-
-                    <div class="container">
-                        <h1>Panel Page 2</h1>
-                        <p>&nbsp;</p>
+                    <div class="row">
+                        <p><img class="panel-img" src="/images/blank.gif" alt="..." data-echo="/images/blank.jpg" width="100%" height="100%"></p>
+                        <p><img class="panel-img" src="/images/blank.gif" alt="..." data-echo="/images/blank.jpg" width="100%" height="100%"></p>
+                        <p><img class="panel-img" src="/images/blank.gif" alt="..." data-echo="/images/blank.jpg" width="100%" height="100%"></p>
                     </div>
-
                 </div>
-            </section>
-			<section class="pt-page pt-page-4" id="page3">
-                <div class="scroll-pane">
+            </div>
+        </div>
 
-                    <div class="clearfix">
-                        <ul class="pt-menu" style="float: right">
-                            <li><a class="btnPrev"> << Previous </a></li>
-                        </ul>
-                    </div>
-
-                    <div class="container">
-                        <h1>Aft Page</h1>
-                        <p>&nbsp;</p>
-                    </div>
-
+		<div id="page3" class="pt-page pt-page-4">
+            <div class="scroll-pane">
+                <div class="clearfix">
+                    <ul class="pt-menu" style="float: right">
+                        <li><a class="btnPrev"> << Previous </a></li>
+                    </ul>
                 </div>
-            </section>
-            <section class="pt-page"></section> <!-- end marker (required) -->
-		</div>
+                <div class="container">
+                    <h1>Aft Page</h1>
+                </div>
+            </div>
+        </div>
 
-    </div>
+        <div class="pt-page"></div> <!-- end marker (required) -->
+
+	</div>
 
     <!-- BEGIN: Scripts -->
     <script data-main="/scripts/main" src="/scripts/require.min.js"></script> <!--// local development -->

@@ -1,24 +1,21 @@
 // Compass
 @import "compass";
 
+
 // Bootstrap
 @import "bootstrap";
-
-
-// Modules and Variables
-$tablet: 999px;
-$mobile: 480px;
-$notebook: 1300px;
-$sm-desktop: 1000px;
-$lg-desktop: 1600px;
 
 
 // Primary Styles
 @import "primary";
 
 
+// Modules and Variables
+@import "modules/page-transitions/base";
+@import "modules/page-transitions/animations";
+
+
 // Partials
-//@import "containertest";
 
 
 // Sprites

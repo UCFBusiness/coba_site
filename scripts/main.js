@@ -31,6 +31,7 @@ requirejs.config({
             // If CDN fails, load from this location
             'libs/bootstrap.min'
         ],
+        'transitions': 'libs/pagetransitions',
         'debounced': 'libs/jquery.debouncedresize',
         'underscore': 'libs/underscore.min',
         'echo': 'libs/echo.min'
@@ -43,13 +44,15 @@ requirejs.config({
         },
         'bootstrap':
         {
-            deps: ['jquery'],
-            exports: 'Bootstrap'
+            deps: ['jquery']
+        },
+        'transitions':
+        {
+            deps: ['jquery']
         },
         'debounced':
         {
-            deps: ['jquery'],
-            exports: 'Debounced'
+            deps: ['jquery']
         },
         'underscore': 
         {
@@ -59,26 +62,29 @@ requirejs.config({
 });
 
 // Enter global require code here...
-require(['modernizr','bootstrap','echo'], function ()
+require(['modernizr'], function ()
 {
-    // Log that jquery was loaded into the global name-space.
-    console.log('jQuery', $.fn.jquery, 'loaded!');
-    //-----------------------------------------------
-
-    // Right-click disabled
-    $(document).bind('contextmenu', function (e)
+    require(['transitions', 'bootstrap', 'echo'], function()
     {
-        return false;
-    });
-    //-----------------------------------------------
+        // Log that jquery was loaded into the global name-space.
+        console.log('jQuery', $.fn.jquery, 'loaded!');
+        //-----------------------------------------------
 
-    // Lazyload images
-    Echo.init({
-        offset: 0,
-        throttle: 250
-    });
-    //Echo.render(); // is also available for non-scroll callbacks
-    //-----------------------------------------------
+        // Right-click disabled
+        $(document).bind('contextmenu', function (e)
+        {
+            return false;
+        });
+        //-----------------------------------------------
+
+        // Lazyload images
+        Echo.init({
+            offset: 0,
+            throttle: 250
+        });
+        //Echo.render(); // is also available for non-scroll callbacks
+        //-----------------------------------------------
+    })
 });
 
 // Logs the end of the file.

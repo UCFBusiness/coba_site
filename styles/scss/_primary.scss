@@ -29,11 +29,19 @@ body {
     overflow: hidden;
 }
 
-.site-container {
-    background: #fff;
-    position: relative;
-    z-index: 1;
+.no-js  {
+    
+    .pt-page {
+        visibility: visible;
+	    z-index: 1;
+    }
+
+    body {
+        overflow: auto;
+    }
 }
+
+// --------------------------------------------------
 
 .centered {
     position: fixed;
