@@ -64,7 +64,7 @@ requirejs.config({
 // Enter global require code here...
 require(['modernizr'], function ()
 {
-    require(['transitions', 'bootstrap', 'echo'], function()
+    require(['jqueryui','transitions','bootstrap','echo'], function()
     {
         // Log that jquery was loaded into the global name-space.
         console.log('jQuery', $.fn.jquery, 'loaded!');
