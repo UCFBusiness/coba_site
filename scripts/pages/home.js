@@ -16,7 +16,7 @@ define(['jquery'], function ($)
     var PrivateMethods = {
         onLoad: function () // runs 2nd
         {
-            if (screenwidth < 600) // load mobile scripts
+            if (screenwidth <= 600) // load mobile scripts
             {
                 require([], function ()
                 {
@@ -29,7 +29,7 @@ define(['jquery'], function ($)
                 });
             }
 
-            if ((screenwidth > 599) && (screenwidth < 999)) // load tablet scripts
+            if ((screenwidth > 600) && (screenwidth < 1000)) // load tablet scripts
             {
                 require([], function ()
                 {
@@ -42,7 +42,7 @@ define(['jquery'], function ($)
                 });
             }
 
-            if (screenwidth > 1000) // load desktop scripts
+            if (screenwidth >= 1000) // load desktop scripts
             {
                 require([], function ()
                 {
@@ -68,7 +68,7 @@ define(['jquery'], function ($)
                 var screenwidth = parseInt($(this).width());
                 var screenheight = parseInt($(this).height());
 
-                if (screenwidth < 600) // load mobile scripts
+                if (screenwidth <= 600) // load mobile scripts
                 {
                     require([], function ()
                     {
@@ -81,7 +81,7 @@ define(['jquery'], function ($)
                     });
                 }
 
-                if ((screenwidth > 599) && (screenwidth < 999)) // load tablet scripts
+                if ((screenwidth > 600) && (screenwidth < 1000)) // load tablet scripts
                 {
                     require([], function ()
                     {
@@ -94,7 +94,7 @@ define(['jquery'], function ($)
                     });
                 }
 
-                if (screenwidth > 1000) // load desktop scripts
+                if (screenwidth >= 1000) // load desktop scripts
                 {
                     require([], function ()
                     {

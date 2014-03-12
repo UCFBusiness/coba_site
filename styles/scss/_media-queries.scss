@@ -2,43 +2,23 @@
 // Media-Queries
 // --------------------------------------------------
 
+// All
+/* Apply to all resolutions. Inherits to all layouts. */
 
-// Base styles
-// --------------------------------------------------
-$media: screen;
-$tablet: 999px;
+// Tablet //
+@media screen and (max-width: 999px){}
 
-.classname {
-    /*global styles*/
+// Mobile //
+@media screen and (max-width: 599px){}
 
-    /* Tablet */
-    @media $media and (max-width: 999px) {
-    
-    }
+// Small Desktop //
+@media screen and (min-width: 1000px){}
 
-    /* Mobile*/
-    @media $media and (max-width: 480px) {
-    
-    }
+// Notebook //
+@media screen and (min-width: 1300px){}
 
-    /* Small Desktop */
-    @media $media and (min-width: 1000px){
-    
-    }
+// Large Desktop //
+@media screen and (min-width: 1600px){}
 
-    /* NoteBook */
-    @media $media and (min-width: 1300px){
-    
-    }
-
-    /* Large Desktop */
-    @media $media and (min-width: 1600px){
-    
-    }
-
-    /* Print Layout */
-    @media print {
-    
-    }
-
-}
+// Print //
+@media print {}
