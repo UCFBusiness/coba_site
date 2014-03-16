@@ -6,6 +6,10 @@
 // Base
 // --------------------------------------------------
 
+
+// All //
+/* Apply to all resolutions. Inherits to all layouts. */
+
 html {
     height: 100%;
 }
@@ -51,8 +55,30 @@ body {
     margin-left: -50%;
 }
 
-.panel-img {
-    //background: #fff url(/images/loading.gif) no-repeat;
-    width: 100%;
-    max-width: 320px;
+// Tablet //
+@media screen and (max-width: 999px){
+
+    .panel-img {
+        width: 100%;
+        max-width: 320px;
+    }
+
 }
+
+// Mobile //
+@media screen and (max-width: 599px){}
+
+// Small Desktop //
+@media screen and (min-width: 1000px){
+
+    .panel-img {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+// Notebook //
+@media screen and (min-width: 1300px){}
+
+// Large Desktop //
+@media screen and (min-width: 1600px){}
