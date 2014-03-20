@@ -16,32 +16,38 @@ define(['jquery'], function ($)
     var PrivateMethods = {
         onLoad: function () // runs 2nd
         {
-            if (screenwidth <= 600) // load mobile scripts
+            if (screenwidth < 1000) // load mobile scripts
             {
                 require([], function ()
                 {
                     //-- screen-size ----------------------------------
-                    $('#msg').text(screenwidth + ' x ' + screenheight + ' - mobile');
+                    $('#msg').text(screenwidth + ' x ' + screenheight + ' - tablet');
                     //------------------------------------------------
                     //-- resize to fit -------------------------------
                     //$('.cover').css('height', screenheight);
                     //------------------------------------------------
+                    
+                    $("#cnext").click(function(){
+                        $("#pt-cover").slideToggle("slow")
+                    });
+                    
+                    
+                    if (screenwidth < 600) // load tablet scripts
+                    {
+                        require([], function ()
+                        {
+                            //-- screen-size ----------------------------------
+                            $("#msg").text(screenwidth + " x " + screenheight + " - mobile");
+                            //------------------------------------------------
+                            //-- resize to fit -------------------------------
+                            //$('.cover').css('height', screenheight);
+                            //------------------------------------------------
+                        });
+                        
+                    }
                 });
             }
-
-            if ((screenwidth > 600) && (screenwidth < 1000)) // load tablet scripts
-            {
-                require([], function ()
-                {
-                    //-- screen-size ----------------------------------
-                    $("#msg").text(screenwidth + " x " + screenheight + " - tablet");
-                    //------------------------------------------------
-                    //-- resize to fit -------------------------------
-                    //$('.cover').css('height', screenheight);
-                    //------------------------------------------------
-                });
-            }
-
+            
             if (screenwidth >= 1000) // load desktop scripts
             {
                 require([], function ()
@@ -68,29 +74,29 @@ define(['jquery'], function ($)
                 var screenwidth = parseInt($(this).width());
                 var screenheight = parseInt($(this).height());
 
-                if (screenwidth <= 600) // load mobile scripts
+                if (screenwidth < 1000) // load mobile scripts
                 {
                     require([], function ()
                     {
                         //-- screen-size ----------------------------------
-                        $('#msg').text(screenwidth + ' x ' + screenheight + ' - mobile');
+                        $('#msg').text(screenwidth + ' x ' + screenheight + ' - tablet');
                         //------------------------------------------------
                         //-- resize to fit -------------------------------
                         //$('.cover').css('height', screenheight);
                         //------------------------------------------------
-                    });
-                }
-
-                if ((screenwidth > 600) && (screenwidth < 1000)) // load tablet scripts
-                {
-                    require([], function ()
-                    {
-                        //-- screen-size ----------------------------------
-                        $("#msg").text(screenwidth + " x " + screenheight + " - tablet");
-                        //------------------------------------------------
-                        //-- resize to fit -------------------------------
-                        //$('.cover').css('height', screenheight);
-                        //------------------------------------------------
+                        
+                        if (screenwidth < 600) // load tablet scripts
+                        {
+                            require([], function ()
+                            {
+                                //-- screen-size ----------------------------------
+                                $("#msg").text(screenwidth + " x " + screenheight + " - mobile");
+                                //------------------------------------------------
+                                //-- resize to fit -------------------------------
+                                //$('.cover').css('height', screenheight);
+                                //------------------------------------------------
+                            });
+                        }
                     });
                 }
 
