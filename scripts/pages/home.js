@@ -4,7 +4,7 @@ define(['jquery'], function ($)
     var screenwidth = parseInt($(this).width());
     var screenheight = parseInt($(this).height());
     var msg = "Hello World, this is a private method.";
-    var gr = 1.618;
+    var gr = 1.618; // Golden Ratio
 
     var PrivateMessage = function ()
     {
