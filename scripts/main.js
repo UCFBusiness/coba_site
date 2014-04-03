@@ -22,7 +22,7 @@ requirejs.config({
             'libs/jquery-ui-1.10.3.min'
         ],
         'modernizr': [
-            '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min',
+            //'//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min',
             // If CDN fails, load from this location
             'libs/modernizr-2.6.2'
         ],
@@ -31,10 +31,16 @@ requirejs.config({
             // If CDN fails, load from this location
             'libs/bootstrap.min'
         ],
+        //required
         'transitions': 'libs/pagetransitions',
         'debounced': 'libs/jquery.debouncedresize',
         'underscore': 'libs/underscore.min',
-        'echo': 'libs/echo.min'
+        'echo': 'libs/echo.min',
+        'pageslide': 'libs/jquery.pageslide',
+        //pagescroll
+        'mousewheel': 'libs/jquery.mousewheel',
+        'mwi': 'libs/mwheelIntent',
+        'scrollpane': 'libs/jquery.jscrollpane.min'
     },
     shim: 
     {
@@ -54,9 +60,17 @@ requirejs.config({
         {
             deps: ['jquery']
         },
-        'underscore': 
+        'mousewheel':
         {
-            exports: '_'
+            deps: ['jquery']
+        },
+        'scrollpane':
+        {
+            deps: ['jquery','mousewheel','mwi']
+        },
+        'pageslide':
+        {
+            deps: ['jquery']
         }
     }
 });
@@ -88,6 +102,9 @@ require(['modernizr'], function ()
         });
         //Echo.render(); // is also available for non-scroll callbacks
         //-----------------------------------------------
+
+        // Add scroll pane
+        $('.scroll-pane').jScrollPane();
     })
 });
 

@@ -18,7 +18,7 @@ define(['jquery'], function ($)
         {
             if (screenwidth < 1000) // load mobile scripts
             {
-                require([], function ()
+                require(['pageslide'], function ()
                 {
                     //-- screen-size ----------------------------------
                     $('#msg').text(screenwidth + ' x ' + screenheight + ' - tablet');
@@ -27,9 +27,18 @@ define(['jquery'], function ($)
                     //$('.cover').css('height', screenheight);
                     //------------------------------------------------
                     
-                    $("#cnext").click(function(){
-                        $("#pt-cover").slideToggle("slow")
-                    });
+                    //$("#cnext").click(function(){
+                    //    $("#pt-cover").slideToggle("slow")
+                    //});
+
+                    
+
+                    //-- resize to fit -------------------------------
+                    $('aside.cover').css('min-height', screenheight);
+                    //-- Slide to the left; if slide is model, you'll have to call $.pageslide.close() to close
+                    $(".target_blank").pageslide({ direction: "left", modal: true });
+                    $("#slidecontent").css("height", screenheight);
+                    //------------------------------------------------
                     
                     
                     if (screenwidth < 600) // load tablet scripts
@@ -50,7 +59,7 @@ define(['jquery'], function ($)
             
             if (screenwidth >= 1000) // load desktop scripts
             {
-                require([], function ()
+                require(['pageslide'], function ()
                 {
                     //-- screen-size ----------------------------------
                     $("#msg").text(screenwidth + " x " + screenheight + " - desktop");
@@ -58,6 +67,16 @@ define(['jquery'], function ($)
                     //-- resize to fit -------------------------------
                     //$('.cover').css('height', screenheight);
                     //------------------------------------------------
+
+                    //-- Slide to the left; if slide is model, you'll have to call $.pageslide.close() to close
+                    $(".target_blank").pageslide({ direction: "left", modal: true });
+                    $("#pageslide").css("width", function (index) {
+                        var cover = parseInt($("aside.cover").width());
+                        return screenwidth - cover;
+                    });
+                    $("#slidecontent").css("height", screenheight);
+                    //------------------------------------------------
+
                 });
             }
         },

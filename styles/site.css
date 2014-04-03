@@ -7708,15 +7708,23 @@ body {
   margin-left: -50%;
 }
 
+/* line 55, scss/_primary.scss */
+.scroll-pane {
+  width: 100%;
+  height: 90%;
+  overflow: auto;
+  border: 1px dashed blue;
+}
+
 @media screen and (max-width: 999px) {
-  /* line 58, scss/_primary.scss */
+  /* line 68, scss/_primary.scss */
   .panel-img {
     width: 100%;
     max-width: 320px;
   }
 }
 @media screen and (min-width: 1000px) {
-  /* line 71, scss/_primary.scss */
+  /* line 81, scss/_primary.scss */
   .panel-img {
     width: 100%;
     max-width: 320px;
@@ -11015,6 +11023,64 @@ body {
   animation-delay: 1s;
 }
 
+/* Apply to all media types and resolutions. Inherits to all layouts. */
+/* line 3, scss/modules/_pageslide.scss */
+#pageslide {
+  /* These styles MUST be included. Do not change. */
+  background: #fff;
+  display: none;
+  position: absolute;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  z-index: 999999;
+  overflow: hidden;
+  /* Specify the width of your pageslide here */
+  width: 100%;
+  padding: 0px 3px;
+}
+
+/* line 20, scss/modules/_pageslide.scss */
+#toolbar {
+  background: #000;
+  border-bottom: 1px solid #ffcc00;
+  position: relative;
+  height: 36px;
+}
+
+/* line 27, scss/modules/_pageslide.scss */
+#closebutton {
+  background: #ffcc00;
+  padding: 7px 10px;
+  width: 60px;
+  cursor: pointer;
+  text-align: center;
+  float: left;
+}
+
+/* line 29, scss/modules/_pageslide.scss */
+#slidecontent {
+  margin-top: 1px;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 35, scss/modules/_pageslide.scss */
+.modal {
+  display: none;
+}
+
+/* Tablet(portrait) Layout. */
+/* Tablet(portrait) Layout. */
+/* Tablet(landscape) and Small Desktop Layout. */
+@media screen and (min-width: 1000px) {
+  /*#slidecontent {
+      height: 100%;
+      width: 100%;
+  }*/
+}
+/* Laptop Layout. */
+/* Large Desktop Layout. */
 /* line 154, icon/*.png */
 .icon-sprite, .icon-beta, .icon-gear, .icon-home, .icon-orderedList0, .icon-orderedList1, .icon-orderedList2, .icon-orderedList3, .icon-orderedList4, .icon-orderedList5, .icon-orderedList6, .icon-orderedList7, .icon-orderedList8, .icon-orderedList9, .icon-search, .icon-ucf-opportunity {
   background: url('/images/icon-s3d43579eee.png') no-repeat;
