@@ -7799,7 +7799,7 @@ body {
 }
 @media screen and (min-width: 1000px) {
   /* line 81, scss/modules/page-transitions/_base.scss */
-  #pt-cover {
+  #page0 {
     background: #ffd800;
     border: 1px solid #333;
     width: 400px;

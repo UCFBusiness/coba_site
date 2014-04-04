@@ -34,7 +34,7 @@ define(['jquery'], function ($)
                     
 
                     //-- resize to fit -------------------------------
-                    $('aside.cover').css('min-height', screenheight);
+                    $('div.cover').css('min-height', screenheight);
                     //-- Slide to the left; if slide is model, you'll have to call $.pageslide.close() to close
                     $(".target_blank").pageslide({ direction: "left", modal: true });
                     $("#slidecontent").css("height", screenheight);
@@ -71,7 +71,7 @@ define(['jquery'], function ($)
                     //-- Slide to the left; if slide is model, you'll have to call $.pageslide.close() to close
                     $(".target_blank").pageslide({ direction: "left", modal: true });
                     $("#pageslide").css("width", function (index) {
-                        var cover = parseInt($("aside.cover").width());
+                        var cover = parseInt($("div.cover").width());
                         return screenwidth - cover;
                     });
                     $("#slidecontent").css("height", screenheight);
