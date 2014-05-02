@@ -41,6 +41,8 @@
                 <h1>Cover</h1>
                 <p>Message: <span id="msg"></span></p>
                 <p><a href="/about.html" class="btn btn-primary btn-lg target_blank">Click Me</a></p>
+                <p><input id="textInput" type="text" /></p>
+                <p>Text: <span id="nameDiv"></span></p>
             </div>
             <!--style="background: #ffd800; border: 1px solid #333; width: 300px; height: 80%; position: fixed; left: 0; top: 32px;z-index: 9999;"-->
         </div>
@@ -197,6 +199,17 @@
                 Page.onLoad();
                 Page.onResize();
             });
+        });
+    </script>
+    <script>
+        var textInputElement = document.getElementById('textInput'),
+            nameDivElement = document.getElementById('nameDiv');
+        
+        textInputElement.addEventListener('keyup', function(){
+            var text = textInputElement.value;
+            
+            nameDivElement.innerHTML = text;
+            console.log('The text is "' + text + '"');
         });
     </script>
     <!-- FINIS: Scripts -->

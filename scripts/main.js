@@ -34,7 +34,6 @@ requirejs.config({
         //required
         'transitions': 'libs/pagetransitions',
         'debounced': 'libs/jquery.debouncedresize',
-        'underscore': 'libs/underscore.min',
         'echo': 'libs/echo.min',
         'pageslide': 'libs/jquery.pageslide',
         //pagescroll
@@ -104,7 +103,7 @@ require(['modernizr'], function ()
         //-----------------------------------------------
 
         // Add scroll pane
-        $('.scroll-pane').jScrollPane();
+        //$('.scroll-pane').jScrollPane();
     })
 });
 
