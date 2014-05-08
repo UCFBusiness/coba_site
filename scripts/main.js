@@ -10,7 +10,12 @@ console.log( 'START: main.js' );
 requirejs.config({
     baseUrl: 'scripts',
     paths: {
-        // The Libraries used
+        // The Libraries:
+        'angular': [
+            '//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min',
+            // If CDN fails, load from this location
+            'libs/angular.min'
+        ],
         'jquery': [
             '//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min',
             // If CDN fails, load from this location
