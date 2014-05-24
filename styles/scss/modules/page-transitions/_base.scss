@@ -1,45 +1,35 @@
 //
 // Page Transitions
 // --------------------------------------------------
-
-
-
-// Base styles
-// --------------------------------------------------
-
-
-// All //
+// All Viewports
 /* Apply to all resolutions. Inherits to all layouts. */
 
-// Menu styles // ---------------------------------------
-        
+
+// Menu styles // ---------------------------------------     
 .pt-menu li {
     display: inline-block;
     padding-right: 10px;
-}
-            
-.pt-menu li > a:hover {
-    cursor: pointer;
+    font-size: 2em;
+    
+    &> a:hover {
+        cursor: pointer;
+    }
 }
 
-// Tablet //
-@media screen and (max-width: 999px){
 
-    #pt-cover {
-        background: #ffd800; border: 1px solid #333; width: 400px; height: 90%; position:fixed; left: 0; top: 30px; z-index: 9999;
-    }
+// Page styles // --------------------------------------- 
+.pt-perspective {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 700px;
     
-    .pt-perspective {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        
-        -webkit-perspective: 1200px;
-        -moz-perspective: 1200px;
-        perspective: 1200px;
-    }
-    
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    perspective: 1200px;
+
     .pt-page {
+        border: 1px dashed red;
         background: #fff;
         width: 100%;
         height: 100%;
@@ -60,6 +50,23 @@
         -webkit-transform-style: preserve-3d;
         -moz-transform-style: preserve-3d;
         transform-style: preserve-3d;
+        
+        .pt-cover {
+            border: 1px solid green;
+            
+            width: 400px;
+            height: 100%;
+            float: left;
+        }
+        
+        .scroll-pane {
+            border: 1px dashed blue;
+            
+            width: 600px;
+            height: 100%;
+            left: 400px; // <-- must match width of cover
+            overflow: auto;
+        }
     }
     
     .pt-page-current {
@@ -72,62 +79,36 @@
     }
 }
 
-// Mobile //
-@media screen and (max-width: 599px){}
+// Tablet //
+@media (max-width: 999px){
+
+    .pt-perspective {
+        
+        .pt-page {
+            
+        }
+    }
+}
+
+// Mobile-Landscape //
+@media (max-width: 699px) and (orientation: landscape){}
+
+// Mobile-Portrait //
+@media (max-width: 499px) and (orientation: portrait){}
 
 // Small Desktop //
-@media screen and (min-width: 1000px){
-    
-    #pt-cover {
-        background: #ffd800; border: 1px solid #333; width: 400px; height: 90%; position: fixed; left: 0; top: 30px; z-index: 9999;
-    }
+@media (min-width: 1000px){
     
     .pt-perspective {
-        position: relative;
-        width: 600px;
-        height: 100%;
-        
-        -webkit-perspective: 1200px;
-        -moz-perspective: 1200px;
-        perspective: 1200px;
-    }
     
-    .pt-page {
-        border: 1px dashed red;
-        background: #fff;
-        width: 600px;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 400px;
-        visibility: hidden;
-        overflow: hidden;
-        
-        -webkit-backface-visibility: hidden;
-        -moz-backface-visibility: hidden;
-        backface-visibility: hidden;
-        
-        -webkit-transform: translate3d(0, 0, 0);
-        -moz-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        
-        -webkit-transform-style: preserve-3d;
-        -moz-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-    }
-    
-    .pt-page-current {
-        visibility: visible;
-        z-index: 1;
-    }
-    
-    .pt-page-ontop {
-        z-index: 999;
+        .pt-page {
+
+        }
     }
 }
 
 // Notebook //
-@media screen and (min-width: 1300px){}
+@media (min-width: 1300px){}
 
 // Large Desktop //
-@media screen and (min-width: 1600px){}
+@media (min-width: 1600px){}

@@ -2,23 +2,26 @@
 // Media-Queries
 // --------------------------------------------------
 
-// All
+// All Viewports //
 /* Apply to all resolutions. Inherits to all layouts. */
 
 // Tablet //
-@media screen and (max-width: 999px){}
+@media (max-width: 999px){}
 
-// Mobile //
-@media screen and (max-width: 599px){}
+// Mobile-Landscape //
+@media (max-width: 699px) and (orientation: landscape){}
+
+// Mobile-Portrait //
+@media (max-width: 499px) and (orientation: portrait){}
 
 // Small Desktop //
-@media screen and (min-width: 1000px){}
+@media (min-width: 1000px){}
 
 // Notebook //
-@media screen and (min-width: 1300px){}
+@media (min-width: 1300px){}
 
 // Large Desktop //
-@media screen and (min-width: 1600px){}
+@media (min-width: 1600px){}
 
 // Print //
 @media print {}

@@ -84,10 +84,6 @@ require(['modernizr'], function ()
 {
     require(['transitions','bootstrap','echo'], function()
     {
-        // Avoid `console` errors in browsers that lack a console.
-        (function () { for (var g, h = function () { }, f = "assert clear count debug dir dirxml error exception group groupCollapsed groupEnd info log markTimeline profile profileEnd table time timeEnd timeStamp trace warn".split(" "), j = f.length, i = window.console = window.console || {}; j--; ) { g = f[j], i[g] || (i[g] = h) } })();
-        //-----------------------------------------------
-        
         // Log that jquery was loaded into the global name-space.
         console.log('jQuery', $.fn.jquery, 'loaded!');
         //-----------------------------------------------
