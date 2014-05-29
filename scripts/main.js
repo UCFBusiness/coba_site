@@ -44,7 +44,11 @@ requirejs.config({
         //pagescroll
         'mousewheel': 'libs/jquery.mousewheel',
         'mwi': 'libs/mwheelIntent',
-        'scrollpane': 'libs/jquery.jscrollpane.min'
+        'scrollpane': 'libs/jquery.jscrollpane.min',
+        //Sly
+        'sly': 'libs/sly.min',
+        'easing': 'libs/jquery.easing.min',
+        'horizontal': 'js/sly.horizontal'
     },
     shim: 
     {

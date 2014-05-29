@@ -1,4 +1,4 @@
-define(['jquery'], function ($)
+define(['jquery','pageslide','easing','horizontal','sly'], function ($)
 {
     // runs 1st
     var screenwidth = parseInt($(this).width());
@@ -18,7 +18,7 @@ define(['jquery'], function ($)
         {
             if (screenwidth < 1000) // load tablet scripts
             {
-                require(['pageslide'], function ()
+                require([], function ()
                 {
                     //-- screen-size ----------------------------------
                     $('#msg').text(screenwidth + ' x ' + screenheight + ' - tablet');
@@ -59,7 +59,7 @@ define(['jquery'], function ($)
             
             if (screenwidth >= 1000) // load desktop scripts
             {
-                require(['pageslide'], function ()
+                require([], function ()
                 {
                     //-- screen-size ----------------------------------
                     $("#msg").text(screenwidth + " x " + screenheight + " - desktop");

@@ -1,4 +1,4 @@
-/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/* normalize.css v3.0.0 | MIT License | git.io/normalize */
 /* line 9, scss/bootstrap/_normalize.scss */
 html, body {
   font-family: sans-serif;
@@ -7719,18 +7719,18 @@ body {
   }
 }
 /* Apply to all resolutions. Inherits to all layouts. */
-/* line 9, scss/modules/page-transitions/_base.scss */
+/* line 9, scss/modules/page-transitions/_page.scss */
 .pt-menu li {
   display: inline-block;
   padding-right: 10px;
   font-size: 2em;
 }
-/* line 14, scss/modules/page-transitions/_base.scss */
+/* line 14, scss/modules/page-transitions/_page.scss */
 .pt-menu li > a:hover {
   cursor: pointer;
 }
 
-/* line 21, scss/modules/page-transitions/_base.scss */
+/* line 21, scss/modules/page-transitions/_page.scss */
 .pt-perspective {
   position: relative;
   width: 100%;
@@ -7740,7 +7740,7 @@ body {
   -moz-perspective: 1200px;
   perspective: 1200px;
 }
-/* line 31, scss/modules/page-transitions/_base.scss */
+/* line 31, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page {
   border: 1px dashed red;
   background: #fff;
@@ -7761,14 +7761,14 @@ body {
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 54, scss/modules/page-transitions/_base.scss */
+/* line 54, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page .pt-cover {
   border: 1px solid green;
   width: 400px;
   height: 100%;
   float: left;
 }
-/* line 62, scss/modules/page-transitions/_base.scss */
+/* line 62, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page .scroll-pane {
   border: 1px dashed blue;
   width: 600px;
@@ -7776,68 +7776,81 @@ body {
   left: 400px;
   overflow: auto;
 }
-/* line 72, scss/modules/page-transitions/_base.scss */
+/* line 72, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page-current {
   visibility: visible;
   z-index: 1;
 }
-/* line 77, scss/modules/page-transitions/_base.scss */
+/* line 77, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page-ontop {
   z-index: 999;
 }
 
+@media (max-width: 999px) {
+  /* line 89, scss/modules/page-transitions/_page.scss */
+  .pt-perspective .pt-page .pt-cover {
+    width: 100%;
+    height: 300px;
+  }
+  /* line 94, scss/modules/page-transitions/_page.scss */
+  .pt-perspective .pt-page .scroll-pane {
+    width: 100%;
+    height: 400px;
+    overflow: auto;
+  }
+}
 /* animation sets */
 /* move from / to  */
-/* line 12, scss/modules/page-transitions/_animations.scss */
+/* line 12, scss/modules/page-transitions/_animation.scss */
 .pt-page-moveToLeft {
   -webkit-animation: moveToLeft .6s ease both;
   -moz-animation: moveToLeft .6s ease both;
   animation: moveToLeft .6s ease both;
 }
 
-/* line 18, scss/modules/page-transitions/_animations.scss */
+/* line 18, scss/modules/page-transitions/_animation.scss */
 .pt-page-moveFromLeft {
   -webkit-animation: moveFromLeft .6s ease both;
   -moz-animation: moveFromLeft .6s ease both;
   animation: moveFromLeft .6s ease both;
 }
 
-/* line 24, scss/modules/page-transitions/_animations.scss */
+/* line 24, scss/modules/page-transitions/_animation.scss */
 .pt-page-moveToRight {
   -webkit-animation: moveToRight .6s ease both;
   -moz-animation: moveToRight .6s ease both;
   animation: moveToRight .6s ease both;
 }
 
-/* line 30, scss/modules/page-transitions/_animations.scss */
+/* line 30, scss/modules/page-transitions/_animation.scss */
 .pt-page-moveFromRight {
   -webkit-animation: moveFromRight .6s ease both;
   -moz-animation: moveFromRight .6s ease both;
   animation: moveFromRight .6s ease both;
 }
 
-/* line 36, scss/modules/page-transitions/_animations.scss */
+/* line 36, scss/modules/page-transitions/_animation.scss */
 .pt-page-moveToTop {
   -webkit-animation: moveToTop .6s ease both;
   -moz-animation: moveToTop .6s ease both;
   animation: moveToTop .6s ease both;
 }
 
-/* line 42, scss/modules/page-transitions/_animations.scss */
+/* line 42, scss/modules/page-transitions/_animation.scss */
 .pt-page-moveFromTop {
   -webkit-animation: moveFromTop .6s ease both;
   -moz-animation: moveFromTop .6s ease both;
   animation: moveFromTop .6s ease both;
 }
 
-/* line 48, scss/modules/page-transitions/_animations.scss */
+/* line 48, scss/modules/page-transitions/_animation.scss */
 .pt-page-moveToBottom {
   -webkit-animation: moveToBottom .6s ease both;
   -moz-animation: moveToBottom .6s ease both;
   animation: moveToBottom .6s ease both;
 }
 
-/* line 54, scss/modules/page-transitions/_animations.scss */
+/* line 54, scss/modules/page-transitions/_animation.scss */
 .pt-page-moveFromBottom {
   -webkit-animation: moveFromBottom .6s ease both;
   -moz-animation: moveFromBottom .6s ease both;
@@ -7845,7 +7858,7 @@ body {
 }
 
 /* fade */
-/* line 62, scss/modules/page-transitions/_animations.scss */
+/* line 62, scss/modules/page-transitions/_animation.scss */
 .pt-page-fade {
   -webkit-animation: fade .7s ease both;
   -moz-animation: fade .7s ease both;
@@ -7853,56 +7866,56 @@ body {
 }
 
 /* move from / to and fade */
-/* line 70, scss/modules/page-transitions/_animations.scss */
+/* line 70, scss/modules/page-transitions/_animation.scss */
 .pt-page-moveToLeftFade {
   -webkit-animation: moveToLeftFade .7s ease both;
   -moz-animation: moveToLeftFade .7s ease both;
   animation: moveToLeftFade .7s ease both;
 }
 
-/* line 76, scss/modules/page-transitions/_animations.scss */
+/* line 76, scss/modules/page-transitions/_animation.scss */
 .pt-page-moveFromLeftFade {
   -webkit-animation: moveFromLeftFade .7s ease both;
   -moz-animation: moveFromLeftFade .7s ease both;
   animation: moveFromLeftFade .7s ease both;
 }
 
-/* line 82, scss/modules/page-transitions/_animations.scss */
+/* line 82, scss/modules/page-transitions/_animation.scss */
 .pt-page-moveToRightFade {
   -webkit-animation: moveToRightFade .7s ease both;
   -moz-animation: moveToRightFade .7s ease both;
   animation: moveToRightFade .7s ease both;
 }
 
-/* line 88, scss/modules/page-transitions/_animations.scss */
+/* line 88, scss/modules/page-transitions/_animation.scss */
 .pt-page-moveFromRightFade {
   -webkit-animation: moveFromRightFade .7s ease both;
   -moz-animation: moveFromRightFade .7s ease both;
   animation: moveFromRightFade .7s ease both;
 }
 
-/* line 94, scss/modules/page-transitions/_animations.scss */
+/* line 94, scss/modules/page-transitions/_animation.scss */
 .pt-page-moveToTopFade {
   -webkit-animation: moveToTopFade .7s ease both;
   -moz-animation: moveToTopFade .7s ease both;
   animation: moveToTopFade .7s ease both;
 }
 
-/* line 100, scss/modules/page-transitions/_animations.scss */
+/* line 100, scss/modules/page-transitions/_animation.scss */
 .pt-page-moveFromTopFade {
   -webkit-animation: moveFromTopFade .7s ease both;
   -moz-animation: moveFromTopFade .7s ease both;
   animation: moveFromTopFade .7s ease both;
 }
 
-/* line 106, scss/modules/page-transitions/_animations.scss */
+/* line 106, scss/modules/page-transitions/_animation.scss */
 .pt-page-moveToBottomFade {
   -webkit-animation: moveToBottomFade .7s ease both;
   -moz-animation: moveToBottomFade .7s ease both;
   animation: moveToBottomFade .7s ease both;
 }
 
-/* line 112, scss/modules/page-transitions/_animations.scss */
+/* line 112, scss/modules/page-transitions/_animation.scss */
 .pt-page-moveFromBottomFade {
   -webkit-animation: moveFromBottomFade .7s ease both;
   -moz-animation: moveFromBottomFade .7s ease both;
@@ -7910,28 +7923,28 @@ body {
 }
 
 /* move to with different easing */
-/* line 120, scss/modules/page-transitions/_animations.scss */
+/* line 120, scss/modules/page-transitions/_animation.scss */
 .pt-page-moveToLeftEasing {
   -webkit-animation: moveToLeft .7s ease-in-out both;
   -moz-animation: moveToLeft .7s ease-in-out both;
   animation: moveToLeft .7s ease-in-out both;
 }
 
-/* line 125, scss/modules/page-transitions/_animations.scss */
+/* line 125, scss/modules/page-transitions/_animation.scss */
 .pt-page-moveToRightEasing {
   -webkit-animation: moveToRight .7s ease-in-out both;
   -moz-animation: moveToRight .7s ease-in-out both;
   animation: moveToRight .7s ease-in-out both;
 }
 
-/* line 130, scss/modules/page-transitions/_animations.scss */
+/* line 130, scss/modules/page-transitions/_animation.scss */
 .pt-page-moveToTopEasing {
   -webkit-animation: moveToTop .7s ease-in-out both;
   -moz-animation: moveToTop .7s ease-in-out both;
   animation: moveToTop .7s ease-in-out both;
 }
 
-/* line 135, scss/modules/page-transitions/_animations.scss */
+/* line 135, scss/modules/page-transitions/_animation.scss */
 .pt-page-moveToBottomEasing {
   -webkit-animation: moveToBottom .7s ease-in-out both;
   -moz-animation: moveToBottom .7s ease-in-out both;
@@ -7941,168 +7954,168 @@ body {
 /********************************* keyframes **************************************/
 /* move from / to  */
 @-webkit-keyframes moveToLeft {
-  /* line 146, scss/modules/page-transitions/_animations.scss */
+  /* line 146, scss/modules/page-transitions/_animation.scss */
   to {
     -webkit-transform: translateX(-100%);
   }
 }
 
 @-moz-keyframes moveToLeft {
-  /* line 149, scss/modules/page-transitions/_animations.scss */
+  /* line 149, scss/modules/page-transitions/_animation.scss */
   to {
     -moz-transform: translateX(-100%);
   }
 }
 
 @keyframes moveToLeft {
-  /* line 152, scss/modules/page-transitions/_animations.scss */
+  /* line 152, scss/modules/page-transitions/_animation.scss */
   to {
     transform: translateX(-100%);
   }
 }
 
 @-webkit-keyframes moveFromLeft {
-  /* line 156, scss/modules/page-transitions/_animations.scss */
+  /* line 156, scss/modules/page-transitions/_animation.scss */
   from {
     -webkit-transform: translateX(-100%);
   }
 }
 
 @-moz-keyframes moveFromLeft {
-  /* line 159, scss/modules/page-transitions/_animations.scss */
+  /* line 159, scss/modules/page-transitions/_animation.scss */
   from {
     -moz-transform: translateX(-100%);
   }
 }
 
 @keyframes moveFromLeft {
-  /* line 162, scss/modules/page-transitions/_animations.scss */
+  /* line 162, scss/modules/page-transitions/_animation.scss */
   from {
     transform: translateX(-100%);
   }
 }
 
 @-webkit-keyframes moveToRight {
-  /* line 166, scss/modules/page-transitions/_animations.scss */
+  /* line 166, scss/modules/page-transitions/_animation.scss */
   to {
     -webkit-transform: translateX(100%);
   }
 }
 
 @-moz-keyframes moveToRight {
-  /* line 169, scss/modules/page-transitions/_animations.scss */
+  /* line 169, scss/modules/page-transitions/_animation.scss */
   to {
     -moz-transform: translateX(100%);
   }
 }
 
 @keyframes moveToRight {
-  /* line 172, scss/modules/page-transitions/_animations.scss */
+  /* line 172, scss/modules/page-transitions/_animation.scss */
   to {
     transform: translateX(100%);
   }
 }
 
 @-webkit-keyframes moveFromRight {
-  /* line 176, scss/modules/page-transitions/_animations.scss */
+  /* line 176, scss/modules/page-transitions/_animation.scss */
   from {
     -webkit-transform: translateX(100%);
   }
 }
 
 @-moz-keyframes moveFromRight {
-  /* line 179, scss/modules/page-transitions/_animations.scss */
+  /* line 179, scss/modules/page-transitions/_animation.scss */
   from {
     -moz-transform: translateX(100%);
   }
 }
 
 @keyframes moveFromRight {
-  /* line 182, scss/modules/page-transitions/_animations.scss */
+  /* line 182, scss/modules/page-transitions/_animation.scss */
   from {
     transform: translateX(100%);
   }
 }
 
 @-webkit-keyframes moveToTop {
-  /* line 186, scss/modules/page-transitions/_animations.scss */
+  /* line 186, scss/modules/page-transitions/_animation.scss */
   to {
     -webkit-transform: translateY(-100%);
   }
 }
 
 @-moz-keyframes moveToTop {
-  /* line 189, scss/modules/page-transitions/_animations.scss */
+  /* line 189, scss/modules/page-transitions/_animation.scss */
   to {
     -moz-transform: translateY(-100%);
   }
 }
 
 @keyframes moveToTop {
-  /* line 192, scss/modules/page-transitions/_animations.scss */
+  /* line 192, scss/modules/page-transitions/_animation.scss */
   to {
     transform: translateY(-100%);
   }
 }
 
 @-webkit-keyframes moveFromTop {
-  /* line 196, scss/modules/page-transitions/_animations.scss */
+  /* line 196, scss/modules/page-transitions/_animation.scss */
   from {
     -webkit-transform: translateY(-100%);
   }
 }
 
 @-moz-keyframes moveFromTop {
-  /* line 199, scss/modules/page-transitions/_animations.scss */
+  /* line 199, scss/modules/page-transitions/_animation.scss */
   from {
     -moz-transform: translateY(-100%);
   }
 }
 
 @keyframes moveFromTop {
-  /* line 202, scss/modules/page-transitions/_animations.scss */
+  /* line 202, scss/modules/page-transitions/_animation.scss */
   from {
     transform: translateY(-100%);
   }
 }
 
 @-webkit-keyframes moveToBottom {
-  /* line 206, scss/modules/page-transitions/_animations.scss */
+  /* line 206, scss/modules/page-transitions/_animation.scss */
   to {
     -webkit-transform: translateY(100%);
   }
 }
 
 @-moz-keyframes moveToBottom {
-  /* line 209, scss/modules/page-transitions/_animations.scss */
+  /* line 209, scss/modules/page-transitions/_animation.scss */
   to {
     -moz-transform: translateY(100%);
   }
 }
 
 @keyframes moveToBottom {
-  /* line 212, scss/modules/page-transitions/_animations.scss */
+  /* line 212, scss/modules/page-transitions/_animation.scss */
   to {
     transform: translateY(100%);
   }
 }
 
 @-webkit-keyframes moveFromBottom {
-  /* line 216, scss/modules/page-transitions/_animations.scss */
+  /* line 216, scss/modules/page-transitions/_animation.scss */
   from {
     -webkit-transform: translateY(100%);
   }
 }
 
 @-moz-keyframes moveFromBottom {
-  /* line 219, scss/modules/page-transitions/_animations.scss */
+  /* line 219, scss/modules/page-transitions/_animation.scss */
   from {
     -moz-transform: translateY(100%);
   }
 }
 
 @keyframes moveFromBottom {
-  /* line 222, scss/modules/page-transitions/_animations.scss */
+  /* line 222, scss/modules/page-transitions/_animation.scss */
   from {
     transform: translateY(100%);
   }
@@ -8110,21 +8123,21 @@ body {
 
 /* fade */
 @-webkit-keyframes fade {
-  /* line 228, scss/modules/page-transitions/_animations.scss */
+  /* line 228, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0.3;
   }
 }
 
 @-moz-keyframes fade {
-  /* line 231, scss/modules/page-transitions/_animations.scss */
+  /* line 231, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0.3;
   }
 }
 
 @keyframes fade {
-  /* line 234, scss/modules/page-transitions/_animations.scss */
+  /* line 234, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0.3;
   }
@@ -8132,7 +8145,7 @@ body {
 
 /* move from / to and fade */
 @-webkit-keyframes moveToLeftFade {
-  /* line 240, scss/modules/page-transitions/_animations.scss */
+  /* line 240, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0.3;
     -webkit-transform: translateX(-100%);
@@ -8140,7 +8153,7 @@ body {
 }
 
 @-moz-keyframes moveToLeftFade {
-  /* line 243, scss/modules/page-transitions/_animations.scss */
+  /* line 243, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0.3;
     -moz-transform: translateX(-100%);
@@ -8148,7 +8161,7 @@ body {
 }
 
 @keyframes moveToLeftFade {
-  /* line 246, scss/modules/page-transitions/_animations.scss */
+  /* line 246, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0.3;
     transform: translateX(-100%);
@@ -8156,7 +8169,7 @@ body {
 }
 
 @-webkit-keyframes moveFromLeftFade {
-  /* line 250, scss/modules/page-transitions/_animations.scss */
+  /* line 250, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0.3;
     -webkit-transform: translateX(-100%);
@@ -8164,7 +8177,7 @@ body {
 }
 
 @-moz-keyframes moveFromLeftFade {
-  /* line 253, scss/modules/page-transitions/_animations.scss */
+  /* line 253, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0.3;
     -moz-transform: translateX(-100%);
@@ -8172,7 +8185,7 @@ body {
 }
 
 @keyframes moveFromLeftFade {
-  /* line 256, scss/modules/page-transitions/_animations.scss */
+  /* line 256, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0.3;
     transform: translateX(-100%);
@@ -8180,7 +8193,7 @@ body {
 }
 
 @-webkit-keyframes moveToRightFade {
-  /* line 260, scss/modules/page-transitions/_animations.scss */
+  /* line 260, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0.3;
     -webkit-transform: translateX(100%);
@@ -8188,7 +8201,7 @@ body {
 }
 
 @-moz-keyframes moveToRightFade {
-  /* line 263, scss/modules/page-transitions/_animations.scss */
+  /* line 263, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0.3;
     -moz-transform: translateX(100%);
@@ -8196,7 +8209,7 @@ body {
 }
 
 @keyframes moveToRightFade {
-  /* line 266, scss/modules/page-transitions/_animations.scss */
+  /* line 266, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0.3;
     transform: translateX(100%);
@@ -8204,7 +8217,7 @@ body {
 }
 
 @-webkit-keyframes moveFromRightFade {
-  /* line 270, scss/modules/page-transitions/_animations.scss */
+  /* line 270, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0.3;
     -webkit-transform: translateX(100%);
@@ -8212,7 +8225,7 @@ body {
 }
 
 @-moz-keyframes moveFromRightFade {
-  /* line 273, scss/modules/page-transitions/_animations.scss */
+  /* line 273, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0.3;
     -moz-transform: translateX(100%);
@@ -8220,7 +8233,7 @@ body {
 }
 
 @keyframes moveFromRightFade {
-  /* line 276, scss/modules/page-transitions/_animations.scss */
+  /* line 276, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0.3;
     transform: translateX(100%);
@@ -8228,7 +8241,7 @@ body {
 }
 
 @-webkit-keyframes moveToTopFade {
-  /* line 280, scss/modules/page-transitions/_animations.scss */
+  /* line 280, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0.3;
     -webkit-transform: translateY(-100%);
@@ -8236,7 +8249,7 @@ body {
 }
 
 @-moz-keyframes moveToTopFade {
-  /* line 283, scss/modules/page-transitions/_animations.scss */
+  /* line 283, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0.3;
     -moz-transform: translateY(-100%);
@@ -8244,7 +8257,7 @@ body {
 }
 
 @keyframes moveToTopFade {
-  /* line 286, scss/modules/page-transitions/_animations.scss */
+  /* line 286, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0.3;
     transform: translateY(-100%);
@@ -8252,7 +8265,7 @@ body {
 }
 
 @-webkit-keyframes moveFromTopFade {
-  /* line 290, scss/modules/page-transitions/_animations.scss */
+  /* line 290, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0.3;
     -webkit-transform: translateY(-100%);
@@ -8260,7 +8273,7 @@ body {
 }
 
 @-moz-keyframes moveFromTopFade {
-  /* line 293, scss/modules/page-transitions/_animations.scss */
+  /* line 293, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0.3;
     -moz-transform: translateY(-100%);
@@ -8268,7 +8281,7 @@ body {
 }
 
 @keyframes moveFromTopFade {
-  /* line 296, scss/modules/page-transitions/_animations.scss */
+  /* line 296, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0.3;
     transform: translateY(-100%);
@@ -8276,7 +8289,7 @@ body {
 }
 
 @-webkit-keyframes moveToBottomFade {
-  /* line 300, scss/modules/page-transitions/_animations.scss */
+  /* line 300, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0.3;
     -webkit-transform: translateY(100%);
@@ -8284,7 +8297,7 @@ body {
 }
 
 @-moz-keyframes moveToBottomFade {
-  /* line 303, scss/modules/page-transitions/_animations.scss */
+  /* line 303, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0.3;
     -moz-transform: translateY(100%);
@@ -8292,7 +8305,7 @@ body {
 }
 
 @keyframes moveToBottomFade {
-  /* line 306, scss/modules/page-transitions/_animations.scss */
+  /* line 306, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0.3;
     transform: translateY(100%);
@@ -8300,7 +8313,7 @@ body {
 }
 
 @-webkit-keyframes moveFromBottomFade {
-  /* line 310, scss/modules/page-transitions/_animations.scss */
+  /* line 310, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0.3;
     -webkit-transform: translateY(100%);
@@ -8308,7 +8321,7 @@ body {
 }
 
 @-moz-keyframes moveFromBottomFade {
-  /* line 313, scss/modules/page-transitions/_animations.scss */
+  /* line 313, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0.3;
     -moz-transform: translateY(100%);
@@ -8316,7 +8329,7 @@ body {
 }
 
 @keyframes moveFromBottomFade {
-  /* line 316, scss/modules/page-transitions/_animations.scss */
+  /* line 316, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0.3;
     transform: translateY(100%);
@@ -8324,42 +8337,42 @@ body {
 }
 
 /* scale and fade */
-/* line 321, scss/modules/page-transitions/_animations.scss */
+/* line 321, scss/modules/page-transitions/_animation.scss */
 .pt-page-scaleDown {
   -webkit-animation: scaleDown .7s ease both;
   -moz-animation: scaleDown .7s ease both;
   animation: scaleDown .7s ease both;
 }
 
-/* line 327, scss/modules/page-transitions/_animations.scss */
+/* line 327, scss/modules/page-transitions/_animation.scss */
 .pt-page-scaleUp {
   -webkit-animation: scaleUp .7s ease both;
   -moz-animation: scaleUp .7s ease both;
   animation: scaleUp .7s ease both;
 }
 
-/* line 333, scss/modules/page-transitions/_animations.scss */
+/* line 333, scss/modules/page-transitions/_animation.scss */
 .pt-page-scaleUpDown {
   -webkit-animation: scaleUpDown .5s ease both;
   -moz-animation: scaleUpDown .5s ease both;
   animation: scaleUpDown .5s ease both;
 }
 
-/* line 339, scss/modules/page-transitions/_animations.scss */
+/* line 339, scss/modules/page-transitions/_animation.scss */
 .pt-page-scaleDownUp {
   -webkit-animation: scaleDownUp .5s ease both;
   -moz-animation: scaleDownUp .5s ease both;
   animation: scaleDownUp .5s ease both;
 }
 
-/* line 345, scss/modules/page-transitions/_animations.scss */
+/* line 345, scss/modules/page-transitions/_animation.scss */
 .pt-page-scaleDownCenter {
   -webkit-animation: scaleDownCenter .4s ease-in both;
   -moz-animation: scaleDownCenter .4s ease-in both;
   animation: scaleDownCenter .4s ease-in both;
 }
 
-/* line 351, scss/modules/page-transitions/_animations.scss */
+/* line 351, scss/modules/page-transitions/_animation.scss */
 .pt-page-scaleUpCenter {
   -webkit-animation: scaleUpCenter .4s ease-out both;
   -moz-animation: scaleUpCenter .4s ease-out both;
@@ -8369,7 +8382,7 @@ body {
 /********************************* keyframes **************************************/
 /* scale and fade */
 @-webkit-keyframes scaleDown {
-  /* line 362, scss/modules/page-transitions/_animations.scss */
+  /* line 362, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -webkit-transform: scale(0.8);
@@ -8377,7 +8390,7 @@ body {
 }
 
 @-moz-keyframes scaleDown {
-  /* line 365, scss/modules/page-transitions/_animations.scss */
+  /* line 365, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -moz-transform: scale(0.8);
@@ -8385,7 +8398,7 @@ body {
 }
 
 @keyframes scaleDown {
-  /* line 368, scss/modules/page-transitions/_animations.scss */
+  /* line 368, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     transform: scale(0.8);
@@ -8393,7 +8406,7 @@ body {
 }
 
 @-webkit-keyframes scaleUp {
-  /* line 372, scss/modules/page-transitions/_animations.scss */
+  /* line 372, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -webkit-transform: scale(0.8);
@@ -8401,7 +8414,7 @@ body {
 }
 
 @-moz-keyframes scaleUp {
-  /* line 375, scss/modules/page-transitions/_animations.scss */
+  /* line 375, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -moz-transform: scale(0.8);
@@ -8409,7 +8422,7 @@ body {
 }
 
 @keyframes scaleUp {
-  /* line 378, scss/modules/page-transitions/_animations.scss */
+  /* line 378, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     transform: scale(0.8);
@@ -8417,7 +8430,7 @@ body {
 }
 
 @-webkit-keyframes scaleUpDown {
-  /* line 382, scss/modules/page-transitions/_animations.scss */
+  /* line 382, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -webkit-transform: scale(1.2);
@@ -8425,7 +8438,7 @@ body {
 }
 
 @-moz-keyframes scaleUpDown {
-  /* line 385, scss/modules/page-transitions/_animations.scss */
+  /* line 385, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -moz-transform: scale(1.2);
@@ -8433,7 +8446,7 @@ body {
 }
 
 @keyframes scaleUpDown {
-  /* line 388, scss/modules/page-transitions/_animations.scss */
+  /* line 388, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     transform: scale(1.2);
@@ -8441,7 +8454,7 @@ body {
 }
 
 @-webkit-keyframes scaleDownUp {
-  /* line 392, scss/modules/page-transitions/_animations.scss */
+  /* line 392, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -webkit-transform: scale(1.2);
@@ -8449,7 +8462,7 @@ body {
 }
 
 @-moz-keyframes scaleDownUp {
-  /* line 395, scss/modules/page-transitions/_animations.scss */
+  /* line 395, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -moz-transform: scale(1.2);
@@ -8457,7 +8470,7 @@ body {
 }
 
 @keyframes scaleDownUp {
-  /* line 398, scss/modules/page-transitions/_animations.scss */
+  /* line 398, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     transform: scale(1.2);
@@ -8465,7 +8478,7 @@ body {
 }
 
 @-webkit-keyframes scaleDownCenter {
-  /* line 402, scss/modules/page-transitions/_animations.scss */
+  /* line 402, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -webkit-transform: scale(0.7);
@@ -8473,7 +8486,7 @@ body {
 }
 
 @-moz-keyframes scaleDownCenter {
-  /* line 405, scss/modules/page-transitions/_animations.scss */
+  /* line 405, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -moz-transform: scale(0.7);
@@ -8481,7 +8494,7 @@ body {
 }
 
 @keyframes scaleDownCenter {
-  /* line 408, scss/modules/page-transitions/_animations.scss */
+  /* line 408, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     transform: scale(0.7);
@@ -8489,7 +8502,7 @@ body {
 }
 
 @-webkit-keyframes scaleUpCenter {
-  /* line 412, scss/modules/page-transitions/_animations.scss */
+  /* line 412, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -webkit-transform: scale(0.7);
@@ -8497,7 +8510,7 @@ body {
 }
 
 @-moz-keyframes scaleUpCenter {
-  /* line 415, scss/modules/page-transitions/_animations.scss */
+  /* line 415, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -moz-transform: scale(0.7);
@@ -8505,7 +8518,7 @@ body {
 }
 
 @keyframes scaleUpCenter {
-  /* line 418, scss/modules/page-transitions/_animations.scss */
+  /* line 418, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     transform: scale(0.7);
@@ -8513,7 +8526,7 @@ body {
 }
 
 /* rotate sides first and scale */
-/* line 423, scss/modules/page-transitions/_animations.scss */
+/* line 423, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateRightSideFirst {
   -webkit-transform-origin: 0% 50%;
   -webkit-animation: rotateRightSideFirst .8s both ease-in;
@@ -8523,7 +8536,7 @@ body {
   animation: rotateRightSideFirst .8s both ease-in;
 }
 
-/* line 431, scss/modules/page-transitions/_animations.scss */
+/* line 431, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateLeftSideFirst {
   -webkit-transform-origin: 100% 50%;
   -webkit-animation: rotateLeftSideFirst .8s both ease-in;
@@ -8533,7 +8546,7 @@ body {
   animation: rotateLeftSideFirst .8s both ease-in;
 }
 
-/* line 439, scss/modules/page-transitions/_animations.scss */
+/* line 439, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateTopSideFirst {
   -webkit-transform-origin: 50% 100%;
   -webkit-animation: rotateTopSideFirst .8s both ease-in;
@@ -8543,7 +8556,7 @@ body {
   animation: rotateTopSideFirst .8s both ease-in;
 }
 
-/* line 447, scss/modules/page-transitions/_animations.scss */
+/* line 447, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateBottomSideFirst {
   -webkit-transform-origin: 50% 0%;
   -webkit-animation: rotateBottomSideFirst .8s both ease-in;
@@ -8554,7 +8567,7 @@ body {
 }
 
 /* flip */
-/* line 458, scss/modules/page-transitions/_animations.scss */
+/* line 458, scss/modules/page-transitions/_animation.scss */
 .pt-page-flipOutRight {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: flipOutRight .5s both ease-in;
@@ -8564,7 +8577,7 @@ body {
   animation: flipOutRight .5s both ease-in;
 }
 
-/* line 466, scss/modules/page-transitions/_animations.scss */
+/* line 466, scss/modules/page-transitions/_animation.scss */
 .pt-page-flipInLeft {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: flipInLeft .5s both ease-out;
@@ -8574,7 +8587,7 @@ body {
   animation: flipInLeft .5s both ease-out;
 }
 
-/* line 474, scss/modules/page-transitions/_animations.scss */
+/* line 474, scss/modules/page-transitions/_animation.scss */
 .pt-page-flipOutLeft {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: flipOutLeft .5s both ease-in;
@@ -8584,7 +8597,7 @@ body {
   animation: flipOutLeft .5s both ease-in;
 }
 
-/* line 482, scss/modules/page-transitions/_animations.scss */
+/* line 482, scss/modules/page-transitions/_animation.scss */
 .pt-page-flipInRight {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: flipInRight .5s both ease-out;
@@ -8594,7 +8607,7 @@ body {
   animation: flipInRight .5s both ease-out;
 }
 
-/* line 490, scss/modules/page-transitions/_animations.scss */
+/* line 490, scss/modules/page-transitions/_animation.scss */
 .pt-page-flipOutTop {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: flipOutTop .5s both ease-in;
@@ -8604,7 +8617,7 @@ body {
   animation: flipOutTop .5s both ease-in;
 }
 
-/* line 498, scss/modules/page-transitions/_animations.scss */
+/* line 498, scss/modules/page-transitions/_animation.scss */
 .pt-page-flipInBottom {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: flipInBottom .5s both ease-out;
@@ -8614,7 +8627,7 @@ body {
   animation: flipInBottom .5s both ease-out;
 }
 
-/* line 506, scss/modules/page-transitions/_animations.scss */
+/* line 506, scss/modules/page-transitions/_animation.scss */
 .pt-page-flipOutBottom {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: flipOutBottom .5s both ease-in;
@@ -8624,7 +8637,7 @@ body {
   animation: flipOutBottom .5s both ease-in;
 }
 
-/* line 514, scss/modules/page-transitions/_animations.scss */
+/* line 514, scss/modules/page-transitions/_animation.scss */
 .pt-page-flipInTop {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: flipInTop .5s both ease-out;
@@ -8635,7 +8648,7 @@ body {
 }
 
 /* rotate fall */
-/* line 525, scss/modules/page-transitions/_animations.scss */
+/* line 525, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateFall {
   -webkit-transform-origin: 0% 0%;
   -webkit-animation: rotateFall 1s both ease-in;
@@ -8646,7 +8659,7 @@ body {
 }
 
 /* rotate newspaper */
-/* line 535, scss/modules/page-transitions/_animations.scss */
+/* line 535, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateOutNewspaper {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: rotateOutNewspaper .5s both ease-in;
@@ -8656,7 +8669,7 @@ body {
   animation: rotateOutNewspaper .5s both ease-in;
 }
 
-/* line 543, scss/modules/page-transitions/_animations.scss */
+/* line 543, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateInNewspaper {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: rotateInNewspaper .5s both ease-out;
@@ -8667,7 +8680,7 @@ body {
 }
 
 /* push */
-/* line 553, scss/modules/page-transitions/_animations.scss */
+/* line 553, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotatePushLeft {
   -webkit-transform-origin: 0% 50%;
   -webkit-animation: rotatePushLeft .8s both ease;
@@ -8677,7 +8690,7 @@ body {
   animation: rotatePushLeft .8s both ease;
 }
 
-/* line 561, scss/modules/page-transitions/_animations.scss */
+/* line 561, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotatePushRight {
   -webkit-transform-origin: 100% 50%;
   -webkit-animation: rotatePushRight .8s both ease;
@@ -8687,7 +8700,7 @@ body {
   animation: rotatePushRight .8s both ease;
 }
 
-/* line 569, scss/modules/page-transitions/_animations.scss */
+/* line 569, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotatePushTop {
   -webkit-transform-origin: 50% 0%;
   -webkit-animation: rotatePushTop .8s both ease;
@@ -8697,7 +8710,7 @@ body {
   animation: rotatePushTop .8s both ease;
 }
 
-/* line 577, scss/modules/page-transitions/_animations.scss */
+/* line 577, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotatePushBottom {
   -webkit-transform-origin: 50% 100%;
   -webkit-animation: rotatePushBottom .8s both ease;
@@ -8708,7 +8721,7 @@ body {
 }
 
 /* pull */
-/* line 587, scss/modules/page-transitions/_animations.scss */
+/* line 587, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotatePullRight {
   -webkit-transform-origin: 100% 50%;
   -webkit-animation: rotatePullRight .5s both ease;
@@ -8718,7 +8731,7 @@ body {
   animation: rotatePullRight .5s both ease;
 }
 
-/* line 595, scss/modules/page-transitions/_animations.scss */
+/* line 595, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotatePullLeft {
   -webkit-transform-origin: 0% 50%;
   -webkit-animation: rotatePullLeft .5s both ease;
@@ -8728,7 +8741,7 @@ body {
   animation: rotatePullLeft .5s both ease;
 }
 
-/* line 603, scss/modules/page-transitions/_animations.scss */
+/* line 603, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotatePullTop {
   -webkit-transform-origin: 50% 0%;
   -webkit-animation: rotatePullTop .5s both ease;
@@ -8738,7 +8751,7 @@ body {
   animation: rotatePullTop .5s both ease;
 }
 
-/* line 611, scss/modules/page-transitions/_animations.scss */
+/* line 611, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotatePullBottom {
   -webkit-transform-origin: 50% 100%;
   -webkit-animation: rotatePullBottom .5s both ease;
@@ -8749,7 +8762,7 @@ body {
 }
 
 /* fold */
-/* line 621, scss/modules/page-transitions/_animations.scss */
+/* line 621, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateFoldRight {
   -webkit-transform-origin: 0% 50%;
   -webkit-animation: rotateFoldRight .7s both ease;
@@ -8759,7 +8772,7 @@ body {
   animation: rotateFoldRight .7s both ease;
 }
 
-/* line 629, scss/modules/page-transitions/_animations.scss */
+/* line 629, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateFoldLeft {
   -webkit-transform-origin: 100% 50%;
   -webkit-animation: rotateFoldLeft .7s both ease;
@@ -8769,7 +8782,7 @@ body {
   animation: rotateFoldLeft .7s both ease;
 }
 
-/* line 637, scss/modules/page-transitions/_animations.scss */
+/* line 637, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateFoldTop {
   -webkit-transform-origin: 50% 100%;
   -webkit-animation: rotateFoldTop .7s both ease;
@@ -8779,7 +8792,7 @@ body {
   animation: rotateFoldTop .7s both ease;
 }
 
-/* line 645, scss/modules/page-transitions/_animations.scss */
+/* line 645, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateFoldBottom {
   -webkit-transform-origin: 50% 0%;
   -webkit-animation: rotateFoldBottom .7s both ease;
@@ -8790,7 +8803,7 @@ body {
 }
 
 /* unfold */
-/* line 655, scss/modules/page-transitions/_animations.scss */
+/* line 655, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateUnfoldLeft {
   -webkit-transform-origin: 100% 50%;
   -webkit-animation: rotateUnfoldLeft .7s both ease;
@@ -8800,7 +8813,7 @@ body {
   animation: rotateUnfoldLeft .7s both ease;
 }
 
-/* line 663, scss/modules/page-transitions/_animations.scss */
+/* line 663, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateUnfoldRight {
   -webkit-transform-origin: 0% 50%;
   -webkit-animation: rotateUnfoldRight .7s both ease;
@@ -8810,7 +8823,7 @@ body {
   animation: rotateUnfoldRight .7s both ease;
 }
 
-/* line 671, scss/modules/page-transitions/_animations.scss */
+/* line 671, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateUnfoldTop {
   -webkit-transform-origin: 50% 100%;
   -webkit-animation: rotateUnfoldTop .7s both ease;
@@ -8820,7 +8833,7 @@ body {
   animation: rotateUnfoldTop .7s both ease;
 }
 
-/* line 679, scss/modules/page-transitions/_animations.scss */
+/* line 679, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateUnfoldBottom {
   -webkit-transform-origin: 50% 0%;
   -webkit-animation: rotateUnfoldBottom .7s both ease;
@@ -8831,7 +8844,7 @@ body {
 }
 
 /* room walls */
-/* line 689, scss/modules/page-transitions/_animations.scss */
+/* line 689, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateRoomLeftOut {
   -webkit-transform-origin: 100% 50%;
   -webkit-animation: rotateRoomLeftOut .8s both ease;
@@ -8841,7 +8854,7 @@ body {
   animation: rotateRoomLeftOut .8s both ease;
 }
 
-/* line 697, scss/modules/page-transitions/_animations.scss */
+/* line 697, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateRoomLeftIn {
   -webkit-transform-origin: 0% 50%;
   -webkit-animation: rotateRoomLeftIn .8s both ease;
@@ -8851,7 +8864,7 @@ body {
   animation: rotateRoomLeftIn .8s both ease;
 }
 
-/* line 705, scss/modules/page-transitions/_animations.scss */
+/* line 705, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateRoomRightOut {
   -webkit-transform-origin: 0% 50%;
   -webkit-animation: rotateRoomRightOut .8s both ease;
@@ -8861,7 +8874,7 @@ body {
   animation: rotateRoomRightOut .8s both ease;
 }
 
-/* line 713, scss/modules/page-transitions/_animations.scss */
+/* line 713, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateRoomRightIn {
   -webkit-transform-origin: 100% 50%;
   -webkit-animation: rotateRoomRightIn .8s both ease;
@@ -8871,7 +8884,7 @@ body {
   animation: rotateRoomRightIn .8s both ease;
 }
 
-/* line 721, scss/modules/page-transitions/_animations.scss */
+/* line 721, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateRoomTopOut {
   -webkit-transform-origin: 50% 100%;
   -webkit-animation: rotateRoomTopOut .8s both ease;
@@ -8881,7 +8894,7 @@ body {
   animation: rotateRoomTopOut .8s both ease;
 }
 
-/* line 729, scss/modules/page-transitions/_animations.scss */
+/* line 729, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateRoomTopIn {
   -webkit-transform-origin: 50% 0%;
   -webkit-animation: rotateRoomTopIn .8s both ease;
@@ -8891,7 +8904,7 @@ body {
   animation: rotateRoomTopIn .8s both ease;
 }
 
-/* line 737, scss/modules/page-transitions/_animations.scss */
+/* line 737, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateRoomBottomOut {
   -webkit-transform-origin: 50% 0%;
   -webkit-animation: rotateRoomBottomOut .8s both ease;
@@ -8901,7 +8914,7 @@ body {
   animation: rotateRoomBottomOut .8s both ease;
 }
 
-/* line 745, scss/modules/page-transitions/_animations.scss */
+/* line 745, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateRoomBottomIn {
   -webkit-transform-origin: 50% 100%;
   -webkit-animation: rotateRoomBottomIn .8s both ease;
@@ -8912,7 +8925,7 @@ body {
 }
 
 /* cube */
-/* line 755, scss/modules/page-transitions/_animations.scss */
+/* line 755, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateCubeLeftOut {
   -webkit-transform-origin: 100% 50%;
   -webkit-animation: rotateCubeLeftOut .6s both ease-in;
@@ -8922,7 +8935,7 @@ body {
   animation: rotateCubeLeftOut .6s both ease-in;
 }
 
-/* line 763, scss/modules/page-transitions/_animations.scss */
+/* line 763, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateCubeLeftIn {
   -webkit-transform-origin: 0% 50%;
   -webkit-animation: rotateCubeLeftIn .6s both ease-in;
@@ -8932,7 +8945,7 @@ body {
   animation: rotateCubeLeftIn .6s both ease-in;
 }
 
-/* line 771, scss/modules/page-transitions/_animations.scss */
+/* line 771, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateCubeRightOut {
   -webkit-transform-origin: 0% 50%;
   -webkit-animation: rotateCubeRightOut .6s both ease-in;
@@ -8942,7 +8955,7 @@ body {
   animation: rotateCubeRightOut .6s both ease-in;
 }
 
-/* line 779, scss/modules/page-transitions/_animations.scss */
+/* line 779, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateCubeRightIn {
   -webkit-transform-origin: 100% 50%;
   -webkit-animation: rotateCubeRightIn .6s both ease-in;
@@ -8952,7 +8965,7 @@ body {
   animation: rotateCubeRightIn .6s both ease-in;
 }
 
-/* line 787, scss/modules/page-transitions/_animations.scss */
+/* line 787, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateCubeTopOut {
   -webkit-transform-origin: 50% 100%;
   -webkit-animation: rotateCubeTopOut .6s both ease-in;
@@ -8962,7 +8975,7 @@ body {
   animation: rotateCubeTopOut .6s both ease-in;
 }
 
-/* line 795, scss/modules/page-transitions/_animations.scss */
+/* line 795, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateCubeTopIn {
   -webkit-transform-origin: 50% 0%;
   -webkit-animation: rotateCubeTopIn .6s both ease-in;
@@ -8972,7 +8985,7 @@ body {
   animation: rotateCubeTopIn .6s both ease-in;
 }
 
-/* line 803, scss/modules/page-transitions/_animations.scss */
+/* line 803, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateCubeBottomOut {
   -webkit-transform-origin: 50% 0%;
   -webkit-animation: rotateCubeBottomOut .6s both ease-in;
@@ -8982,7 +8995,7 @@ body {
   animation: rotateCubeBottomOut .6s both ease-in;
 }
 
-/* line 811, scss/modules/page-transitions/_animations.scss */
+/* line 811, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateCubeBottomIn {
   -webkit-transform-origin: 50% 100%;
   -webkit-animation: rotateCubeBottomIn .6s both ease-in;
@@ -8993,7 +9006,7 @@ body {
 }
 
 /* carousel */
-/* line 821, scss/modules/page-transitions/_animations.scss */
+/* line 821, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateCarouselLeftOut {
   -webkit-transform-origin: 100% 50%;
   -webkit-animation: rotateCarouselLeftOut .8s both ease;
@@ -9003,7 +9016,7 @@ body {
   animation: rotateCarouselLeftOut .8s both ease;
 }
 
-/* line 829, scss/modules/page-transitions/_animations.scss */
+/* line 829, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateCarouselLeftIn {
   -webkit-transform-origin: 0% 50%;
   -webkit-animation: rotateCarouselLeftIn .8s both ease;
@@ -9013,7 +9026,7 @@ body {
   animation: rotateCarouselLeftIn .8s both ease;
 }
 
-/* line 837, scss/modules/page-transitions/_animations.scss */
+/* line 837, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateCarouselRightOut {
   -webkit-transform-origin: 0% 50%;
   -webkit-animation: rotateCarouselRightOut .8s both ease;
@@ -9023,7 +9036,7 @@ body {
   animation: rotateCarouselRightOut .8s both ease;
 }
 
-/* line 845, scss/modules/page-transitions/_animations.scss */
+/* line 845, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateCarouselRightIn {
   -webkit-transform-origin: 100% 50%;
   -webkit-animation: rotateCarouselRightIn .8s both ease;
@@ -9033,7 +9046,7 @@ body {
   animation: rotateCarouselRightIn .8s both ease;
 }
 
-/* line 853, scss/modules/page-transitions/_animations.scss */
+/* line 853, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateCarouselTopOut {
   -webkit-transform-origin: 50% 100%;
   -webkit-animation: rotateCarouselTopOut .8s both ease;
@@ -9043,7 +9056,7 @@ body {
   animation: rotateCarouselTopOut .8s both ease;
 }
 
-/* line 861, scss/modules/page-transitions/_animations.scss */
+/* line 861, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateCarouselTopIn {
   -webkit-transform-origin: 50% 0%;
   -webkit-animation: rotateCarouselTopIn .8s both ease;
@@ -9053,7 +9066,7 @@ body {
   animation: rotateCarouselTopIn .8s both ease;
 }
 
-/* line 869, scss/modules/page-transitions/_animations.scss */
+/* line 869, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateCarouselBottomOut {
   -webkit-transform-origin: 50% 0%;
   -webkit-animation: rotateCarouselBottomOut .8s both ease;
@@ -9063,7 +9076,7 @@ body {
   animation: rotateCarouselBottomOut .8s both ease;
 }
 
-/* line 877, scss/modules/page-transitions/_animations.scss */
+/* line 877, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateCarouselBottomIn {
   -webkit-transform-origin: 50% 100%;
   -webkit-animation: rotateCarouselBottomIn .8s both ease;
@@ -9074,7 +9087,7 @@ body {
 }
 
 /* sides */
-/* line 887, scss/modules/page-transitions/_animations.scss */
+/* line 887, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateSidesOut {
   -webkit-transform-origin: -50% 50%;
   -webkit-animation: rotateSidesOut .5s both ease-in;
@@ -9084,7 +9097,7 @@ body {
   animation: rotateSidesOut .5s both ease-in;
 }
 
-/* line 895, scss/modules/page-transitions/_animations.scss */
+/* line 895, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateSidesIn {
   -webkit-transform-origin: 150% 50%;
   -webkit-animation: rotateSidesIn .5s both ease-out;
@@ -9095,14 +9108,14 @@ body {
 }
 
 /* slide */
-/* line 905, scss/modules/page-transitions/_animations.scss */
+/* line 905, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateSlideOut {
   -webkit-animation: rotateSlideOut 1s both ease;
   -moz-animation: rotateSlideOut 1s both ease;
   animation: rotateSlideOut 1s both ease;
 }
 
-/* line 910, scss/modules/page-transitions/_animations.scss */
+/* line 910, scss/modules/page-transitions/_animation.scss */
 .pt-page-rotateSlideIn {
   -webkit-animation: rotateSlideIn 1s both ease;
   -moz-animation: rotateSlideIn 1s both ease;
@@ -9112,14 +9125,14 @@ body {
 /********************************* keyframes **************************************/
 /* rotate sides first and scale */
 @-webkit-keyframes rotateRightSideFirst {
-  /* line 921, scss/modules/page-transitions/_animations.scss */
+  /* line 921, scss/modules/page-transitions/_animation.scss */
   40% {
     -webkit-transform: rotateY(15deg);
     opacity: .8;
     -webkit-animation-timing-function: ease-out;
   }
 
-  /* line 922, scss/modules/page-transitions/_animations.scss */
+  /* line 922, scss/modules/page-transitions/_animation.scss */
   100% {
     -webkit-transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -9127,14 +9140,14 @@ body {
 }
 
 @-moz-keyframes rotateRightSideFirst {
-  /* line 925, scss/modules/page-transitions/_animations.scss */
+  /* line 925, scss/modules/page-transitions/_animation.scss */
   40% {
     -moz-transform: rotateY(15deg);
     opacity: .8;
     -moz-animation-timing-function: ease-out;
   }
 
-  /* line 926, scss/modules/page-transitions/_animations.scss */
+  /* line 926, scss/modules/page-transitions/_animation.scss */
   100% {
     -moz-transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -9142,14 +9155,14 @@ body {
 }
 
 @keyframes rotateRightSideFirst {
-  /* line 929, scss/modules/page-transitions/_animations.scss */
+  /* line 929, scss/modules/page-transitions/_animation.scss */
   40% {
     transform: rotateY(15deg);
     opacity: .8;
     animation-timing-function: ease-out;
   }
 
-  /* line 930, scss/modules/page-transitions/_animations.scss */
+  /* line 930, scss/modules/page-transitions/_animation.scss */
   100% {
     transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -9157,14 +9170,14 @@ body {
 }
 
 @-webkit-keyframes rotateLeftSideFirst {
-  /* line 934, scss/modules/page-transitions/_animations.scss */
+  /* line 934, scss/modules/page-transitions/_animation.scss */
   40% {
     -webkit-transform: rotateY(-15deg);
     opacity: .8;
     -webkit-animation-timing-function: ease-out;
   }
 
-  /* line 935, scss/modules/page-transitions/_animations.scss */
+  /* line 935, scss/modules/page-transitions/_animation.scss */
   100% {
     -webkit-transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -9172,14 +9185,14 @@ body {
 }
 
 @-moz-keyframes rotateLeftSideFirst {
-  /* line 938, scss/modules/page-transitions/_animations.scss */
+  /* line 938, scss/modules/page-transitions/_animation.scss */
   40% {
     -moz-transform: rotateY(-15deg);
     opacity: .8;
     -moz-animation-timing-function: ease-out;
   }
 
-  /* line 939, scss/modules/page-transitions/_animations.scss */
+  /* line 939, scss/modules/page-transitions/_animation.scss */
   100% {
     -moz-transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -9187,14 +9200,14 @@ body {
 }
 
 @keyframes rotateLeftSideFirst {
-  /* line 942, scss/modules/page-transitions/_animations.scss */
+  /* line 942, scss/modules/page-transitions/_animation.scss */
   40% {
     transform: rotateY(-15deg);
     opacity: .8;
     animation-timing-function: ease-out;
   }
 
-  /* line 943, scss/modules/page-transitions/_animations.scss */
+  /* line 943, scss/modules/page-transitions/_animation.scss */
   100% {
     transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -9202,14 +9215,14 @@ body {
 }
 
 @-webkit-keyframes rotateTopSideFirst {
-  /* line 947, scss/modules/page-transitions/_animations.scss */
+  /* line 947, scss/modules/page-transitions/_animation.scss */
   40% {
     -webkit-transform: rotateX(15deg);
     opacity: .8;
     -webkit-animation-timing-function: ease-out;
   }
 
-  /* line 948, scss/modules/page-transitions/_animations.scss */
+  /* line 948, scss/modules/page-transitions/_animation.scss */
   100% {
     -webkit-transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -9217,14 +9230,14 @@ body {
 }
 
 @-moz-keyframes rotateTopSideFirst {
-  /* line 951, scss/modules/page-transitions/_animations.scss */
+  /* line 951, scss/modules/page-transitions/_animation.scss */
   40% {
     -moz-transform: rotateX(15deg);
     opacity: .8;
     -moz-animation-timing-function: ease-out;
   }
 
-  /* line 952, scss/modules/page-transitions/_animations.scss */
+  /* line 952, scss/modules/page-transitions/_animation.scss */
   100% {
     -moz-transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -9232,14 +9245,14 @@ body {
 }
 
 @keyframes rotateTopSideFirst {
-  /* line 955, scss/modules/page-transitions/_animations.scss */
+  /* line 955, scss/modules/page-transitions/_animation.scss */
   40% {
     transform: rotateX(15deg);
     opacity: .8;
     animation-timing-function: ease-out;
   }
 
-  /* line 956, scss/modules/page-transitions/_animations.scss */
+  /* line 956, scss/modules/page-transitions/_animation.scss */
   100% {
     transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -9247,14 +9260,14 @@ body {
 }
 
 @-webkit-keyframes rotateBottomSideFirst {
-  /* line 960, scss/modules/page-transitions/_animations.scss */
+  /* line 960, scss/modules/page-transitions/_animation.scss */
   40% {
     -webkit-transform: rotateX(-15deg);
     opacity: .8;
     -webkit-animation-timing-function: ease-out;
   }
 
-  /* line 961, scss/modules/page-transitions/_animations.scss */
+  /* line 961, scss/modules/page-transitions/_animation.scss */
   100% {
     -webkit-transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -9262,14 +9275,14 @@ body {
 }
 
 @-moz-keyframes rotateBottomSideFirst {
-  /* line 964, scss/modules/page-transitions/_animations.scss */
+  /* line 964, scss/modules/page-transitions/_animation.scss */
   40% {
     -moz-transform: rotateX(-15deg);
     opacity: .8;
     -moz-animation-timing-function: ease-out;
   }
 
-  /* line 965, scss/modules/page-transitions/_animations.scss */
+  /* line 965, scss/modules/page-transitions/_animation.scss */
   100% {
     -moz-transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -9277,14 +9290,14 @@ body {
 }
 
 @keyframes rotateBottomSideFirst {
-  /* line 968, scss/modules/page-transitions/_animations.scss */
+  /* line 968, scss/modules/page-transitions/_animation.scss */
   40% {
     transform: rotateX(-15deg);
     opacity: .8;
     animation-timing-function: ease-out;
   }
 
-  /* line 969, scss/modules/page-transitions/_animations.scss */
+  /* line 969, scss/modules/page-transitions/_animation.scss */
   100% {
     transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -9293,7 +9306,7 @@ body {
 
 /* flip */
 @-webkit-keyframes flipOutRight {
-  /* line 975, scss/modules/page-transitions/_animations.scss */
+  /* line 975, scss/modules/page-transitions/_animation.scss */
   to {
     -webkit-transform: translateZ(-1000px) rotateY(90deg);
     opacity: 0.2;
@@ -9301,7 +9314,7 @@ body {
 }
 
 @-moz-keyframes flipOutRight {
-  /* line 978, scss/modules/page-transitions/_animations.scss */
+  /* line 978, scss/modules/page-transitions/_animation.scss */
   to {
     -moz-transform: translateZ(-1000px) rotateY(90deg);
     opacity: 0.2;
@@ -9309,7 +9322,7 @@ body {
 }
 
 @keyframes flipOutRight {
-  /* line 981, scss/modules/page-transitions/_animations.scss */
+  /* line 981, scss/modules/page-transitions/_animation.scss */
   to {
     transform: translateZ(-1000px) rotateY(90deg);
     opacity: 0.2;
@@ -9317,7 +9330,7 @@ body {
 }
 
 @-webkit-keyframes flipInLeft {
-  /* line 985, scss/modules/page-transitions/_animations.scss */
+  /* line 985, scss/modules/page-transitions/_animation.scss */
   from {
     -webkit-transform: translateZ(-1000px) rotateY(-90deg);
     opacity: 0.2;
@@ -9325,7 +9338,7 @@ body {
 }
 
 @-moz-keyframes flipInLeft {
-  /* line 988, scss/modules/page-transitions/_animations.scss */
+  /* line 988, scss/modules/page-transitions/_animation.scss */
   from {
     -moz-transform: translateZ(-1000px) rotateY(-90deg);
     opacity: 0.2;
@@ -9333,7 +9346,7 @@ body {
 }
 
 @keyframes flipInLeft {
-  /* line 991, scss/modules/page-transitions/_animations.scss */
+  /* line 991, scss/modules/page-transitions/_animation.scss */
   from {
     transform: translateZ(-1000px) rotateY(-90deg);
     opacity: 0.2;
@@ -9341,7 +9354,7 @@ body {
 }
 
 @-webkit-keyframes flipOutLeft {
-  /* line 995, scss/modules/page-transitions/_animations.scss */
+  /* line 995, scss/modules/page-transitions/_animation.scss */
   to {
     -webkit-transform: translateZ(-1000px) rotateY(-90deg);
     opacity: 0.2;
@@ -9349,7 +9362,7 @@ body {
 }
 
 @-moz-keyframes flipOutLeft {
-  /* line 998, scss/modules/page-transitions/_animations.scss */
+  /* line 998, scss/modules/page-transitions/_animation.scss */
   to {
     -moz-transform: translateZ(-1000px) rotateY(-90deg);
     opacity: 0.2;
@@ -9357,7 +9370,7 @@ body {
 }
 
 @keyframes flipOutLeft {
-  /* line 1001, scss/modules/page-transitions/_animations.scss */
+  /* line 1001, scss/modules/page-transitions/_animation.scss */
   to {
     transform: translateZ(-1000px) rotateY(-90deg);
     opacity: 0.2;
@@ -9365,7 +9378,7 @@ body {
 }
 
 @-webkit-keyframes flipInRight {
-  /* line 1005, scss/modules/page-transitions/_animations.scss */
+  /* line 1005, scss/modules/page-transitions/_animation.scss */
   from {
     -webkit-transform: translateZ(-1000px) rotateY(90deg);
     opacity: 0.2;
@@ -9373,7 +9386,7 @@ body {
 }
 
 @-moz-keyframes flipInRight {
-  /* line 1008, scss/modules/page-transitions/_animations.scss */
+  /* line 1008, scss/modules/page-transitions/_animation.scss */
   from {
     -moz-transform: translateZ(-1000px) rotateY(90deg);
     opacity: 0.2;
@@ -9381,7 +9394,7 @@ body {
 }
 
 @keyframes flipInRight {
-  /* line 1011, scss/modules/page-transitions/_animations.scss */
+  /* line 1011, scss/modules/page-transitions/_animation.scss */
   from {
     transform: translateZ(-1000px) rotateY(90deg);
     opacity: 0.2;
@@ -9389,7 +9402,7 @@ body {
 }
 
 @-webkit-keyframes flipOutTop {
-  /* line 1015, scss/modules/page-transitions/_animations.scss */
+  /* line 1015, scss/modules/page-transitions/_animation.scss */
   to {
     -webkit-transform: translateZ(-1000px) rotateX(90deg);
     opacity: 0.2;
@@ -9397,7 +9410,7 @@ body {
 }
 
 @-moz-keyframes flipOutTop {
-  /* line 1018, scss/modules/page-transitions/_animations.scss */
+  /* line 1018, scss/modules/page-transitions/_animation.scss */
   to {
     -moz-transform: translateZ(-1000px) rotateX(90deg);
     opacity: 0.2;
@@ -9405,7 +9418,7 @@ body {
 }
 
 @keyframes flipOutTop {
-  /* line 1021, scss/modules/page-transitions/_animations.scss */
+  /* line 1021, scss/modules/page-transitions/_animation.scss */
   to {
     transform: translateZ(-1000px) rotateX(90deg);
     opacity: 0.2;
@@ -9413,7 +9426,7 @@ body {
 }
 
 @-webkit-keyframes flipInBottom {
-  /* line 1025, scss/modules/page-transitions/_animations.scss */
+  /* line 1025, scss/modules/page-transitions/_animation.scss */
   from {
     -webkit-transform: translateZ(-1000px) rotateX(-90deg);
     opacity: 0.2;
@@ -9421,7 +9434,7 @@ body {
 }
 
 @-moz-keyframes flipInBottom {
-  /* line 1028, scss/modules/page-transitions/_animations.scss */
+  /* line 1028, scss/modules/page-transitions/_animation.scss */
   from {
     -moz-transform: translateZ(-1000px) rotateX(-90deg);
     opacity: 0.2;
@@ -9429,7 +9442,7 @@ body {
 }
 
 @keyframes flipInBottom {
-  /* line 1031, scss/modules/page-transitions/_animations.scss */
+  /* line 1031, scss/modules/page-transitions/_animation.scss */
   from {
     transform: translateZ(-1000px) rotateX(-90deg);
     opacity: 0.2;
@@ -9437,7 +9450,7 @@ body {
 }
 
 @-webkit-keyframes flipOutBottom {
-  /* line 1035, scss/modules/page-transitions/_animations.scss */
+  /* line 1035, scss/modules/page-transitions/_animation.scss */
   to {
     -webkit-transform: translateZ(-1000px) rotateX(-90deg);
     opacity: 0.2;
@@ -9445,7 +9458,7 @@ body {
 }
 
 @-moz-keyframes flipOutBottom {
-  /* line 1038, scss/modules/page-transitions/_animations.scss */
+  /* line 1038, scss/modules/page-transitions/_animation.scss */
   to {
     -moz-transform: translateZ(-1000px) rotateX(-90deg);
     opacity: 0.2;
@@ -9453,7 +9466,7 @@ body {
 }
 
 @keyframes flipOutBottom {
-  /* line 1041, scss/modules/page-transitions/_animations.scss */
+  /* line 1041, scss/modules/page-transitions/_animation.scss */
   to {
     transform: translateZ(-1000px) rotateX(-90deg);
     opacity: 0.2;
@@ -9461,7 +9474,7 @@ body {
 }
 
 @-webkit-keyframes flipInTop {
-  /* line 1045, scss/modules/page-transitions/_animations.scss */
+  /* line 1045, scss/modules/page-transitions/_animation.scss */
   from {
     -webkit-transform: translateZ(-1000px) rotateX(90deg);
     opacity: 0.2;
@@ -9469,7 +9482,7 @@ body {
 }
 
 @-moz-keyframes flipInTop {
-  /* line 1048, scss/modules/page-transitions/_animations.scss */
+  /* line 1048, scss/modules/page-transitions/_animation.scss */
   from {
     -moz-transform: translateZ(-1000px) rotateX(90deg);
     opacity: 0.2;
@@ -9477,7 +9490,7 @@ body {
 }
 
 @keyframes flipInTop {
-  /* line 1051, scss/modules/page-transitions/_animations.scss */
+  /* line 1051, scss/modules/page-transitions/_animation.scss */
   from {
     transform: translateZ(-1000px) rotateX(90deg);
     opacity: 0.2;
@@ -9486,84 +9499,84 @@ body {
 
 /* fall */
 @-webkit-keyframes rotateFall {
-  /* line 1057, scss/modules/page-transitions/_animations.scss */
+  /* line 1057, scss/modules/page-transitions/_animation.scss */
   0% {
     -webkit-transform: rotateZ(0deg);
   }
 
-  /* line 1058, scss/modules/page-transitions/_animations.scss */
+  /* line 1058, scss/modules/page-transitions/_animation.scss */
   20% {
     -webkit-transform: rotateZ(10deg);
     -webkit-animation-timing-function: ease-out;
   }
 
-  /* line 1059, scss/modules/page-transitions/_animations.scss */
+  /* line 1059, scss/modules/page-transitions/_animation.scss */
   40% {
     -webkit-transform: rotateZ(17deg);
   }
 
-  /* line 1060, scss/modules/page-transitions/_animations.scss */
+  /* line 1060, scss/modules/page-transitions/_animation.scss */
   60% {
     -webkit-transform: rotateZ(16deg);
   }
 
-  /* line 1061, scss/modules/page-transitions/_animations.scss */
+  /* line 1061, scss/modules/page-transitions/_animation.scss */
   100% {
     -webkit-transform: translateY(100%) rotateZ(17deg);
   }
 }
 
 @-moz-keyframes rotateFall {
-  /* line 1064, scss/modules/page-transitions/_animations.scss */
+  /* line 1064, scss/modules/page-transitions/_animation.scss */
   0% {
     -moz-transform: rotateZ(0deg);
   }
 
-  /* line 1065, scss/modules/page-transitions/_animations.scss */
+  /* line 1065, scss/modules/page-transitions/_animation.scss */
   20% {
     -moz-transform: rotateZ(10deg);
     -moz-animation-timing-function: ease-out;
   }
 
-  /* line 1066, scss/modules/page-transitions/_animations.scss */
+  /* line 1066, scss/modules/page-transitions/_animation.scss */
   40% {
     -moz-transform: rotateZ(17deg);
   }
 
-  /* line 1067, scss/modules/page-transitions/_animations.scss */
+  /* line 1067, scss/modules/page-transitions/_animation.scss */
   60% {
     -moz-transform: rotateZ(16deg);
   }
 
-  /* line 1068, scss/modules/page-transitions/_animations.scss */
+  /* line 1068, scss/modules/page-transitions/_animation.scss */
   100% {
     -moz-transform: translateY(100%) rotateZ(17deg);
   }
 }
 
 @keyframes rotateFall {
-  /* line 1071, scss/modules/page-transitions/_animations.scss */
+  /* line 1071, scss/modules/page-transitions/_animation.scss */
   0% {
     transform: rotateZ(0deg);
   }
 
-  /* line 1072, scss/modules/page-transitions/_animations.scss */
+  /* line 1072, scss/modules/page-transitions/_animation.scss */
   20% {
     transform: rotateZ(10deg);
     animation-timing-function: ease-out;
   }
 
-  /* line 1073, scss/modules/page-transitions/_animations.scss */
+  /* line 1073, scss/modules/page-transitions/_animation.scss */
   40% {
     transform: rotateZ(17deg);
   }
 
-  /* line 1074, scss/modules/page-transitions/_animations.scss */
+  /* line 1074, scss/modules/page-transitions/_animation.scss */
   60% {
     transform: rotateZ(16deg);
   }
 
-  /* line 1075, scss/modules/page-transitions/_animations.scss */
+  /* line 1075, scss/modules/page-transitions/_animation.scss */
   100% {
     transform: translateY(100%) rotateZ(17deg);
   }
@@ -9571,7 +9584,7 @@ body {
 
 /* newspaper */
 @-webkit-keyframes rotateOutNewspaper {
-  /* line 1081, scss/modules/page-transitions/_animations.scss */
+  /* line 1081, scss/modules/page-transitions/_animation.scss */
   to {
     -webkit-transform: translateZ(-3000px) rotateZ(360deg);
     opacity: 0;
@@ -9579,7 +9592,7 @@ body {
 }
 
 @-moz-keyframes rotateOutNewspaper {
-  /* line 1084, scss/modules/page-transitions/_animations.scss */
+  /* line 1084, scss/modules/page-transitions/_animation.scss */
   to {
     -moz-transform: translateZ(-3000px) rotateZ(360deg);
     opacity: 0;
@@ -9587,7 +9600,7 @@ body {
 }
 
 @keyframes rotateOutNewspaper {
-  /* line 1087, scss/modules/page-transitions/_animations.scss */
+  /* line 1087, scss/modules/page-transitions/_animation.scss */
   to {
     transform: translateZ(-3000px) rotateZ(360deg);
     opacity: 0;
@@ -9595,7 +9608,7 @@ body {
 }
 
 @-webkit-keyframes rotateInNewspaper {
-  /* line 1091, scss/modules/page-transitions/_animations.scss */
+  /* line 1091, scss/modules/page-transitions/_animation.scss */
   from {
     -webkit-transform: translateZ(-3000px) rotateZ(-360deg);
     opacity: 0;
@@ -9603,7 +9616,7 @@ body {
 }
 
 @-moz-keyframes rotateInNewspaper {
-  /* line 1094, scss/modules/page-transitions/_animations.scss */
+  /* line 1094, scss/modules/page-transitions/_animation.scss */
   from {
     -moz-transform: translateZ(-3000px) rotateZ(-360deg);
     opacity: 0;
@@ -9611,7 +9624,7 @@ body {
 }
 
 @keyframes rotateInNewspaper {
-  /* line 1097, scss/modules/page-transitions/_animations.scss */
+  /* line 1097, scss/modules/page-transitions/_animation.scss */
   from {
     transform: translateZ(-3000px) rotateZ(-360deg);
     opacity: 0;
@@ -9620,7 +9633,7 @@ body {
 
 /* push */
 @-webkit-keyframes rotatePushLeft {
-  /* line 1103, scss/modules/page-transitions/_animations.scss */
+  /* line 1103, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -webkit-transform: rotateY(90deg);
@@ -9628,7 +9641,7 @@ body {
 }
 
 @-moz-keyframes rotatePushLeft {
-  /* line 1106, scss/modules/page-transitions/_animations.scss */
+  /* line 1106, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -moz-transform: rotateY(90deg);
@@ -9636,7 +9649,7 @@ body {
 }
 
 @keyframes rotatePushLeft {
-  /* line 1109, scss/modules/page-transitions/_animations.scss */
+  /* line 1109, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     transform: rotateY(90deg);
@@ -9644,7 +9657,7 @@ body {
 }
 
 @-webkit-keyframes rotatePushRight {
-  /* line 1113, scss/modules/page-transitions/_animations.scss */
+  /* line 1113, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -webkit-transform: rotateY(-90deg);
@@ -9652,7 +9665,7 @@ body {
 }
 
 @-moz-keyframes rotatePushRight {
-  /* line 1116, scss/modules/page-transitions/_animations.scss */
+  /* line 1116, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -moz-transform: rotateY(-90deg);
@@ -9660,7 +9673,7 @@ body {
 }
 
 @keyframes rotatePushRight {
-  /* line 1119, scss/modules/page-transitions/_animations.scss */
+  /* line 1119, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     transform: rotateY(-90deg);
@@ -9668,7 +9681,7 @@ body {
 }
 
 @-webkit-keyframes rotatePushTop {
-  /* line 1123, scss/modules/page-transitions/_animations.scss */
+  /* line 1123, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -webkit-transform: rotateX(-90deg);
@@ -9676,7 +9689,7 @@ body {
 }
 
 @-moz-keyframes rotatePushTop {
-  /* line 1126, scss/modules/page-transitions/_animations.scss */
+  /* line 1126, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -moz-transform: rotateX(-90deg);
@@ -9684,7 +9697,7 @@ body {
 }
 
 @keyframes rotatePushTop {
-  /* line 1129, scss/modules/page-transitions/_animations.scss */
+  /* line 1129, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     transform: rotateX(-90deg);
@@ -9692,7 +9705,7 @@ body {
 }
 
 @-webkit-keyframes rotatePushBottom {
-  /* line 1133, scss/modules/page-transitions/_animations.scss */
+  /* line 1133, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -webkit-transform: rotateX(90deg);
@@ -9700,7 +9713,7 @@ body {
 }
 
 @-moz-keyframes rotatePushBottom {
-  /* line 1136, scss/modules/page-transitions/_animations.scss */
+  /* line 1136, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -moz-transform: rotateX(90deg);
@@ -9708,7 +9721,7 @@ body {
 }
 
 @keyframes rotatePushBottom {
-  /* line 1139, scss/modules/page-transitions/_animations.scss */
+  /* line 1139, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     transform: rotateX(90deg);
@@ -9717,7 +9730,7 @@ body {
 
 /* pull */
 @-webkit-keyframes rotatePullRight {
-  /* line 1145, scss/modules/page-transitions/_animations.scss */
+  /* line 1145, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -webkit-transform: rotateY(-90deg);
@@ -9725,7 +9738,7 @@ body {
 }
 
 @-moz-keyframes rotatePullRight {
-  /* line 1148, scss/modules/page-transitions/_animations.scss */
+  /* line 1148, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -moz-transform: rotateY(-90deg);
@@ -9733,7 +9746,7 @@ body {
 }
 
 @keyframes rotatePullRight {
-  /* line 1151, scss/modules/page-transitions/_animations.scss */
+  /* line 1151, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     transform: rotateY(-90deg);
@@ -9741,7 +9754,7 @@ body {
 }
 
 @-webkit-keyframes rotatePullLeft {
-  /* line 1155, scss/modules/page-transitions/_animations.scss */
+  /* line 1155, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -webkit-transform: rotateY(90deg);
@@ -9749,7 +9762,7 @@ body {
 }
 
 @-moz-keyframes rotatePullLeft {
-  /* line 1158, scss/modules/page-transitions/_animations.scss */
+  /* line 1158, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -moz-transform: rotateY(90deg);
@@ -9757,7 +9770,7 @@ body {
 }
 
 @keyframes rotatePullLeft {
-  /* line 1161, scss/modules/page-transitions/_animations.scss */
+  /* line 1161, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     transform: rotateY(90deg);
@@ -9765,7 +9778,7 @@ body {
 }
 
 @-webkit-keyframes rotatePullTop {
-  /* line 1165, scss/modules/page-transitions/_animations.scss */
+  /* line 1165, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -webkit-transform: rotateX(-90deg);
@@ -9773,7 +9786,7 @@ body {
 }
 
 @-moz-keyframes rotatePullTop {
-  /* line 1168, scss/modules/page-transitions/_animations.scss */
+  /* line 1168, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -moz-transform: rotateX(-90deg);
@@ -9781,7 +9794,7 @@ body {
 }
 
 @keyframes rotatePullTop {
-  /* line 1171, scss/modules/page-transitions/_animations.scss */
+  /* line 1171, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     transform: rotateX(-90deg);
@@ -9789,7 +9802,7 @@ body {
 }
 
 @-webkit-keyframes rotatePullBottom {
-  /* line 1175, scss/modules/page-transitions/_animations.scss */
+  /* line 1175, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -webkit-transform: rotateX(90deg);
@@ -9797,7 +9810,7 @@ body {
 }
 
 @-moz-keyframes rotatePullBottom {
-  /* line 1178, scss/modules/page-transitions/_animations.scss */
+  /* line 1178, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -moz-transform: rotateX(90deg);
@@ -9805,7 +9818,7 @@ body {
 }
 
 @keyframes rotatePullBottom {
-  /* line 1181, scss/modules/page-transitions/_animations.scss */
+  /* line 1181, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     transform: rotateX(90deg);
@@ -9814,7 +9827,7 @@ body {
 
 /* fold */
 @-webkit-keyframes rotateFoldRight {
-  /* line 1187, scss/modules/page-transitions/_animations.scss */
+  /* line 1187, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -webkit-transform: translateX(100%) rotateY(90deg);
@@ -9822,7 +9835,7 @@ body {
 }
 
 @-moz-keyframes rotateFoldRight {
-  /* line 1190, scss/modules/page-transitions/_animations.scss */
+  /* line 1190, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -moz-transform: translateX(100%) rotateY(90deg);
@@ -9830,7 +9843,7 @@ body {
 }
 
 @keyframes rotateFoldRight {
-  /* line 1193, scss/modules/page-transitions/_animations.scss */
+  /* line 1193, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     transform: translateX(100%) rotateY(90deg);
@@ -9838,7 +9851,7 @@ body {
 }
 
 @-webkit-keyframes rotateFoldLeft {
-  /* line 1197, scss/modules/page-transitions/_animations.scss */
+  /* line 1197, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -webkit-transform: translateX(-100%) rotateY(-90deg);
@@ -9846,7 +9859,7 @@ body {
 }
 
 @-moz-keyframes rotateFoldLeft {
-  /* line 1200, scss/modules/page-transitions/_animations.scss */
+  /* line 1200, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -moz-transform: translateX(-100%) rotateY(-90deg);
@@ -9854,7 +9867,7 @@ body {
 }
 
 @keyframes rotateFoldLeft {
-  /* line 1203, scss/modules/page-transitions/_animations.scss */
+  /* line 1203, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     transform: translateX(-100%) rotateY(-90deg);
@@ -9862,7 +9875,7 @@ body {
 }
 
 @-webkit-keyframes rotateFoldTop {
-  /* line 1207, scss/modules/page-transitions/_animations.scss */
+  /* line 1207, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -webkit-transform: translateY(-100%) rotateX(90deg);
@@ -9870,7 +9883,7 @@ body {
 }
 
 @-moz-keyframes rotateFoldTop {
-  /* line 1210, scss/modules/page-transitions/_animations.scss */
+  /* line 1210, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -moz-transform: translateY(-100%) rotateX(90deg);
@@ -9878,7 +9891,7 @@ body {
 }
 
 @keyframes rotateFoldTop {
-  /* line 1213, scss/modules/page-transitions/_animations.scss */
+  /* line 1213, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     transform: translateY(-100%) rotateX(90deg);
@@ -9886,7 +9899,7 @@ body {
 }
 
 @-webkit-keyframes rotateFoldBottom {
-  /* line 1217, scss/modules/page-transitions/_animations.scss */
+  /* line 1217, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -webkit-transform: translateY(100%) rotateX(-90deg);
@@ -9894,7 +9907,7 @@ body {
 }
 
 @-moz-keyframes rotateFoldBottom {
-  /* line 1220, scss/modules/page-transitions/_animations.scss */
+  /* line 1220, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -moz-transform: translateY(100%) rotateX(-90deg);
@@ -9902,7 +9915,7 @@ body {
 }
 
 @keyframes rotateFoldBottom {
-  /* line 1223, scss/modules/page-transitions/_animations.scss */
+  /* line 1223, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     transform: translateY(100%) rotateX(-90deg);
@@ -9911,7 +9924,7 @@ body {
 
 /* unfold */
 @-webkit-keyframes rotateUnfoldLeft {
-  /* line 1229, scss/modules/page-transitions/_animations.scss */
+  /* line 1229, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -webkit-transform: translateX(-100%) rotateY(-90deg);
@@ -9919,7 +9932,7 @@ body {
 }
 
 @-moz-keyframes rotateUnfoldLeft {
-  /* line 1232, scss/modules/page-transitions/_animations.scss */
+  /* line 1232, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -moz-transform: translateX(-100%) rotateY(-90deg);
@@ -9927,7 +9940,7 @@ body {
 }
 
 @keyframes rotateUnfoldLeft {
-  /* line 1235, scss/modules/page-transitions/_animations.scss */
+  /* line 1235, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     transform: translateX(-100%) rotateY(-90deg);
@@ -9935,7 +9948,7 @@ body {
 }
 
 @-webkit-keyframes rotateUnfoldRight {
-  /* line 1239, scss/modules/page-transitions/_animations.scss */
+  /* line 1239, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -webkit-transform: translateX(100%) rotateY(90deg);
@@ -9943,7 +9956,7 @@ body {
 }
 
 @-moz-keyframes rotateUnfoldRight {
-  /* line 1242, scss/modules/page-transitions/_animations.scss */
+  /* line 1242, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -moz-transform: translateX(100%) rotateY(90deg);
@@ -9951,7 +9964,7 @@ body {
 }
 
 @keyframes rotateUnfoldRight {
-  /* line 1245, scss/modules/page-transitions/_animations.scss */
+  /* line 1245, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     transform: translateX(100%) rotateY(90deg);
@@ -9959,7 +9972,7 @@ body {
 }
 
 @-webkit-keyframes rotateUnfoldTop {
-  /* line 1249, scss/modules/page-transitions/_animations.scss */
+  /* line 1249, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -webkit-transform: translateY(-100%) rotateX(90deg);
@@ -9967,7 +9980,7 @@ body {
 }
 
 @-moz-keyframes rotateUnfoldTop {
-  /* line 1252, scss/modules/page-transitions/_animations.scss */
+  /* line 1252, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -moz-transform: translateY(-100%) rotateX(90deg);
@@ -9975,7 +9988,7 @@ body {
 }
 
 @keyframes rotateUnfoldTop {
-  /* line 1255, scss/modules/page-transitions/_animations.scss */
+  /* line 1255, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     transform: translateY(-100%) rotateX(90deg);
@@ -9983,7 +9996,7 @@ body {
 }
 
 @-webkit-keyframes rotateUnfoldBottom {
-  /* line 1259, scss/modules/page-transitions/_animations.scss */
+  /* line 1259, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -webkit-transform: translateY(100%) rotateX(-90deg);
@@ -9991,7 +10004,7 @@ body {
 }
 
 @-moz-keyframes rotateUnfoldBottom {
-  /* line 1262, scss/modules/page-transitions/_animations.scss */
+  /* line 1262, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -moz-transform: translateY(100%) rotateX(-90deg);
@@ -9999,7 +10012,7 @@ body {
 }
 
 @keyframes rotateUnfoldBottom {
-  /* line 1265, scss/modules/page-transitions/_animations.scss */
+  /* line 1265, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     transform: translateY(100%) rotateX(-90deg);
@@ -10008,7 +10021,7 @@ body {
 
 /* room walls */
 @-webkit-keyframes rotateRoomLeftOut {
-  /* line 1271, scss/modules/page-transitions/_animations.scss */
+  /* line 1271, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     -webkit-transform: translateX(-100%) rotateY(90deg);
@@ -10016,7 +10029,7 @@ body {
 }
 
 @-moz-keyframes rotateRoomLeftOut {
-  /* line 1274, scss/modules/page-transitions/_animations.scss */
+  /* line 1274, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     -moz-transform: translateX(-100%) rotateY(90deg);
@@ -10024,7 +10037,7 @@ body {
 }
 
 @keyframes rotateRoomLeftOut {
-  /* line 1277, scss/modules/page-transitions/_animations.scss */
+  /* line 1277, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     transform: translateX(-100%) rotateY(90deg);
@@ -10032,7 +10045,7 @@ body {
 }
 
 @-webkit-keyframes rotateRoomLeftIn {
-  /* line 1281, scss/modules/page-transitions/_animations.scss */
+  /* line 1281, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     -webkit-transform: translateX(100%) rotateY(-90deg);
@@ -10040,7 +10053,7 @@ body {
 }
 
 @-moz-keyframes rotateRoomLeftIn {
-  /* line 1284, scss/modules/page-transitions/_animations.scss */
+  /* line 1284, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     -moz-transform: translateX(100%) rotateY(-90deg);
@@ -10048,7 +10061,7 @@ body {
 }
 
 @keyframes rotateRoomLeftIn {
-  /* line 1287, scss/modules/page-transitions/_animations.scss */
+  /* line 1287, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     transform: translateX(100%) rotateY(-90deg);
@@ -10056,7 +10069,7 @@ body {
 }
 
 @-webkit-keyframes rotateRoomRightOut {
-  /* line 1291, scss/modules/page-transitions/_animations.scss */
+  /* line 1291, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     -webkit-transform: translateX(100%) rotateY(-90deg);
@@ -10064,7 +10077,7 @@ body {
 }
 
 @-moz-keyframes rotateRoomRightOut {
-  /* line 1294, scss/modules/page-transitions/_animations.scss */
+  /* line 1294, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     -moz-transform: translateX(100%) rotateY(-90deg);
@@ -10072,7 +10085,7 @@ body {
 }
 
 @keyframes rotateRoomRightOut {
-  /* line 1297, scss/modules/page-transitions/_animations.scss */
+  /* line 1297, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     transform: translateX(100%) rotateY(-90deg);
@@ -10080,7 +10093,7 @@ body {
 }
 
 @-webkit-keyframes rotateRoomRightIn {
-  /* line 1301, scss/modules/page-transitions/_animations.scss */
+  /* line 1301, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     -webkit-transform: translateX(-100%) rotateY(90deg);
@@ -10088,7 +10101,7 @@ body {
 }
 
 @-moz-keyframes rotateRoomRightIn {
-  /* line 1304, scss/modules/page-transitions/_animations.scss */
+  /* line 1304, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     -moz-transform: translateX(-100%) rotateY(90deg);
@@ -10096,7 +10109,7 @@ body {
 }
 
 @keyframes rotateRoomRightIn {
-  /* line 1307, scss/modules/page-transitions/_animations.scss */
+  /* line 1307, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     transform: translateX(-100%) rotateY(90deg);
@@ -10104,7 +10117,7 @@ body {
 }
 
 @-webkit-keyframes rotateRoomTopOut {
-  /* line 1311, scss/modules/page-transitions/_animations.scss */
+  /* line 1311, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     -webkit-transform: translateY(-100%) rotateX(-90deg);
@@ -10112,7 +10125,7 @@ body {
 }
 
 @-moz-keyframes rotateRoomTopOut {
-  /* line 1314, scss/modules/page-transitions/_animations.scss */
+  /* line 1314, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     -moz-transform: translateY(-100%) rotateX(-90deg);
@@ -10120,7 +10133,7 @@ body {
 }
 
 @keyframes rotateRoomTopOut {
-  /* line 1317, scss/modules/page-transitions/_animations.scss */
+  /* line 1317, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     transform: translateY(-100%) rotateX(-90deg);
@@ -10128,7 +10141,7 @@ body {
 }
 
 @-webkit-keyframes rotateRoomTopIn {
-  /* line 1321, scss/modules/page-transitions/_animations.scss */
+  /* line 1321, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     -webkit-transform: translateY(100%) rotateX(90deg);
@@ -10136,7 +10149,7 @@ body {
 }
 
 @-moz-keyframes rotateRoomTopIn {
-  /* line 1324, scss/modules/page-transitions/_animations.scss */
+  /* line 1324, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     -moz-transform: translateY(100%) rotateX(90deg);
@@ -10144,7 +10157,7 @@ body {
 }
 
 @keyframes rotateRoomTopIn {
-  /* line 1327, scss/modules/page-transitions/_animations.scss */
+  /* line 1327, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     transform: translateY(100%) rotateX(90deg);
@@ -10152,7 +10165,7 @@ body {
 }
 
 @-webkit-keyframes rotateRoomBottomOut {
-  /* line 1331, scss/modules/page-transitions/_animations.scss */
+  /* line 1331, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     -webkit-transform: translateY(100%) rotateX(90deg);
@@ -10160,7 +10173,7 @@ body {
 }
 
 @-moz-keyframes rotateRoomBottomOut {
-  /* line 1334, scss/modules/page-transitions/_animations.scss */
+  /* line 1334, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     -moz-transform: translateY(100%) rotateX(90deg);
@@ -10168,7 +10181,7 @@ body {
 }
 
 @keyframes rotateRoomBottomOut {
-  /* line 1337, scss/modules/page-transitions/_animations.scss */
+  /* line 1337, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     transform: translateY(100%) rotateX(90deg);
@@ -10176,7 +10189,7 @@ body {
 }
 
 @-webkit-keyframes rotateRoomBottomIn {
-  /* line 1341, scss/modules/page-transitions/_animations.scss */
+  /* line 1341, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     -webkit-transform: translateY(-100%) rotateX(-90deg);
@@ -10184,7 +10197,7 @@ body {
 }
 
 @-moz-keyframes rotateRoomBottomIn {
-  /* line 1344, scss/modules/page-transitions/_animations.scss */
+  /* line 1344, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     -moz-transform: translateY(-100%) rotateX(-90deg);
@@ -10192,7 +10205,7 @@ body {
 }
 
 @keyframes rotateRoomBottomIn {
-  /* line 1347, scss/modules/page-transitions/_animations.scss */
+  /* line 1347, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     transform: translateY(-100%) rotateX(-90deg);
@@ -10201,13 +10214,13 @@ body {
 
 /* cube */
 @-webkit-keyframes rotateCubeLeftOut {
-  /* line 1353, scss/modules/page-transitions/_animations.scss */
+  /* line 1353, scss/modules/page-transitions/_animation.scss */
   50% {
     -webkit-animation-timing-function: ease-out;
     -webkit-transform: translateX(-50%) translateZ(-200px) rotateY(-45deg);
   }
 
-  /* line 1354, scss/modules/page-transitions/_animations.scss */
+  /* line 1354, scss/modules/page-transitions/_animation.scss */
   100% {
     opacity: .3;
     -webkit-transform: translateX(-100%) rotateY(-90deg);
@@ -10215,13 +10228,13 @@ body {
 }
 
 @-moz-keyframes rotateCubeLeftOut {
-  /* line 1357, scss/modules/page-transitions/_animations.scss */
+  /* line 1357, scss/modules/page-transitions/_animation.scss */
   50% {
     -moz-animation-timing-function: ease-out;
     -moz-transform: translateX(-50%) translateZ(-200px) rotateY(-45deg);
   }
 
-  /* line 1358, scss/modules/page-transitions/_animations.scss */
+  /* line 1358, scss/modules/page-transitions/_animation.scss */
   100% {
     opacity: .3;
     -moz-transform: translateX(-100%) rotateY(-90deg);
@@ -10229,13 +10242,13 @@ body {
 }
 
 @keyframes rotateCubeLeftOut {
-  /* line 1361, scss/modules/page-transitions/_animations.scss */
+  /* line 1361, scss/modules/page-transitions/_animation.scss */
   50% {
     animation-timing-function: ease-out;
     transform: translateX(-50%) translateZ(-200px) rotateY(-45deg);
   }
 
-  /* line 1362, scss/modules/page-transitions/_animations.scss */
+  /* line 1362, scss/modules/page-transitions/_animation.scss */
   100% {
     opacity: .3;
     transform: translateX(-100%) rotateY(-90deg);
@@ -10243,13 +10256,13 @@ body {
 }
 
 @-webkit-keyframes rotateCubeLeftIn {
-  /* line 1366, scss/modules/page-transitions/_animations.scss */
+  /* line 1366, scss/modules/page-transitions/_animation.scss */
   0% {
     opacity: .3;
     -webkit-transform: translateX(100%) rotateY(90deg);
   }
 
-  /* line 1367, scss/modules/page-transitions/_animations.scss */
+  /* line 1367, scss/modules/page-transitions/_animation.scss */
   50% {
     -webkit-animation-timing-function: ease-out;
     -webkit-transform: translateX(50%) translateZ(-200px) rotateY(45deg);
@@ -10257,13 +10270,13 @@ body {
 }
 
 @-moz-keyframes rotateCubeLeftIn {
-  /* line 1370, scss/modules/page-transitions/_animations.scss */
+  /* line 1370, scss/modules/page-transitions/_animation.scss */
   0% {
     opacity: .3;
     -moz-transform: translateX(100%) rotateY(90deg);
   }
 
-  /* line 1371, scss/modules/page-transitions/_animations.scss */
+  /* line 1371, scss/modules/page-transitions/_animation.scss */
   50% {
     -moz-animation-timing-function: ease-out;
     -moz-transform: translateX(50%) translateZ(-200px) rotateY(45deg);
@@ -10271,13 +10284,13 @@ body {
 }
 
 @keyframes rotateCubeLeftIn {
-  /* line 1374, scss/modules/page-transitions/_animations.scss */
+  /* line 1374, scss/modules/page-transitions/_animation.scss */
   0% {
     opacity: .3;
     transform: translateX(100%) rotateY(90deg);
   }
 
-  /* line 1375, scss/modules/page-transitions/_animations.scss */
+  /* line 1375, scss/modules/page-transitions/_animation.scss */
   50% {
     animation-timing-function: ease-out;
     transform: translateX(50%) translateZ(-200px) rotateY(45deg);
@@ -10285,13 +10298,13 @@ body {
 }
 
 @-webkit-keyframes rotateCubeRightOut {
-  /* line 1379, scss/modules/page-transitions/_animations.scss */
+  /* line 1379, scss/modules/page-transitions/_animation.scss */
   50% {
     -webkit-animation-timing-function: ease-out;
     -webkit-transform: translateX(50%) translateZ(-200px) rotateY(45deg);
   }
 
-  /* line 1380, scss/modules/page-transitions/_animations.scss */
+  /* line 1380, scss/modules/page-transitions/_animation.scss */
   100% {
     opacity: .3;
     -webkit-transform: translateX(100%) rotateY(90deg);
@@ -10299,13 +10312,13 @@ body {
 }
 
 @-moz-keyframes rotateCubeRightOut {
-  /* line 1383, scss/modules/page-transitions/_animations.scss */
+  /* line 1383, scss/modules/page-transitions/_animation.scss */
   50% {
     -moz-animation-timing-function: ease-out;
     -moz-transform: translateX(50%) translateZ(-200px) rotateY(45deg);
   }
 
-  /* line 1384, scss/modules/page-transitions/_animations.scss */
+  /* line 1384, scss/modules/page-transitions/_animation.scss */
   100% {
     opacity: .3;
     -moz-transform: translateX(100%) rotateY(90deg);
@@ -10313,13 +10326,13 @@ body {
 }
 
 @keyframes rotateCubeRightOut {
-  /* line 1387, scss/modules/page-transitions/_animations.scss */
+  /* line 1387, scss/modules/page-transitions/_animation.scss */
   50% {
     animation-timing-function: ease-out;
     transform: translateX(50%) translateZ(-200px) rotateY(45deg);
   }
 
-  /* line 1388, scss/modules/page-transitions/_animations.scss */
+  /* line 1388, scss/modules/page-transitions/_animation.scss */
   100% {
     opacity: .3;
     transform: translateX(100%) rotateY(90deg);
@@ -10327,13 +10340,13 @@ body {
 }
 
 @-webkit-keyframes rotateCubeRightIn {
-  /* line 1392, scss/modules/page-transitions/_animations.scss */
+  /* line 1392, scss/modules/page-transitions/_animation.scss */
   0% {
     opacity: .3;
     -webkit-transform: translateX(-100%) rotateY(-90deg);
   }
 
-  /* line 1393, scss/modules/page-transitions/_animations.scss */
+  /* line 1393, scss/modules/page-transitions/_animation.scss */
   50% {
     -webkit-animation-timing-function: ease-out;
     -webkit-transform: translateX(-50%) translateZ(-200px) rotateY(-45deg);
@@ -10341,13 +10354,13 @@ body {
 }
 
 @-moz-keyframes rotateCubeRightIn {
-  /* line 1396, scss/modules/page-transitions/_animations.scss */
+  /* line 1396, scss/modules/page-transitions/_animation.scss */
   0% {
     opacity: .3;
     -moz-transform: translateX(-100%) rotateY(-90deg);
   }
 
-  /* line 1397, scss/modules/page-transitions/_animations.scss */
+  /* line 1397, scss/modules/page-transitions/_animation.scss */
   50% {
     -moz-animation-timing-function: ease-out;
     -moz-transform: translateX(-50%) translateZ(-200px) rotateY(-45deg);
@@ -10355,13 +10368,13 @@ body {
 }
 
 @keyframes rotateCubeRightIn {
-  /* line 1400, scss/modules/page-transitions/_animations.scss */
+  /* line 1400, scss/modules/page-transitions/_animation.scss */
   0% {
     opacity: .3;
     transform: translateX(-100%) rotateY(-90deg);
   }
 
-  /* line 1401, scss/modules/page-transitions/_animations.scss */
+  /* line 1401, scss/modules/page-transitions/_animation.scss */
   50% {
     animation-timing-function: ease-out;
     transform: translateX(-50%) translateZ(-200px) rotateY(-45deg);
@@ -10369,13 +10382,13 @@ body {
 }
 
 @-webkit-keyframes rotateCubeTopOut {
-  /* line 1405, scss/modules/page-transitions/_animations.scss */
+  /* line 1405, scss/modules/page-transitions/_animation.scss */
   50% {
     -webkit-animation-timing-function: ease-out;
     -webkit-transform: translateY(-50%) translateZ(-200px) rotateX(45deg);
   }
 
-  /* line 1406, scss/modules/page-transitions/_animations.scss */
+  /* line 1406, scss/modules/page-transitions/_animation.scss */
   100% {
     opacity: .3;
     -webkit-transform: translateY(-100%) rotateX(90deg);
@@ -10383,13 +10396,13 @@ body {
 }
 
 @-moz-keyframes rotateCubeTopOut {
-  /* line 1409, scss/modules/page-transitions/_animations.scss */
+  /* line 1409, scss/modules/page-transitions/_animation.scss */
   50% {
     -moz-animation-timing-function: ease-out;
     -moz-transform: translateY(-50%) translateZ(-200px) rotateX(45deg);
   }
 
-  /* line 1410, scss/modules/page-transitions/_animations.scss */
+  /* line 1410, scss/modules/page-transitions/_animation.scss */
   100% {
     opacity: .3;
     -moz-transform: translateY(-100%) rotateX(90deg);
@@ -10397,13 +10410,13 @@ body {
 }
 
 @keyframes rotateCubeTopOut {
-  /* line 1413, scss/modules/page-transitions/_animations.scss */
+  /* line 1413, scss/modules/page-transitions/_animation.scss */
   50% {
     animation-timing-function: ease-out;
     transform: translateY(-50%) translateZ(-200px) rotateX(45deg);
   }
 
-  /* line 1414, scss/modules/page-transitions/_animations.scss */
+  /* line 1414, scss/modules/page-transitions/_animation.scss */
   100% {
     opacity: .3;
     transform: translateY(-100%) rotateX(90deg);
@@ -10411,13 +10424,13 @@ body {
 }
 
 @-webkit-keyframes rotateCubeTopIn {
-  /* line 1418, scss/modules/page-transitions/_animations.scss */
+  /* line 1418, scss/modules/page-transitions/_animation.scss */
   0% {
     opacity: .3;
     -webkit-transform: translateY(100%) rotateX(-90deg);
   }
 
-  /* line 1419, scss/modules/page-transitions/_animations.scss */
+  /* line 1419, scss/modules/page-transitions/_animation.scss */
   50% {
     -webkit-animation-timing-function: ease-out;
     -webkit-transform: translateY(50%) translateZ(-200px) rotateX(-45deg);
@@ -10425,13 +10438,13 @@ body {
 }
 
 @-moz-keyframes rotateCubeTopIn {
-  /* line 1422, scss/modules/page-transitions/_animations.scss */
+  /* line 1422, scss/modules/page-transitions/_animation.scss */
   0% {
     opacity: .3;
     -moz-transform: translateY(100%) rotateX(-90deg);
   }
 
-  /* line 1423, scss/modules/page-transitions/_animations.scss */
+  /* line 1423, scss/modules/page-transitions/_animation.scss */
   50% {
     -moz-animation-timing-function: ease-out;
     -moz-transform: translateY(50%) translateZ(-200px) rotateX(-45deg);
@@ -10439,13 +10452,13 @@ body {
 }
 
 @keyframes rotateCubeTopIn {
-  /* line 1426, scss/modules/page-transitions/_animations.scss */
+  /* line 1426, scss/modules/page-transitions/_animation.scss */
   0% {
     opacity: .3;
     transform: translateY(100%) rotateX(-90deg);
   }
 
-  /* line 1427, scss/modules/page-transitions/_animations.scss */
+  /* line 1427, scss/modules/page-transitions/_animation.scss */
   50% {
     animation-timing-function: ease-out;
     transform: translateY(50%) translateZ(-200px) rotateX(-45deg);
@@ -10453,13 +10466,13 @@ body {
 }
 
 @-webkit-keyframes rotateCubeBottomOut {
-  /* line 1431, scss/modules/page-transitions/_animations.scss */
+  /* line 1431, scss/modules/page-transitions/_animation.scss */
   50% {
     -webkit-animation-timing-function: ease-out;
     -webkit-transform: translateY(50%) translateZ(-200px) rotateX(-45deg);
   }
 
-  /* line 1432, scss/modules/page-transitions/_animations.scss */
+  /* line 1432, scss/modules/page-transitions/_animation.scss */
   100% {
     opacity: .3;
     -webkit-transform: translateY(100%) rotateX(-90deg);
@@ -10467,13 +10480,13 @@ body {
 }
 
 @-moz-keyframes rotateCubeBottomOut {
-  /* line 1435, scss/modules/page-transitions/_animations.scss */
+  /* line 1435, scss/modules/page-transitions/_animation.scss */
   50% {
     -moz-animation-timing-function: ease-out;
     -moz-transform: translateY(50%) translateZ(-200px) rotateX(-45deg);
   }
 
-  /* line 1436, scss/modules/page-transitions/_animations.scss */
+  /* line 1436, scss/modules/page-transitions/_animation.scss */
   100% {
     opacity: .3;
     -moz-transform: translateY(100%) rotateX(-90deg);
@@ -10481,13 +10494,13 @@ body {
 }
 
 @keyframes rotateCubeBottomOut {
-  /* line 1439, scss/modules/page-transitions/_animations.scss */
+  /* line 1439, scss/modules/page-transitions/_animation.scss */
   50% {
     animation-timing-function: ease-out;
     transform: translateY(50%) translateZ(-200px) rotateX(-45deg);
   }
 
-  /* line 1440, scss/modules/page-transitions/_animations.scss */
+  /* line 1440, scss/modules/page-transitions/_animation.scss */
   100% {
     opacity: .3;
     transform: translateY(100%) rotateX(-90deg);
@@ -10495,13 +10508,13 @@ body {
 }
 
 @-webkit-keyframes rotateCubeBottomIn {
-  /* line 1444, scss/modules/page-transitions/_animations.scss */
+  /* line 1444, scss/modules/page-transitions/_animation.scss */
   0% {
     opacity: .3;
     -webkit-transform: translateY(-100%) rotateX(90deg);
   }
 
-  /* line 1445, scss/modules/page-transitions/_animations.scss */
+  /* line 1445, scss/modules/page-transitions/_animation.scss */
   50% {
     -webkit-animation-timing-function: ease-out;
     -webkit-transform: translateY(-50%) translateZ(-200px) rotateX(45deg);
@@ -10509,13 +10522,13 @@ body {
 }
 
 @-moz-keyframes rotateCubeBottomIn {
-  /* line 1448, scss/modules/page-transitions/_animations.scss */
+  /* line 1448, scss/modules/page-transitions/_animation.scss */
   0% {
     opacity: .3;
     -moz-transform: translateY(-100%) rotateX(90deg);
   }
 
-  /* line 1449, scss/modules/page-transitions/_animations.scss */
+  /* line 1449, scss/modules/page-transitions/_animation.scss */
   50% {
     -moz-animation-timing-function: ease-out;
     -moz-transform: translateY(-50%) translateZ(-200px) rotateX(45deg);
@@ -10523,13 +10536,13 @@ body {
 }
 
 @keyframes rotateCubeBottomIn {
-  /* line 1452, scss/modules/page-transitions/_animations.scss */
+  /* line 1452, scss/modules/page-transitions/_animation.scss */
   0% {
     opacity: .3;
     transform: translateY(-100%) rotateX(90deg);
   }
 
-  /* line 1453, scss/modules/page-transitions/_animations.scss */
+  /* line 1453, scss/modules/page-transitions/_animation.scss */
   50% {
     animation-timing-function: ease-out;
     transform: translateY(-50%) translateZ(-200px) rotateX(45deg);
@@ -10538,7 +10551,7 @@ body {
 
 /* carousel */
 @-webkit-keyframes rotateCarouselLeftOut {
-  /* line 1459, scss/modules/page-transitions/_animations.scss */
+  /* line 1459, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     -webkit-transform: translateX(-150%) scale(0.4) rotateY(-65deg);
@@ -10546,7 +10559,7 @@ body {
 }
 
 @-moz-keyframes rotateCarouselLeftOut {
-  /* line 1462, scss/modules/page-transitions/_animations.scss */
+  /* line 1462, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     -moz-transform: translateX(-150%) scale(0.4) rotateY(-65deg);
@@ -10554,7 +10567,7 @@ body {
 }
 
 @keyframes rotateCarouselLeftOut {
-  /* line 1465, scss/modules/page-transitions/_animations.scss */
+  /* line 1465, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     transform: translateX(-150%) scale(0.4) rotateY(-65deg);
@@ -10562,7 +10575,7 @@ body {
 }
 
 @-webkit-keyframes rotateCarouselLeftIn {
-  /* line 1469, scss/modules/page-transitions/_animations.scss */
+  /* line 1469, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     -webkit-transform: translateX(200%) scale(0.4) rotateY(65deg);
@@ -10570,7 +10583,7 @@ body {
 }
 
 @-moz-keyframes rotateCarouselLeftIn {
-  /* line 1472, scss/modules/page-transitions/_animations.scss */
+  /* line 1472, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     -moz-transform: translateX(200%) scale(0.4) rotateY(65deg);
@@ -10578,7 +10591,7 @@ body {
 }
 
 @keyframes rotateCarouselLeftIn {
-  /* line 1475, scss/modules/page-transitions/_animations.scss */
+  /* line 1475, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     transform: translateX(200%) scale(0.4) rotateY(65deg);
@@ -10586,7 +10599,7 @@ body {
 }
 
 @-webkit-keyframes rotateCarouselRightOut {
-  /* line 1479, scss/modules/page-transitions/_animations.scss */
+  /* line 1479, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     -webkit-transform: translateX(200%) scale(0.4) rotateY(65deg);
@@ -10594,7 +10607,7 @@ body {
 }
 
 @-moz-keyframes rotateCarouselRightOut {
-  /* line 1482, scss/modules/page-transitions/_animations.scss */
+  /* line 1482, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     -moz-transform: translateX(200%) scale(0.4) rotateY(65deg);
@@ -10602,7 +10615,7 @@ body {
 }
 
 @keyframes rotateCarouselRightOut {
-  /* line 1485, scss/modules/page-transitions/_animations.scss */
+  /* line 1485, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     transform: translateX(200%) scale(0.4) rotateY(65deg);
@@ -10610,7 +10623,7 @@ body {
 }
 
 @-webkit-keyframes rotateCarouselRightIn {
-  /* line 1489, scss/modules/page-transitions/_animations.scss */
+  /* line 1489, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     -webkit-transform: translateX(-200%) scale(0.4) rotateY(-65deg);
@@ -10618,7 +10631,7 @@ body {
 }
 
 @-moz-keyframes rotateCarouselRightIn {
-  /* line 1492, scss/modules/page-transitions/_animations.scss */
+  /* line 1492, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     -moz-transform: translateX(-200%) scale(0.4) rotateY(-65deg);
@@ -10626,7 +10639,7 @@ body {
 }
 
 @keyframes rotateCarouselRightIn {
-  /* line 1495, scss/modules/page-transitions/_animations.scss */
+  /* line 1495, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     transform: translateX(-200%) scale(0.4) rotateY(-65deg);
@@ -10634,7 +10647,7 @@ body {
 }
 
 @-webkit-keyframes rotateCarouselTopOut {
-  /* line 1499, scss/modules/page-transitions/_animations.scss */
+  /* line 1499, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     -webkit-transform: translateY(-200%) scale(0.4) rotateX(65deg);
@@ -10642,7 +10655,7 @@ body {
 }
 
 @-moz-keyframes rotateCarouselTopOut {
-  /* line 1502, scss/modules/page-transitions/_animations.scss */
+  /* line 1502, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     -moz-transform: translateY(-200%) scale(0.4) rotateX(65deg);
@@ -10650,7 +10663,7 @@ body {
 }
 
 @keyframes rotateCarouselTopOut {
-  /* line 1505, scss/modules/page-transitions/_animations.scss */
+  /* line 1505, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     transform: translateY(-200%) scale(0.4) rotateX(65deg);
@@ -10658,7 +10671,7 @@ body {
 }
 
 @-webkit-keyframes rotateCarouselTopIn {
-  /* line 1509, scss/modules/page-transitions/_animations.scss */
+  /* line 1509, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     -webkit-transform: translateY(200%) scale(0.4) rotateX(-65deg);
@@ -10666,7 +10679,7 @@ body {
 }
 
 @-moz-keyframes rotateCarouselTopIn {
-  /* line 1512, scss/modules/page-transitions/_animations.scss */
+  /* line 1512, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     -moz-transform: translateY(200%) scale(0.4) rotateX(-65deg);
@@ -10674,7 +10687,7 @@ body {
 }
 
 @keyframes rotateCarouselTopIn {
-  /* line 1515, scss/modules/page-transitions/_animations.scss */
+  /* line 1515, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     transform: translateY(200%) scale(0.4) rotateX(-65deg);
@@ -10682,7 +10695,7 @@ body {
 }
 
 @-webkit-keyframes rotateCarouselBottomOut {
-  /* line 1519, scss/modules/page-transitions/_animations.scss */
+  /* line 1519, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     -webkit-transform: translateY(200%) scale(0.4) rotateX(-65deg);
@@ -10690,7 +10703,7 @@ body {
 }
 
 @-moz-keyframes rotateCarouselBottomOut {
-  /* line 1522, scss/modules/page-transitions/_animations.scss */
+  /* line 1522, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     -moz-transform: translateY(200%) scale(0.4) rotateX(-65deg);
@@ -10698,7 +10711,7 @@ body {
 }
 
 @keyframes rotateCarouselBottomOut {
-  /* line 1525, scss/modules/page-transitions/_animations.scss */
+  /* line 1525, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: .3;
     transform: translateY(200%) scale(0.4) rotateX(-65deg);
@@ -10706,7 +10719,7 @@ body {
 }
 
 @-webkit-keyframes rotateCarouselBottomIn {
-  /* line 1529, scss/modules/page-transitions/_animations.scss */
+  /* line 1529, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     -webkit-transform: translateY(-200%) scale(0.4) rotateX(65deg);
@@ -10714,7 +10727,7 @@ body {
 }
 
 @-moz-keyframes rotateCarouselBottomIn {
-  /* line 1532, scss/modules/page-transitions/_animations.scss */
+  /* line 1532, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     -moz-transform: translateY(-200%) scale(0.4) rotateX(65deg);
@@ -10722,7 +10735,7 @@ body {
 }
 
 @keyframes rotateCarouselBottomIn {
-  /* line 1535, scss/modules/page-transitions/_animations.scss */
+  /* line 1535, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: .3;
     transform: translateY(-200%) scale(0.4) rotateX(65deg);
@@ -10731,7 +10744,7 @@ body {
 
 /* sides */
 @-webkit-keyframes rotateSidesOut {
-  /* line 1541, scss/modules/page-transitions/_animations.scss */
+  /* line 1541, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -webkit-transform: translateZ(-500px) rotateY(90deg);
@@ -10739,7 +10752,7 @@ body {
 }
 
 @-moz-keyframes rotateSidesOut {
-  /* line 1544, scss/modules/page-transitions/_animations.scss */
+  /* line 1544, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     -moz-transform: translateZ(-500px) rotateY(90deg);
@@ -10747,7 +10760,7 @@ body {
 }
 
 @keyframes rotateSidesOut {
-  /* line 1547, scss/modules/page-transitions/_animations.scss */
+  /* line 1547, scss/modules/page-transitions/_animation.scss */
   to {
     opacity: 0;
     transform: translateZ(-500px) rotateY(90deg);
@@ -10755,7 +10768,7 @@ body {
 }
 
 @-webkit-keyframes rotateSidesIn {
-  /* line 1551, scss/modules/page-transitions/_animations.scss */
+  /* line 1551, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -webkit-transform: translateZ(-500px) rotateY(-90deg);
@@ -10763,7 +10776,7 @@ body {
 }
 
 @-moz-keyframes rotateSidesIn {
-  /* line 1554, scss/modules/page-transitions/_animations.scss */
+  /* line 1554, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     -moz-transform: translateZ(-500px) rotateY(-90deg);
@@ -10771,7 +10784,7 @@ body {
 }
 
 @keyframes rotateSidesIn {
-  /* line 1557, scss/modules/page-transitions/_animations.scss */
+  /* line 1557, scss/modules/page-transitions/_animation.scss */
   from {
     opacity: 0;
     transform: translateZ(-500px) rotateY(-90deg);
@@ -10780,19 +10793,19 @@ body {
 
 /* slide */
 @-webkit-keyframes rotateSlideOut {
-  /* line 1563, scss/modules/page-transitions/_animations.scss */
+  /* line 1563, scss/modules/page-transitions/_animation.scss */
   25% {
     opacity: .5;
     -webkit-transform: translateZ(-500px);
   }
 
-  /* line 1564, scss/modules/page-transitions/_animations.scss */
+  /* line 1564, scss/modules/page-transitions/_animation.scss */
   75% {
     opacity: .5;
     -webkit-transform: translateZ(-500px) translateX(-200%);
   }
 
-  /* line 1565, scss/modules/page-transitions/_animations.scss */
+  /* line 1565, scss/modules/page-transitions/_animation.scss */
   100% {
     opacity: .5;
     -webkit-transform: translateZ(-500px) translateX(-200%);
@@ -10800,19 +10813,19 @@ body {
 }
 
 @-moz-keyframes rotateSlideOut {
-  /* line 1568, scss/modules/page-transitions/_animations.scss */
+  /* line 1568, scss/modules/page-transitions/_animation.scss */
   25% {
     opacity: .5;
     -moz-transform: translateZ(-500px);
   }
 
-  /* line 1569, scss/modules/page-transitions/_animations.scss */
+  /* line 1569, scss/modules/page-transitions/_animation.scss */
   75% {
     opacity: .5;
     -moz-transform: translateZ(-500px) translateX(-200%);
   }
 
-  /* line 1570, scss/modules/page-transitions/_animations.scss */
+  /* line 1570, scss/modules/page-transitions/_animation.scss */
   100% {
     opacity: .5;
     -moz-transform: translateZ(-500px) translateX(-200%);
@@ -10820,19 +10833,19 @@ body {
 }
 
 @keyframes rotateSlideOut {
-  /* line 1573, scss/modules/page-transitions/_animations.scss */
+  /* line 1573, scss/modules/page-transitions/_animation.scss */
   25% {
     opacity: .5;
     transform: translateZ(-500px);
   }
 
-  /* line 1574, scss/modules/page-transitions/_animations.scss */
+  /* line 1574, scss/modules/page-transitions/_animation.scss */
   75% {
     opacity: .5;
     transform: translateZ(-500px) translateX(-200%);
   }
 
-  /* line 1575, scss/modules/page-transitions/_animations.scss */
+  /* line 1575, scss/modules/page-transitions/_animation.scss */
   100% {
     opacity: .5;
     transform: translateZ(-500px) translateX(-200%);
@@ -10840,19 +10853,19 @@ body {
 }
 
 @-webkit-keyframes rotateSlideIn {
-  /* line 1579, scss/modules/page-transitions/_animations.scss */
+  /* line 1579, scss/modules/page-transitions/_animation.scss */
   0%, 25% {
     opacity: .5;
     -webkit-transform: translateZ(-500px) translateX(200%);
   }
 
-  /* line 1580, scss/modules/page-transitions/_animations.scss */
+  /* line 1580, scss/modules/page-transitions/_animation.scss */
   75% {
     opacity: .5;
     -webkit-transform: translateZ(-500px);
   }
 
-  /* line 1581, scss/modules/page-transitions/_animations.scss */
+  /* line 1581, scss/modules/page-transitions/_animation.scss */
   100% {
     opacity: 1;
     -webkit-transform: translateZ(0) translateX(0);
@@ -10860,19 +10873,19 @@ body {
 }
 
 @-moz-keyframes rotateSlideIn {
-  /* line 1584, scss/modules/page-transitions/_animations.scss */
+  /* line 1584, scss/modules/page-transitions/_animation.scss */
   0%, 25% {
     opacity: .5;
     -moz-transform: translateZ(-500px) translateX(200%);
   }
 
-  /* line 1585, scss/modules/page-transitions/_animations.scss */
+  /* line 1585, scss/modules/page-transitions/_animation.scss */
   75% {
     opacity: .5;
     -moz-transform: translateZ(-500px);
   }
 
-  /* line 1586, scss/modules/page-transitions/_animations.scss */
+  /* line 1586, scss/modules/page-transitions/_animation.scss */
   100% {
     opacity: 1;
     -moz-transform: translateZ(0) translateX(0);
@@ -10880,19 +10893,19 @@ body {
 }
 
 @keyframes rotateSlideIn {
-  /* line 1589, scss/modules/page-transitions/_animations.scss */
+  /* line 1589, scss/modules/page-transitions/_animation.scss */
   0%, 25% {
     opacity: .5;
     transform: translateZ(-500px) translateX(200%);
   }
 
-  /* line 1590, scss/modules/page-transitions/_animations.scss */
+  /* line 1590, scss/modules/page-transitions/_animation.scss */
   75% {
     opacity: .5;
     transform: translateZ(-500px);
   }
 
-  /* line 1591, scss/modules/page-transitions/_animations.scss */
+  /* line 1591, scss/modules/page-transitions/_animation.scss */
   100% {
     opacity: 1;
     transform: translateZ(0) translateX(0);
@@ -10900,60 +10913,520 @@ body {
 }
 
 /* animation delay classes */
-/* line 1596, scss/modules/page-transitions/_animations.scss */
+/* line 1596, scss/modules/page-transitions/_animation.scss */
 .pt-page-delay100 {
   -webkit-animation-delay: .1s;
   -moz-animation-delay: .1s;
   animation-delay: .1s;
 }
 
-/* line 1601, scss/modules/page-transitions/_animations.scss */
+/* line 1601, scss/modules/page-transitions/_animation.scss */
 .pt-page-delay180 {
   -webkit-animation-delay: .180s;
   -moz-animation-delay: .180s;
   animation-delay: .180s;
 }
 
-/* line 1606, scss/modules/page-transitions/_animations.scss */
+/* line 1606, scss/modules/page-transitions/_animation.scss */
 .pt-page-delay200 {
   -webkit-animation-delay: .2s;
   -moz-animation-delay: .2s;
   animation-delay: .2s;
 }
 
-/* line 1611, scss/modules/page-transitions/_animations.scss */
+/* line 1611, scss/modules/page-transitions/_animation.scss */
 .pt-page-delay300 {
   -webkit-animation-delay: .3s;
   -moz-animation-delay: .3s;
   animation-delay: .3s;
 }
 
-/* line 1616, scss/modules/page-transitions/_animations.scss */
+/* line 1616, scss/modules/page-transitions/_animation.scss */
 .pt-page-delay400 {
   -webkit-animation-delay: .4s;
   -moz-animation-delay: .4s;
   animation-delay: .4s;
 }
 
-/* line 1621, scss/modules/page-transitions/_animations.scss */
+/* line 1621, scss/modules/page-transitions/_animation.scss */
 .pt-page-delay500 {
   -webkit-animation-delay: .5s;
   -moz-animation-delay: .5s;
   animation-delay: .5s;
 }
 
-/* line 1626, scss/modules/page-transitions/_animations.scss */
+/* line 1626, scss/modules/page-transitions/_animation.scss */
 .pt-page-delay700 {
   -webkit-animation-delay: .7s;
   -moz-animation-delay: .7s;
   animation-delay: .7s;
 }
 
-/* line 1631, scss/modules/page-transitions/_animations.scss */
+/* line 1631, scss/modules/page-transitions/_animation.scss */
 .pt-page-delay1000 {
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   animation-delay: 1s;
+}
+
+/* Pages */
+/* line 2, scss/modules/sly/_page.scss */
+.pages {
+  list-style: none;
+  margin: 0 0 3px;
+  padding: 0;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+/* line 10, scss/modules/sly/_page.scss */
+.pages li {
+  display: none;
+  width: 26px;
+  height: 26px;
+  margin: 0 4px;
+  text-indent: -999px;
+  border-radius: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+/* line 22, scss/modules/sly/_page.scss */
+.pages li:hover {
+  background: #ffcc00;
+  border: 1px solid #333;
+}
+
+/* line 26, scss/modules/sly/_page.scss */
+.pages li.active {
+  background: #333;
+  border: 1px solid #fff;
+}
+
+/* Pages */
+/* line 32, scss/modules/sly/_page.scss */
+.pages {
+  margin: 0;
+  position: absolute;
+  bottom: 9px;
+  text-align: center;
+}
+
+/* line 38, scss/modules/sly/_page.scss */
+.pages li {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  margin: 0 4px;
+  text-indent: -999px;
+  border-radius: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+/* line 50, scss/modules/sly/_page.scss */
+.pages li {
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Pagespan */
+/* line 61, scss/modules/sly/_page.scss */
+.pagespan *,
+.pagespan *:after,
+.pagespan *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Wrapper */
+/* line 70, scss/modules/sly/_page.scss */
+.pagespan .wrap {
+  position: relative;
+}
+
+/* Wrapper Header */
+/* line 75, scss/modules/sly/_page.scss */
+.pagespan .wrap-header {
+  padding: 3px 6px;
+  background: #eee;
+  border: 1px solid #fff;
+}
+
+/* line 81, scss/modules/sly/_page.scss */
+.pagespan .wrap-header span {
+  font-weight: normal;
+  color: #333;
+  font-size: 1em;
+  text-transform: capitalize;
+}
+
+/* line 88, scss/modules/sly/_page.scss */
+.pagespan .wrap-header span:last-child {
+  float: right;
+  font-weight: normal;
+  font-size: .8em;
+}
+
+/* Frame */
+/* line 95, scss/modules/sly/_page.scss */
+.frame {
+  margin: 0 0 1px;
+  height: 224px;
+  /*<== height of panel */
+  width: 100%;
+  overflow: hidden;
+  z-index: 8;
+}
+
+/* line 102, scss/modules/sly/_page.scss */
+.frame ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 100%;
+  position: relative;
+}
+
+/* Panels */
+/* line 111, scss/modules/sly/_page.scss */
+.frame ul li {
+  /* all panels */
+  background: #fff;
+  width: 240px;
+  /*<== width of panel */
+  height: 100%;
+  margin: 0 1px 0;
+  padding: 0;
+  line-height: 1em;
+  float: left;
+  cursor: pointer;
+  position: relative;
+}
+
+/* line 122, scss/modules/sly/_page.scss */
+.frame ul li.active {
+  /* active panel */
+  /*background: #fff;*/
+  color: #fff;
+}
+
+/* Panel image */
+/* line 130, scss/modules/sly/_page.scss */
+.frame ul li img {
+  /*background: #fff url(/images/ajax.gif) no-repeat;*/
+  background: #fff;
+  height: 100%;
+  min-height: 224px;
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Panel Caption */
+/* line 141, scss/modules/sly/_page.scss */
+.frame p {
+  margin: 0;
+  padding: 10px 5px;
+  background: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.23);
+  width: 100%;
+  max-width: 480px;
+  /*<== width of caption*/
+  font-size: 1.75em;
+  line-height: 1em;
+  color: #333;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: 9;
+}
+
+/* line 156, scss/modules/sly/_page.scss */
+.frame a {
+  color: #fff;
+}
+
+/* Scrollbar */
+/* line 162, scss/modules/sly/_page.scss */
+.scrollbar {
+  margin: 1px 0 1px;
+  height: 30px;
+  background: #ccc;
+  line-height: 0;
+}
+
+/* line 168, scss/modules/sly/_page.scss */
+.scrollbar .handle {
+  width: 20px;
+  height: 100%;
+  background: #ffcc00;
+  cursor: pointer;
+}
+
+/* line 174, scss/modules/sly/_page.scss */
+.scrollbar .handle .mousearea {
+  position: absolute;
+  top: -9px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+}
+
+/* Controls */
+/* line 184, scss/modules/sly/_page.scss */
+.controls {
+  margin: 0;
+  text-align: center;
+}
+
+/*.controls .divider { display: inline-block; margin: 0 10px; }*/
+/* Button Controls */
+/* line 188, scss/modules/sly/_page.scss */
+.controls button {
+  background: rgba(255, 204, 0, 0.6);
+  border: 0;
+  color: #ffcc00;
+  opacity: .5;
+}
+
+/* line 189, scss/modules/sly/_page.scss */
+.controls button:hover {
+  opacity: 1;
+}
+
+/* line 190, scss/modules/sly/_page.scss */
+.controls button:disabled {
+  opacity: .2;
+}
+
+/* line 192, scss/modules/sly/_page.scss */
+.next, .prev, .forward, .backward, .prevPage, .nextPage {
+  background: rgba(255, 204, 0, 0.3);
+  display: block;
+  float: left;
+  width: 40px;
+  height: 224px;
+  /*<== match height of panel*/
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  z-index: 9;
+  visibility: hidden;
+}
+
+/* line 204, scss/modules/sly/_page.scss */
+.prev, .backward, .prevPage {
+  left: 0;
+}
+
+/* line 205, scss/modules/sly/_page.scss */
+.next, .forward, .nextPage {
+  right: 0;
+}
+
+/* line 206, scss/modules/sly/_page.scss */
+.next:hover, .prev:hover {
+  background: rgba(255, 204, 0, 0.7);
+  color: #fff;
+}
+
+/* Tablet(portrait) Layout. */
+@media screen and (max-width: 999px) {
+  /* Frame */
+  /* line 213, scss/modules/sly/_page.scss */
+  .frame {
+    height: 240px;
+    /*<== height of panel */
+  }
+
+  /* line 216, scss/modules/sly/_page.scss */
+  .frame ul li {
+    width: 257px;
+    /*<== width of panel */
+  }
+
+  /* Panel image */
+  /* line 221, scss/modules/sly/_page.scss */
+  .frame ul li img {
+    /* panel image */
+    height: 240px;
+    /*<== height of panel image */
+    width: 257px;
+    /*<== width of panel image */
+  }
+}
+/* Tablet(portrait) Layout. */
+@media all and (max-width: 599px) {
+  /* Frame */
+  /* line 233, scss/modules/sly/_page.scss */
+  .frame {
+    height: 224px;
+    /*<== height of panel */
+  }
+
+  /* line 236, scss/modules/sly/_page.scss */
+  .frame ul li {
+    width: 240px;
+    /*<== width of panel */
+  }
+
+  /* Panel image */
+  /* line 241, scss/modules/sly/_page.scss */
+  .frame ul li img {
+    height: 224px;
+    /*<== height of panel image */
+    width: 240px;
+    /*<== width of panel image */
+  }
+
+  /* Button Controls */
+  /* line 248, scss/modules/sly/_page.scss */
+  .next, .prev, .forward, .backward, .prevPage, .nextPage {
+    visibility: visible;
+    height: 252px;
+    /*<== match height of panel*/
+  }
+}
+/* Tablet(landscape) and Small Desktop Layout. */
+@media screen and (min-width: 1000px) {
+  /* Frame */
+  /* line 260, scss/modules/sly/_page.scss */
+  .frame ul li {
+    /*opacity: 0.55;
+    filter: Alpha(opacity=55);*/
+    /*IE8 and earlier */
+  }
+
+  /* line 264, scss/modules/sly/_page.scss */
+  .frame ul li:hover {
+    /*border: 1px solid #eee;
+    opacity: 1;
+    filter: Alpha(opacity=100);*/
+    /*IE8 and earlier */
+  }
+
+  /* line 269, scss/modules/sly/_page.scss */
+  .frame ul li.active {
+    /*active panel*/
+    /*opacity: 1;
+    filter: Alpha(opacity=100);*/
+    /*IE8 and earlier */
+  }
+
+  /* line 274, scss/modules/sly/_page.scss */
+  .frame ul li.long-panel {
+    width: 480px;
+  }
+
+  /* Scrollbar */
+  /* line 278, scss/modules/sly/_page.scss */
+  .scrollbar {
+    height: 3px;
+  }
+
+  /* Button Controls */
+  /* line 281, scss/modules/sly/_page.scss */
+  .next, .prev, .forward, .backward, .prevPage, .nextPage {
+    visibility: visible;
+    height: 224px;
+    /*<== match height of panel*/
+  }
+}
+/* Laptop Layout. */
+@media screen and (min-width: 1300px) {
+  /* Button Controls */
+}
+/* 3D Effects */
+/* line 3, scss/modules/sly/_effects.scss */
+.effects {
+  min-height: 200px;
+  line-height: 200px;
+  -webkit-perspective: 800px;
+  -ms-perspective: 800px;
+  perspective: 800px;
+  -webkit-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+  overflow-y: show;
+}
+
+/* line 14, scss/modules/sly/_effects.scss */
+.effects ul {
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* line 19, scss/modules/sly/_effects.scss */
+.effects ul li {
+  position: relative;
+  margin: 0 -20px;
+  -webkit-transform: rotateY(60deg) scale(0.9);
+  -ms-transform: rotateY(60deg) scale(0.9);
+  transform: rotateY(60deg) scale(0.9);
+  -webkit-transition: -webkit-transform 300ms ease-out;
+  transition: transform 300ms ease-out;
+}
+
+/* line 28, scss/modules/sly/_effects.scss */
+.effects ul li.active {
+  z-index: 10;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+/* line 34, scss/modules/sly/_effects.scss */
+.effects ul li.active ~ li {
+  -webkit-transform: rotateY(-60deg) scale(0.9);
+  -ms-transform: rotateY(-60deg) scale(0.9);
+  transform: rotateY(-60deg) scale(0.9);
+}
+
+/* Crazy example */
+/* line 43, scss/modules/sly/_effects.scss */
+.crazy ul li:nth-child(2n) {
+  width: 100px;
+  margin: 0 4px 0 20px;
+}
+
+/* line 44, scss/modules/sly/_effects.scss */
+.crazy ul li:nth-child(3n) {
+  width: 300px;
+  margin: 0 10px 0 5px;
+}
+
+/* line 45, scss/modules/sly/_effects.scss */
+.crazy ul li:nth-child(4n) {
+  width: 400px;
+  margin: 0 30px 0 2px;
+}
+
+/* One Item Per Frame example*/
+/* line 50, scss/modules/sly/_effects.scss */
+.oneperframe {
+  min-height: 300px;
+  line-height: 300px;
+}
+
+/* line 51, scss/modules/sly/_effects.scss */
+.oneperframe ul li {
+  width: 1140px;
+}
+
+/* line 52, scss/modules/sly/_effects.scss */
+.oneperframe ul li.active {
+  background: #333;
 }
 
 /* Apply to all media types and resolutions. Inherits to all layouts. */
@@ -11019,77 +11492,77 @@ body {
   background: url('/images/icon-s3d43579eee.png') no-repeat;
 }
 
-/* line 60, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../../Program Files/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-beta {
   background-position: 0 -48px;
 }
 
-/* line 60, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../../Program Files/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-gear {
   background-position: 0 -108px;
 }
 
-/* line 60, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../../Program Files/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-home {
   background-position: 0 -188px;
 }
 
-/* line 60, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../../Program Files/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-orderedList0 {
   background-position: 0 -348px;
 }
 
-/* line 60, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../../Program Files/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-orderedList1 {
   background-position: 0 -498px;
 }
 
-/* line 60, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../../Program Files/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-orderedList2 {
   background-position: 0 -468px;
 }
 
-/* line 60, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../../Program Files/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-orderedList3 {
   background-position: 0 -378px;
 }
 
-/* line 60, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../../Program Files/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-orderedList4 {
   background-position: 0 -408px;
 }
 
-/* line 60, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../../Program Files/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-orderedList5 {
   background-position: 0 -438px;
 }
 
-/* line 60, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../../Program Files/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-orderedList6 {
   background-position: 0 -228px;
 }
 
-/* line 60, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../../Program Files/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-orderedList7 {
   background-position: 0 -258px;
 }
 
-/* line 60, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../../Program Files/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-orderedList8 {
   background-position: 0 -288px;
 }
 
-/* line 60, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../../Program Files/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-orderedList9 {
   background-position: 0 -318px;
 }
 
-/* line 60, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../../Program Files/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-search {
   background-position: 0 -148px;
 }
 
-/* line 60, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../../Program Files/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icon-ucf-opportunity {
   background-position: 0 0;
 }
