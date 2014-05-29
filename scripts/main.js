@@ -36,7 +36,7 @@ requirejs.config({
             // If CDN fails, load from this location
             'libs/bootstrap.min'
         ],
-        //required
+        //--------------------------------------------
         'debounced': 'libs/jquery.debouncedresize',
         'transitions': 'js/pagetransitions',
         'echo': 'libs/echo.min',
@@ -46,8 +46,8 @@ requirejs.config({
         'mwintent': 'js/mwheelIntent',
         'scrollpane': 'libs/jquery.jscrollpane.min',
         //Sly
-        'sly': 'libs/sly.min',
         'easing': 'libs/jquery.easing.min',
+        'sly': 'libs/sly.min',
         'horizontal': 'js/sly.horizontal'
     },
     shim: 
@@ -79,6 +79,18 @@ requirejs.config({
         'pageslide':
         {
             deps: ['jquery']
+        },
+        'easing':
+        {
+            deps: ['jquery']
+        },
+        'sly':
+        {
+            deps: ['jquery', 'easing']
+        },
+        'horizontal':
+        {
+            deps: ['sly']
         }
     }
 });

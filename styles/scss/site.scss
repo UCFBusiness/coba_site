@@ -5,17 +5,13 @@
 @import "bootstrap/bootstrap";
 @import "font-awesome/font-awesome";
 
-// Primary Styles
+// Partials
 @import "partials/primary";
-
 
 // Modules and Variables
 @import "modules/page-transitions/base";
 @import "modules/sly/base";
 @import "modules/pageslide";
-
-// Partials
-
 
 // Sprites
 @import "icon/*.png";

@@ -1,119 +1,88 @@
-define(['jquery','pageslide','easing','horizontal','sly'], function ($)
-{
+define(['jquery', 'debounced', 'easing', 'sly', 'horizontal', 'pageslide'], function ($) {
     // runs 1st
     var screenwidth = parseInt($(this).width());
     var screenheight = parseInt($(this).height());
     var msg = "Hello World, this is a private method.";
     var gr = 1.618; // Golden Ratio
 
-    var PrivateMessage = function ()
-    {
+    var PrivateMessage = function () {
         return msg;
     };
 
-    $('#msg').text(' runs on JQuery');
+    //-- Test jQuery
+    $('#msg').text(' runs on jQuery');
 
     var PrivateMethods = {
         onLoad: function () // runs 2nd
         {
+            //alert(gr);
+
+            //-- Slide to the left; if slide is model, you'll have to call $.pageslide.close() to close.
+            $("a.target_blank").pageslide({ direction: "left", modal: true });
+            $("#slidecontent").css("height", function (index) {
+                var toolBar = parseInt($('#toolbar').height());
+                return screenheight - toolBar;
+            });
+
             if (screenwidth < 1000) // load tablet scripts
             {
-                require([], function ()
-                {
+                require([], function () {
                     //-- screen-size ----------------------------------
                     $('#msg').text(screenwidth + ' x ' + screenheight + ' - tablet');
-                    //------------------------------------------------
-                    //-- resize to fit -------------------------------
-                    //$('.cover').css('height', screenheight);
-                    //------------------------------------------------
-                    
-                    //$("#cnext").click(function(){
-                    //    $("#pt-cover").slideToggle("slow")
-                    //});
 
-                    
-
-                    //-- resize to fit -------------------------------
-                    $('div.cover').css('min-height', screenheight);
-                    //-- Slide to the left; if slide is model, you'll have to call $.pageslide.close() to close
-                    $(".target_blank").pageslide({ direction: "left", modal: true });
-                    $("#slidecontent").css("height", screenheight);
-                    //------------------------------------------------
-                    
-                    
                     if (screenwidth < 700) // load mobile scripts
                     {
-                        require([], function ()
-                        {
+                        require([], function () {
                             //-- screen-size ----------------------------------
                             $("#msg").text(screenwidth + " x " + screenheight + " - mobile");
-                            //------------------------------------------------
-                            //-- resize to fit -------------------------------
-                            //$('.cover').css('height', screenheight);
-                            //------------------------------------------------
                         });
-                        
                     }
                 });
             }
-            
+
             if (screenwidth >= 1000) // load desktop scripts
             {
-                require([], function ()
-                {
+                require([], function () {
                     //-- screen-size ----------------------------------
                     $("#msg").text(screenwidth + " x " + screenheight + " - desktop");
-                    //------------------------------------------------
-                    //-- resize to fit -------------------------------
-                    //$('#pt-main').css('height', screenheight);
-                    //------------------------------------------------
 
-                    //-- Slide to the left; if slide is model, you'll have to call $.pageslide.close() to close
-                    $(".target_blank").pageslide({ direction: "left", modal: true });
+                    //-- resize to fit -------------------------------
                     $("#pageslide").css("width", function (index) {
-                        var cover = parseInt($("div.cover").width());
+                        var cover = parseInt($("div.pt-cover").width());
                         return screenwidth - cover;
                     });
-                    $("#slidecontent").css("height", screenheight);
-                    //------------------------------------------------
-
                 });
             }
         },
         onResize: function () // runs 3rd
         {
-            alert(PrivateMessage());
+            //alert(PrivateMessage());
 
             // ---------------------------------------------------
             // On Smart PageResize...
             // fires only after user is done resizing the window
             // ---------------------------------------------------            
-            $(window).on('debouncedresize', function (event)
-            {
+            $(window).on('debouncedresize', function (event) {
                 var screenwidth = parseInt($(this).width());
                 var screenheight = parseInt($(this).height());
 
                 if (screenwidth < 1000) // load tablet scripts
                 {
-                    require([], function ()
-                    {
+                    require([], function () {
                         //-- screen-size ----------------------------------
                         $('#msg').text(screenwidth + ' x ' + screenheight + ' - tablet');
-                        //------------------------------------------------
+
                         //-- resize to fit -------------------------------
                         //$('.cover').css('height', screenheight);
-                        //------------------------------------------------
-                        
+
                         if (screenwidth < 700) // load mobile scripts
                         {
-                            require([], function ()
-                            {
+                            require([], function () {
                                 //-- screen-size ----------------------------------
                                 $("#msg").text(screenwidth + " x " + screenheight + " - mobile");
-                                //------------------------------------------------
+
                                 //-- resize to fit -------------------------------
                                 //$('.cover').css('height', screenheight);
-                                //------------------------------------------------
                             });
                         }
                     });
@@ -121,14 +90,12 @@ define(['jquery','pageslide','easing','horizontal','sly'], function ($)
 
                 if (screenwidth >= 1000) // load desktop scripts
                 {
-                    require([], function ()
-                    {
+                    require([], function () {
                         //-- screen-size ----------------------------------
                         $("#msg").text(screenwidth + " x " + screenheight + " - desktop");
-                        //------------------------------------------------
+
                         //-- resize to fit -------------------------------
                         //$('.cover').css('height', screenheight);
-                        //------------------------------------------------
                     });
                 }
             }); //end debouncedresize

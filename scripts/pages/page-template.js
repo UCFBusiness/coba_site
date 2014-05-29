@@ -1,31 +1,28 @@
-define(['jquery'], function ($)
+define(['jquery', 'debounced'], function ($)
 {
     // runs 1st
     var screenwidth = parseInt($(this).width());
     var screenheight = parseInt($(this).height());
-    var gr = 1.618;
-
     var msg = "Hello World, this is a private method.";
+    var gr = 1.618; // Golden Ratio
 
-    $('#msg').text(' runs on JQuery');
-    //alert('runs 1st');
-
-    var PrivateMessage = function ()
-    {
+    var PrivateMessage = function () {
         return msg;
     };
+
+    //-- Test jQuery
+    $('#msg').text(' runs on jQuery');
 
     var PrivateMethods = {
         onLoad: function () // runs 2nd
         {
             //alert('runs 2nd');
+            alert(PrivateMessage());
 
             if (screenwidth <= 600) // load mobile scripts
             {
                 require([], function ()
                 {
-                    //-- resize to fit -------------------------------
-                    //$('.cover').css('height', screenheight);
                     //------------------------------------------------
                 });
             }
@@ -34,8 +31,6 @@ define(['jquery'], function ($)
             {
                 require([], function ()
                 {
-                    //-- resize to fit -------------------------------
-                    //$('.cover').css('height', screenheight);
                     //------------------------------------------------
                 });
             }
@@ -44,8 +39,6 @@ define(['jquery'], function ($)
             {
                 require([], function ()
                 {
-                    //-- resize to fit -------------------------------
-                    //$('.cover').css('height', screenheight);
                     //------------------------------------------------
                 });
             }
@@ -68,8 +61,6 @@ define(['jquery'], function ($)
                 {
                     require([], function ()
                     {
-                        //-- resize to fit -------------------------------
-                        //$('.cover').css('height', screenheight);
                         //------------------------------------------------
                     });
                 }
@@ -78,8 +69,6 @@ define(['jquery'], function ($)
                 {
                     require([], function ()
                     {
-                        //-- resize to fit -------------------------------
-                        //$('.cover').css('height', screenheight);
                         //------------------------------------------------
                     });
                 }
@@ -88,8 +77,6 @@ define(['jquery'], function ($)
                 {
                     require([], function ()
                     {
-                        //-- resize to fit -------------------------------
-                        //$('.cover').css('height', screenheight);
                         //------------------------------------------------
                     });
                 }

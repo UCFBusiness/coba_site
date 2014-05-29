@@ -1,25 +1,24 @@
 // --------------------------------------------------
 // Primary Styles
-// Base
 // --------------------------------------------------
-// All //
-/* Apply to all resolutions. Inherits to all layouts. */
+
+// All Mediums -- Apply to all resolutions. Inherits to all layouts.
 
 html {
-    height: 100%;
+	height: 100%;
 }
 
 body {
-    @extend html;
-    
-    letter-spacing: 1px;
-    font-size: .85em;
+	@extend html;
+	
+	letter-spacing: 1px;
+	font-size: .85em;
 	font-weight: 400;
-    line-height: 1em;
-    color: #333;
-    
-    position: relative;
-    z-index: 0;
+	line-height: 1em;
+	color: #333;
+	
+	position: relative;
+	z-index: 0;
 }
 
 //.js {
@@ -27,55 +26,28 @@ body {
 //}
 
 .no-js  {
-    
-    body {
-        overflow: auto;
-        
-        .pt-page {
-            visibility: visible;
-            z-index: 1;
-        }
-    }
+	
+	body {
+		overflow: auto;
+		
+		.pt-page {
+			visibility: visible;
+			z-index: 1;
+		}
+	}
 }
 
 // --------------------------------------------------
 
 .centered {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -50%;
-    margin-left: -50%;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -50%;
+	margin-left: -50%;
 }
 
-
-// Tablet //
-@media (max-width: 999px){
-
-    .panel-img {
-        width: 100%;
-        max-width: 320px;
-    }
-
-}
-
-// Mobile-Landscape //
-@media (max-width: 699px) and (orientation: landscape){}
-
-// Mobile-Portrait //
-@media (max-width: 499px) and (orientation: portrait){}
-
-// Small Desktop //
-@media (min-width: 1000px){
-    
-    .panel-img {
-        width: 100%;
-        max-width: 320px;
-    }
-}
-
-// Notebook //
-@media screen and (min-width: 1300px){}
-
-// Large Desktop //
-@media screen and (min-width: 1600px){}
+img.panel-img {
+		width: 100%;
+		max-width: 320px;
+	}
