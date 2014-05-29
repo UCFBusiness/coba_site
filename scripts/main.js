@@ -37,13 +37,13 @@ requirejs.config({
             'libs/bootstrap.min'
         ],
         //required
-        'transitions': 'libs/pagetransitions',
         'debounced': 'libs/jquery.debouncedresize',
+        'transitions': 'js/pagetransitions',
         'echo': 'libs/echo.min',
         'pageslide': 'libs/jquery.pageslide',
         //pagescroll
         'mousewheel': 'libs/jquery.mousewheel',
-        'mwi': 'libs/mwheelIntent',
+        'mwintent': 'js/mwheelIntent',
         'scrollpane': 'libs/jquery.jscrollpane.min',
         //Sly
         'sly': 'libs/sly.min',
@@ -74,7 +74,7 @@ requirejs.config({
         },
         'scrollpane':
         {
-            deps: ['jquery','mousewheel','mwi']
+            deps: ['jquery','mousewheel','mwintent']
         },
         'pageslide':
         {
