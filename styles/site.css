@@ -10283,7 +10283,7 @@ img.panel-img {
 /* line 78, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page .scroll-pane {
   border: 1px dashed blue;
-  min-width: 300px;
+  min-width: 800px;
   width: 100%;
   height: 100%;
   overflow: auto;
