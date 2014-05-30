@@ -2,17 +2,13 @@
 @import "compass";
 
 // Bootstrap
-@import "bootstrap/bootstrap";
-@import "font-awesome/font-awesome";
+@import "vendors/bootstrap";
+@import "vendors/font-awesome";
 
 // Partials
 @import "partials/primary";
 
-// Modules and Variables
+// Modules
 @import "modules/page-transitions/base";
 @import "modules/sly/base";
 @import "modules/pageslide";
-
-// Sprites
-@import "icon/*.png";
-@include all-icon-sprites;

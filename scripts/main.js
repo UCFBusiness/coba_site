@@ -44,7 +44,7 @@ requirejs.config({
         //pagescroll
         'mousewheel': 'libs/jquery.mousewheel',
         'mwintent': 'js/mwheelIntent',
-        'scrollpane': 'libs/jquery.jscrollpane.min',
+        'jscroll': 'libs/jquery.jscrollpane.min',
         //Sly
         'easing': 'libs/jquery.easing.min',
         'sly': 'libs/sly.min',
@@ -72,7 +72,7 @@ requirejs.config({
         {
             deps: ['jquery']
         },
-        'scrollpane':
+        'jscroll':
         {
             deps: ['jquery','mousewheel','mwintent']
         },

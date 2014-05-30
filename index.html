@@ -41,9 +41,9 @@
 
 		<div id="pt-main" class="pt-perspective">
 
-			<div id="page0" class="pt-page">
-				<div class="pt-cover">
-					<div>
+			<div id="page1" class="pt-page">
+				<div class="scroll-pane">
+                    <div class="pt-cover">
 						<h1>Cover</h1>
 						<p>Message: <span id="msg"></span></p>
 						<p><a href="//ucfmba.ucf.edu/evening-mba" class="btn btn-primary btn-lg target_blank">Click Me</a></p>
@@ -52,33 +52,30 @@
 						<p>First Name: <input ng-model="firstName" type="text" /></p>
 						<p>Last Name: <input ng-model="lastName" type="text" /></p>
 						<p>Hello {{firstName}} {{lastName}}</p>
-					</div>
-				</div>
-				
-				<div class="scroll-pane">
-					<div>
+				    </div>
+
+					<div class="pt-body">
 						<a class="btnNext"> Next </a>
+                        <h1>Start Page</h1>
+					    <h2>
+						    <span class="glyphicon glyphicon-star"></span> Star
+					    </h2>
 					</div>
-					<h1>Start Page</h1>
-					<h2>
-						<span class="glyphicon glyphicon-star"></span> Star
-					</h2>
 				</div>
 			</div>
 
-			<div id="page1" class="pt-page">
-				<div class="pt-cover">
-					<div>
-						<h1>Cover 1</h1>
-					</div>
-				</div>
-				
+			<div id="page2" class="pt-page">
 				<div class="scroll-pane">
-					<div>
+					<div class="pt-cover">
+					    <div>
+						    <h1>Cover 2</h1>
+					    </div>
+				    </div>
+                    
+                    <div class="pt-body">
 						<a class="btnPrev"> Previous </a>
 						<a class="btnNext"> Next </a>
-					</div>
-					<div>
+
 						<h1>Panels - Page 1</h1>
 						<div class="row">
 						
@@ -88,7 +85,6 @@
 									<div class="wrap-header"><span>Spotlights</span></div>
 									<div class="frame" id="row1" data-intro="row1" data-position="left">
 										<ul class="clearfix">
-										
 											<li>
 												<div title="title of panel">
 													<a href="//www.bus.ucf.edu" class="target_blank">
@@ -133,18 +129,20 @@
 													</a>
 												</div>
 											</li>
-										
 										</ul>
 									</div><!--/frame -->
+
 									<div class="scrollbar">
 										<div class="handle">
 											<div class="mousearea"><span></span></div>
 										</div>
 									</div><!--/scrollbar --> 
+
 									<div class="controls center use-fastclick">
 										<button class="btn prevPage"><i class="fa fa-chevron-left"></i><i class="icon-chevron-left"></i></button><!--/back button-->
 										<button class="btn nextPage"><i class="fa fa-chevron-right"></i></button><!--/forward button-->
-									</div><!--/controls -->    
+									</div><!--/controls --> 
+                                       
 								</section>
 							</div><!--/pagespan -->   
 							
@@ -157,19 +155,18 @@
 				</div>
 			</div>
 
-			<div id="page2" class="pt-page">
-				<div class="pt-cover">
-					<div>
-						<h1>Cover 2</h1>
-					</div>
-				</div>
-				
+			<div id="page3" class="pt-page">
 				<div class="scroll-pane">
-					<div>
+                    <div class="pt-cover">
+					    <div>
+						    <h1>Cover 3</h1>
+					    </div>
+				    </div>
+
+					<div class="pt-body">
 						<a class="btnPrev"> Previous </a>
 						<a class="btnNext"> Next </a>
-					</div>
-					<div>
+
 						<h1>Panels - Page 2</h1>
 						<div class="row">
 							<p><img class="panel-img" src="/images/blank.gif" alt="..." data-echo="/images/blank.jpg" width="100%" height="100%"></p>
@@ -187,18 +184,17 @@
 				</div>
 			</div>
 
-			<div id="page3" class="pt-page">
-				<div class="pt-cover">
-					<div>
-						<h1>Cover 3</h1>
-					</div>
-				</div>
-				
+			<div id="page4" class="pt-page">
 				<div class="scroll-pane">
-					<div>
+					<div class="pt-cover">
+					    <div>
+						    <h1>Cover 4</h1>
+					    </div>
+				    </div>
+                    
+                    <div class="pt-body">
 						<a class="btnPrev"> Previous </a>
-					</div>
-					<div>
+
 						<h1>Aft Page</h1>
 					</div>
 				</div>
