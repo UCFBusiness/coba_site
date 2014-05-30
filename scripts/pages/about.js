@@ -14,7 +14,7 @@ define([], function ()
 
     Application.prototype.toString = function ()
     {
-        alert(toPrivateMessage());
+        //alert(toPrivateMessage());
         return this.id;
     };
 

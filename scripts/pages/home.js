@@ -48,7 +48,7 @@ define(['jquery', 'debounced', 'easing', 'sly', 'horizontal', 'pageslide'], func
 
                     //-- resize to fit -------------------------------
                     $("#pageslide").css("width", function (index) {
-                        var cover = parseInt($("div.pt-cover").width());
+                        var cover = parseInt($("div.cover").width());
                         return screenwidth - cover;
                     });
                 });
@@ -72,17 +72,11 @@ define(['jquery', 'debounced', 'easing', 'sly', 'horizontal', 'pageslide'], func
                         //-- screen-size ----------------------------------
                         $('#msg').text(screenwidth + ' x ' + screenheight + ' - tablet');
 
-                        //-- resize to fit -------------------------------
-                        //$('.cover').css('height', screenheight);
-
                         if (screenwidth < 700) // load mobile scripts
                         {
                             require([], function () {
                                 //-- screen-size ----------------------------------
                                 $("#msg").text(screenwidth + " x " + screenheight + " - mobile");
-
-                                //-- resize to fit -------------------------------
-                                //$('.cover').css('height', screenheight);
                             });
                         }
                     });
@@ -93,9 +87,6 @@ define(['jquery', 'debounced', 'easing', 'sly', 'horizontal', 'pageslide'], func
                     require([], function () {
                         //-- screen-size ----------------------------------
                         $("#msg").text(screenwidth + " x " + screenheight + " - desktop");
-
-                        //-- resize to fit -------------------------------
-                        //$('.cover').css('height', screenheight);
                     });
                 }
             }); //end debouncedresize
