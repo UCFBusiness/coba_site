@@ -6,6 +6,8 @@
 
 html {
 	height: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 body {
@@ -22,20 +24,8 @@ body {
 }
 
 //.js {
-//    overflow: hidden;
+//	overflow: hidden;
 //}
-
-.no-js  {
-	
-	body {
-		overflow: auto;
-		
-		.pt-page {
-			visibility: visible;
-			z-index: 1;
-		}
-	}
-}
 
 // --------------------------------------------------
 
@@ -47,7 +37,6 @@ body {
 	margin-left: -50%;
 }
 
-img.panel-img {
-	width: 100%;
-	max-width: 320px;
+#main-container {
+	position: relative;
 }

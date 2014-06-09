@@ -7677,7 +7677,7 @@ button.close {
 @font-face {
   font-family: 'FontAwesome';
   src: url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.eot?v=4.1.0");
-  src: url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0") format("embedded-opentype"), url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.woff?v=4.1.0") format("woff"), url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.ttf?v=4.1.0") format("truetype"), url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular") format("svg");
+  src: url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0") format("embedded-opentype"), url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.woff") format("woff"), url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.ttf?v=4.1.0") format("truetype"), url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -10182,9 +10182,11 @@ button.close {
 /* line 7, scss/partials/_primary.scss */
 html, body {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-/* line 11, scss/partials/_primary.scss */
+/* line 13, scss/partials/_primary.scss */
 body {
   letter-spacing: 1px;
   font-size: .85em;
@@ -10195,17 +10197,7 @@ body {
   z-index: 0;
 }
 
-/* line 30, scss/partials/_primary.scss */
-.no-js body {
-  overflow: auto;
-}
-/* line 33, scss/partials/_primary.scss */
-.no-js body .pt-page {
-  visibility: visible;
-  z-index: 1;
-}
-
-/* line 42, scss/partials/_primary.scss */
+/* line 32, scss/partials/_primary.scss */
 .centered {
   position: fixed;
   top: 50%;
@@ -10214,25 +10206,45 @@ body {
   margin-left: -50%;
 }
 
-/* line 50, scss/partials/_primary.scss */
-img.panel-img {
-  width: 100%;
-  max-width: 320px;
+/* line 40, scss/partials/_primary.scss */
+#main-container {
+  position: relative;
 }
 
 /* Apply to all resolutions. Inherits to all layouts. */
 /* line 9, scss/modules/page-transitions/_page.scss */
-.pt-menu li {
-  display: inline-block;
-  padding-right: 10px;
-  font-size: 2em;
+.pt-menu {
+  background: #333;
+  margin: 0;
+  padding: 1em;
 }
-/* line 16, scss/modules/page-transitions/_page.scss */
+/* line 14, scss/modules/page-transitions/_page.scss */
+.pt-menu li {
+  display: inline;
+  padding-right: 10px;
+  font-size: 3em;
+}
+/* line 21, scss/modules/page-transitions/_page.scss */
 .pt-menu li > a:hover {
   cursor: pointer;
 }
 
-/* line 24, scss/modules/page-transitions/_page.scss */
+/* line 33, scss/modules/page-transitions/_page.scss */
+.no-js body {
+  overflow: auto;
+}
+/* line 36, scss/modules/page-transitions/_page.scss */
+.no-js body .pt-page, .no-js body .pt-page-current {
+  visibility: visible;
+  z-index: 1;
+}
+
+/* line 47, scss/modules/page-transitions/_page.scss */
+.pt-page-ontop {
+  z-index: 999;
+}
+
+/* line 52, scss/modules/page-transitions/_page.scss */
 .pt-perspective {
   position: relative;
   width: 100%;
@@ -10242,8 +10254,8 @@ img.panel-img {
   -moz-perspective: 1200px;
   perspective: 1200px;
 }
-/* line 34, scss/modules/page-transitions/_page.scss */
-.pt-perspective .pt-page {
+/* line 62, scss/modules/page-transitions/_page.scss */
+.pt-perspective .pt-page, .pt-perspective .no-js body .pt-page-current, .no-js body .pt-perspective .pt-page-current {
   border: 1px dashed red;
   background: #fff;
   width: 100%;
@@ -10263,50 +10275,57 @@ img.panel-img {
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 58, scss/modules/page-transitions/_page.scss */
-.pt-perspective .pt-page .pt-cover {
-  border: 1px solid green;
-  width: 400px;
+/* line 86, scss/modules/page-transitions/_page.scss */
+.pt-perspective .pt-page .scroll-pane, .pt-perspective .no-js body .pt-page-current .scroll-pane, .no-js body .pt-perspective .pt-page-current .scroll-pane {
+  border: 2px dashed blue;
+  min-width: 300px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+/* line 95, scss/modules/page-transitions/_page.scss */
+.pt-perspective .pt-page .pt-cover, .pt-perspective .no-js body .pt-page-current .pt-cover, .no-js body .pt-perspective .pt-page-current .pt-cover {
+  border: 2px solid green;
+  padding: 5px;
+  width: 30%;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
 }
-/* line 69, scss/modules/page-transitions/_page.scss */
-.pt-perspective .pt-page .pt-body {
-  width: 600px;
-  height: 100%;
+/* line 108, scss/modules/page-transitions/_page.scss */
+.pt-perspective .pt-page .pt-body, .pt-perspective .no-js body .pt-page-current .pt-body, .no-js body .pt-perspective .pt-page-current .pt-body {
+  border: 2px solid green;
+  padding: 5px;
+  width: 70%;
+  min-height: 100%;
   position: relative;
   top: 0;
-  left: 415px;
+  left: 30%;
 }
-/* line 78, scss/modules/page-transitions/_page.scss */
-.pt-perspective .pt-page .scroll-pane {
-  border: 1px dashed blue;
-  min-width: 800px;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-}
-/* line 88, scss/modules/page-transitions/_page.scss */
+/* line 122, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page-current {
   visibility: visible;
   z-index: 1;
 }
-/* line 93, scss/modules/page-transitions/_page.scss */
+/* line 127, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page-ontop {
   z-index: 999;
 }
 
 @media (max-width: 999px) {
-  /* line 105, scss/modules/page-transitions/_page.scss */
-  .pt-perspective .pt-page .pt-cover {
+  /* line 139, scss/modules/page-transitions/_page.scss */
+  .pt-perspective .pt-page .pt-cover, .pt-perspective .no-js body .pt-page-current .pt-cover, .no-js body .pt-perspective .pt-page-current .pt-cover {
+    min-width: 300px;
     width: 100%;
     height: 300px;
     position: relative;
   }
-  /* line 111, scss/modules/page-transitions/_page.scss */
-  .pt-perspective .pt-page .pt-body {
+  /* line 146, scss/modules/page-transitions/_page.scss */
+  .pt-perspective .pt-page .pt-body, .pt-perspective .no-js body .pt-page-current .pt-body, .no-js body .pt-perspective .pt-page-current .pt-body {
+    min-width: 300px;
+    width: 100%;
+    position: relative;
     left: 0;
   }
 }
@@ -13481,75 +13500,9 @@ img.panel-img {
 }
 
 /* Pages */
-/* line 2, scss/modules/sly/_page.scss */
-.pages {
-  list-style: none;
-  margin: 0 0 3px;
-  padding: 0;
-  text-align: center;
-  position: relative;
-  z-index: 10;
-}
-
-/* line 10, scss/modules/sly/_page.scss */
-.pages li {
-  display: none;
-  width: 26px;
-  height: 26px;
-  margin: 0 4px;
-  text-indent: -999px;
-  border-radius: 16px;
-  cursor: pointer;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
-}
-
-/* line 22, scss/modules/sly/_page.scss */
-.pages li:hover {
-  background: #ffcc00;
-  border: 1px solid #333;
-}
-
-/* line 26, scss/modules/sly/_page.scss */
-.pages li.active {
-  background: #333;
-  border: 1px solid #fff;
-}
-
-/* Pages */
-/* line 32, scss/modules/sly/_page.scss */
-.pages {
-  margin: 0;
-  position: absolute;
-  bottom: 9px;
-  text-align: center;
-}
-
-/* line 38, scss/modules/sly/_page.scss */
-.pages li {
-  display: inline-block;
-  width: 26px;
-  height: 26px;
-  margin: 0 4px;
-  text-indent: -999px;
-  border-radius: 16px;
-  cursor: pointer;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
-}
-
-/* line 50, scss/modules/sly/_page.scss */
-.pages li {
-  width: 13px;
-  height: 13px;
-  border-radius: 10px;
-}
-
 /*-----------------------------------------------------------------------------------------------------------------------------------------------*/
 /* Pagespan */
-/* line 61, scss/modules/sly/_page.scss */
+/* line 65, scss/modules/sly/_page.scss */
 .pagespan *,
 .pagespan *:after,
 .pagespan *:before {
@@ -13561,20 +13514,20 @@ img.panel-img {
 }
 
 /* Wrapper */
-/* line 70, scss/modules/sly/_page.scss */
+/* line 74, scss/modules/sly/_page.scss */
 .pagespan .wrap {
   position: relative;
 }
 
 /* Wrapper Header */
-/* line 75, scss/modules/sly/_page.scss */
+/* line 79, scss/modules/sly/_page.scss */
 .pagespan .wrap-header {
   padding: 3px 6px;
   background: #eee;
   border: 1px solid #fff;
 }
 
-/* line 81, scss/modules/sly/_page.scss */
+/* line 85, scss/modules/sly/_page.scss */
 .pagespan .wrap-header span {
   font-weight: normal;
   color: #333;
@@ -13582,7 +13535,7 @@ img.panel-img {
   text-transform: capitalize;
 }
 
-/* line 88, scss/modules/sly/_page.scss */
+/* line 92, scss/modules/sly/_page.scss */
 .pagespan .wrap-header span:last-child {
   float: right;
   font-weight: normal;
@@ -13590,17 +13543,16 @@ img.panel-img {
 }
 
 /* Frame */
-/* line 95, scss/modules/sly/_page.scss */
+/* line 99, scss/modules/sly/_page.scss */
 .frame {
   margin: 0 0 1px;
   height: 224px;
   /*<== height of panel */
   width: 100%;
   overflow: hidden;
-  z-index: 8;
 }
 
-/* line 102, scss/modules/sly/_page.scss */
+/* line 106, scss/modules/sly/_page.scss */
 .frame ul {
   margin: 0;
   padding: 0;
@@ -13610,7 +13562,7 @@ img.panel-img {
 }
 
 /* Panels */
-/* line 111, scss/modules/sly/_page.scss */
+/* line 115, scss/modules/sly/_page.scss */
 .frame ul li {
   /* all panels */
   background: #fff;
@@ -13625,7 +13577,7 @@ img.panel-img {
   position: relative;
 }
 
-/* line 122, scss/modules/sly/_page.scss */
+/* line 126, scss/modules/sly/_page.scss */
 .frame ul li.active {
   /* active panel */
   /*background: #fff;*/
@@ -13633,7 +13585,7 @@ img.panel-img {
 }
 
 /* Panel image */
-/* line 130, scss/modules/sly/_page.scss */
+/* line 134, scss/modules/sly/_page.scss */
 .frame ul li img {
   /*background: #fff url(/images/ajax.gif) no-repeat;*/
   background: #fff;
@@ -13644,7 +13596,7 @@ img.panel-img {
 }
 
 /* Panel Caption */
-/* line 141, scss/modules/sly/_page.scss */
+/* line 145, scss/modules/sly/_page.scss */
 .frame p {
   margin: 0;
   padding: 10px 5px;
@@ -13659,16 +13611,15 @@ img.panel-img {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  z-index: 9;
 }
 
-/* line 156, scss/modules/sly/_page.scss */
+/* line 160, scss/modules/sly/_page.scss */
 .frame a {
   color: #fff;
 }
 
 /* Scrollbar */
-/* line 162, scss/modules/sly/_page.scss */
+/* line 166, scss/modules/sly/_page.scss */
 .scrollbar {
   margin: 1px 0 1px;
   height: 30px;
@@ -13676,7 +13627,7 @@ img.panel-img {
   line-height: 0;
 }
 
-/* line 168, scss/modules/sly/_page.scss */
+/* line 172, scss/modules/sly/_page.scss */
 .scrollbar .handle {
   width: 20px;
   height: 100%;
@@ -13684,7 +13635,7 @@ img.panel-img {
   cursor: pointer;
 }
 
-/* line 174, scss/modules/sly/_page.scss */
+/* line 178, scss/modules/sly/_page.scss */
 .scrollbar .handle .mousearea {
   position: absolute;
   top: -9px;
@@ -13694,7 +13645,7 @@ img.panel-img {
 }
 
 /* Controls */
-/* line 184, scss/modules/sly/_page.scss */
+/* line 188, scss/modules/sly/_page.scss */
 .controls {
   margin: 0;
   text-align: center;
@@ -13702,7 +13653,7 @@ img.panel-img {
 
 /*.controls .divider { display: inline-block; margin: 0 10px; }*/
 /* Button Controls */
-/* line 188, scss/modules/sly/_page.scss */
+/* line 192, scss/modules/sly/_page.scss */
 .controls button {
   background: rgba(255, 204, 0, 0.6);
   border: 0;
@@ -13710,17 +13661,17 @@ img.panel-img {
   opacity: .5;
 }
 
-/* line 189, scss/modules/sly/_page.scss */
+/* line 193, scss/modules/sly/_page.scss */
 .controls button:hover {
   opacity: 1;
 }
 
-/* line 190, scss/modules/sly/_page.scss */
+/* line 194, scss/modules/sly/_page.scss */
 .controls button:disabled {
   opacity: .2;
 }
 
-/* line 192, scss/modules/sly/_page.scss */
+/* line 196, scss/modules/sly/_page.scss */
 .next, .prev, .forward, .backward, .prevPage, .nextPage {
   background: rgba(255, 204, 0, 0.3);
   display: block;
@@ -13731,21 +13682,20 @@ img.panel-img {
   font-size: 30px;
   position: absolute;
   top: 0;
-  z-index: 9;
   visibility: hidden;
 }
 
-/* line 204, scss/modules/sly/_page.scss */
+/* line 208, scss/modules/sly/_page.scss */
 .prev, .backward, .prevPage {
   left: 0;
 }
 
-/* line 205, scss/modules/sly/_page.scss */
+/* line 209, scss/modules/sly/_page.scss */
 .next, .forward, .nextPage {
   right: 0;
 }
 
-/* line 206, scss/modules/sly/_page.scss */
+/* line 210, scss/modules/sly/_page.scss */
 .next:hover, .prev:hover {
   background: rgba(255, 204, 0, 0.7);
   color: #fff;
@@ -13754,20 +13704,20 @@ img.panel-img {
 /* Tablet(portrait) Layout. */
 @media screen and (max-width: 999px) {
   /* Frame */
-  /* line 213, scss/modules/sly/_page.scss */
+  /* line 217, scss/modules/sly/_page.scss */
   .frame {
     height: 240px;
     /*<== height of panel */
   }
 
-  /* line 216, scss/modules/sly/_page.scss */
+  /* line 220, scss/modules/sly/_page.scss */
   .frame ul li {
     width: 257px;
     /*<== width of panel */
   }
 
   /* Panel image */
-  /* line 221, scss/modules/sly/_page.scss */
+  /* line 225, scss/modules/sly/_page.scss */
   .frame ul li img {
     /* panel image */
     height: 240px;
@@ -13779,20 +13729,20 @@ img.panel-img {
 /* Tablet(portrait) Layout. */
 @media all and (max-width: 599px) {
   /* Frame */
-  /* line 233, scss/modules/sly/_page.scss */
+  /* line 237, scss/modules/sly/_page.scss */
   .frame {
     height: 224px;
     /*<== height of panel */
   }
 
-  /* line 236, scss/modules/sly/_page.scss */
+  /* line 240, scss/modules/sly/_page.scss */
   .frame ul li {
     width: 240px;
     /*<== width of panel */
   }
 
   /* Panel image */
-  /* line 241, scss/modules/sly/_page.scss */
+  /* line 245, scss/modules/sly/_page.scss */
   .frame ul li img {
     height: 224px;
     /*<== height of panel image */
@@ -13801,7 +13751,7 @@ img.panel-img {
   }
 
   /* Button Controls */
-  /* line 248, scss/modules/sly/_page.scss */
+  /* line 252, scss/modules/sly/_page.scss */
   .next, .prev, .forward, .backward, .prevPage, .nextPage {
     visibility: visible;
     height: 252px;
@@ -13811,14 +13761,14 @@ img.panel-img {
 /* Tablet(landscape) and Small Desktop Layout. */
 @media screen and (min-width: 1000px) {
   /* Frame */
-  /* line 260, scss/modules/sly/_page.scss */
+  /* line 264, scss/modules/sly/_page.scss */
   .frame ul li {
     /*opacity: 0.55;
     filter: Alpha(opacity=55);*/
     /*IE8 and earlier */
   }
 
-  /* line 264, scss/modules/sly/_page.scss */
+  /* line 268, scss/modules/sly/_page.scss */
   .frame ul li:hover {
     /*border: 1px solid #eee;
     opacity: 1;
@@ -13826,7 +13776,7 @@ img.panel-img {
     /*IE8 and earlier */
   }
 
-  /* line 269, scss/modules/sly/_page.scss */
+  /* line 273, scss/modules/sly/_page.scss */
   .frame ul li.active {
     /*active panel*/
     /*opacity: 1;
@@ -13834,19 +13784,19 @@ img.panel-img {
     /*IE8 and earlier */
   }
 
-  /* line 274, scss/modules/sly/_page.scss */
+  /* line 278, scss/modules/sly/_page.scss */
   .frame ul li.long-panel {
     width: 480px;
   }
 
   /* Scrollbar */
-  /* line 278, scss/modules/sly/_page.scss */
+  /* line 282, scss/modules/sly/_page.scss */
   .scrollbar {
     height: 3px;
   }
 
   /* Button Controls */
-  /* line 281, scss/modules/sly/_page.scss */
+  /* line 285, scss/modules/sly/_page.scss */
   .next, .prev, .forward, .backward, .prevPage, .nextPage {
     visibility: visible;
     height: 224px;
