@@ -84,7 +84,7 @@
 		transform-style: preserve-3d;
 		
 		.scroll-pane {
-			border: 2px dashed blue; // development line
+			border: 1px solid blue; // development line
 			
 			min-width: 300px;
 			width: 100%;
@@ -93,7 +93,7 @@
 		}
 		
 		.pt-cover {
-			border: 2px solid green; // development line
+			border: 1px solid green; // development line
 			
 			//padding: 5px;
 			width: 30%;
@@ -106,9 +106,9 @@
 		}
 
 		.pt-body {
-			border: 2px solid green; // development line
+			border: 1px solid green; // development line
 
-			//padding: 5px;
+			padding: 5px;
 			width: 70%;
 			min-height: 100%;
 
