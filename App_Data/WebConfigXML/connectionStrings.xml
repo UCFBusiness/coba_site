@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<connectionStrings>
+    <add name="UCF_Business_DataConnectionString" connectionString="Data Source=web.bus.ucf.edu;Initial Catalog=UCF_Business_Data;Persist Security Info=True;User ID=ucf-cba-site;Password=5lus59u1lachlespiUThla5l0c0us71ROAp6Ia1oEphoazl4frOEyoAprlawleyO" providerName="System.Data.SqlClient"/>
+    <add name="ADConnectionString" connectionString="LDAP://cba1.bus.ucf.edu/DC=cba1,DC=bus,DC=ucf,DC=edu"/>
+</connectionStrings>
