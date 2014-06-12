@@ -10245,15 +10245,14 @@ body {
 
 /* line 52, scss/modules/page-transitions/_page.scss */
 .pt-perspective {
-  position: relative;
-  width: 100%;
+  border: 1px solid red;
+  min-height: 320px;
   height: 100%;
-  min-height: 700px;
   -webkit-perspective: 1200px;
   -moz-perspective: 1200px;
   perspective: 1200px;
 }
-/* line 62, scss/modules/page-transitions/_page.scss */
+/* line 64, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page, .pt-perspective .no-js body .pt-page-current, .no-js body .pt-perspective .pt-page-current {
   border: 1px dashed red;
   background: #fff;
@@ -10274,7 +10273,7 @@ body {
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 86, scss/modules/page-transitions/_page.scss */
+/* line 88, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page .scroll-pane, .pt-perspective .no-js body .pt-page-current .scroll-pane, .no-js body .pt-perspective .pt-page-current .scroll-pane {
   border: 1px solid blue;
   min-width: 300px;
@@ -10282,7 +10281,7 @@ body {
   height: 100%;
   overflow: auto;
 }
-/* line 95, scss/modules/page-transitions/_page.scss */
+/* line 97, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page .pt-cover, .pt-perspective .no-js body .pt-page-current .pt-cover, .no-js body .pt-perspective .pt-page-current .pt-cover {
   border: 1px solid green;
   width: 30%;
@@ -10291,35 +10290,34 @@ body {
   top: 0;
   left: 0;
 }
-/* line 108, scss/modules/page-transitions/_page.scss */
+/* line 109, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page .pt-body, .pt-perspective .no-js body .pt-page-current .pt-body, .no-js body .pt-perspective .pt-page-current .pt-body {
   border: 1px solid green;
-  padding: 5px;
   width: 70%;
   min-height: 100%;
   position: relative;
   top: 0;
   left: 30%;
 }
-/* line 122, scss/modules/page-transitions/_page.scss */
+/* line 123, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page-current {
   visibility: visible;
   z-index: 1;
 }
-/* line 127, scss/modules/page-transitions/_page.scss */
+/* line 128, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page-ontop {
   z-index: 999;
 }
 
 @media (max-width: 999px) {
-  /* line 139, scss/modules/page-transitions/_page.scss */
+  /* line 140, scss/modules/page-transitions/_page.scss */
   .pt-perspective .pt-page .pt-cover, .pt-perspective .no-js body .pt-page-current .pt-cover, .no-js body .pt-perspective .pt-page-current .pt-cover {
     min-width: 300px;
     width: 100%;
     height: 300px;
     position: relative;
   }
-  /* line 146, scss/modules/page-transitions/_page.scss */
+  /* line 147, scss/modules/page-transitions/_page.scss */
   .pt-perspective .pt-page .pt-body, .pt-perspective .no-js body .pt-page-current .pt-body, .no-js body .pt-perspective .pt-page-current .pt-body {
     min-width: 300px;
     width: 100%;

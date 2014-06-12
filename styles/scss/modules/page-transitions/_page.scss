@@ -50,10 +50,12 @@
 
 
 .pt-perspective {
-	position: relative;
-	width: 100%;
+	//position: relative;
+    border: 1px solid red; // development line
+
+	//width: 100%;
+    min-height: 320px; // set to height of viewport
 	height: 100%;
-	min-height: 700px; // set to height of viewport
 	
 	-webkit-perspective: 1200px;
 	-moz-perspective: 1200px;
@@ -95,7 +97,6 @@
 		.pt-cover {
 			border: 1px solid green; // development line
 			
-			//padding: 5px;
 			width: 30%;
 			height: 100%;
 
@@ -108,7 +109,7 @@
 		.pt-body {
 			border: 1px solid green; // development line
 
-			padding: 5px;
+			//padding: 5px;
 			width: 70%;
 			min-height: 100%;
 

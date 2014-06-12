@@ -40,172 +40,190 @@
 
 	<div id="main-container">
 		
-		<div class="clearfix">
-			<ul id="menav" class="pt-menu"></ul>
-		</div>
-
-		<div id="pt-main" class="pt-perspective">
-
-			<div id="page1" class="pt-page">
-				<div class="scroll-pane">
-					<div class="pt-cover">
-						<h1>Cover</h1>
-						<p>Message: <span id="msg"></span></p>
-						<p><a href="//ucfmba.ucf.edu/evening-mba" class="btn btn-primary btn-lg target_blank">Click Me</a></p>
-						<!--<p><input id="textInput" type="text" /></p>
-						<p>Text: <span id="nameDiv"></span></p>-->
-						<p>First Name: <input ng-model="firstName" type="text" /></p>
-						<p>Last Name: <input ng-model="lastName" type="text" /></p>
-						<p>Hello {{firstName}} {{lastName}}</p>
-					</div>
-
-					<div class="pt-body">
-						<a class="btnNext"> Next </a>
-						<h1>Start Page</h1>
-						<h2>
-							<span class="glyphicon glyphicon-star"></span> Star
-						</h2>
-					</div>
-				</div>
+		<aside id="sidebarLeft" class="sidebarLeft">
+			<div class="scrollableArea">
+				<a class="shutLeft" href="">&#10006;</a>
+				<!-- Place whatever HTML you want in here -->
+				<h3>Left Content</h3>
 			</div>
+		</aside>
 
-			<div id="page2" class="pt-page">
-				<div class="scroll-pane">
-					<div class="pt-cover">
-						<div>
-							<h1>Cover 2</h1>
-						</div>
-					</div>
+        <section id="page" class="page">
+
+            <header class="topBar">
+				<a id="leftBurger" class="slideRight" href="">&#9776;</a>
+				<a id="rightBurger" class="slideLeft" href="">&#9776;</a>
+				<ul id="menav" class="pt-menu"></ul>
+			</header>
+
+		    <div id="pt-main" class="pt-perspective">
+			    <div id="page1" class="pt-page">
+				    <div class="scroll-pane">
+					    <div class="pt-cover">
+						    <h1>Cover</h1>
+						    <p>Message: <span id="msg"></span></p>
+						    <p><a href="//ucfmba.ucf.edu/evening-mba" class="btn btn-primary btn-lg target_blank">Click Me</a></p>
+						    <!--<p><input id="textInput" type="text" /></p>
+						    <p>Text: <span id="nameDiv"></span></p>-->
+						    <p>First Name: <input ng-model="firstName" type="text" /></p>
+						    <p>Last Name: <input ng-model="lastName" type="text" /></p>
+						    <p>Hello {{firstName}} {{lastName}}</p>
+					    </div>
+
+					    <div class="pt-body">
+						    <a class="btnNext"> Next </a>
+						    <h1>Start Page</h1>
+						    <h2>
+							    <span class="glyphicon glyphicon-star"></span> Star
+						    </h2>
+					    </div>
+				    </div>
+			    </div>
+			    <div id="page2" class="pt-page">
+				    <div class="scroll-pane">
+					    <div class="pt-cover">
+						    <div>
+							    <h1>Cover 2</h1>
+						    </div>
+					    </div>
 					
-					<div class="pt-body">
-						<a class="btnPrev"> Previous </a>
-						<a class="btnNext"> Next </a>
+					    <div class="pt-body">
+						    <a class="btnPrev"> Previous </a>
+						    <a class="btnNext"> Next </a>
 
-						<h1>Panels - Page 1</h1>
+						    <h1>Panels - Page 1</h1>
 						
-						<!--// ROW - SPOTLIGHTS/FEATURED -->
-						<div class="pagespan">
-							<section class="wrap">
-								<div class="wrap-header"><span>Spotlights</span></div>
+						    <!--// ROW - SPOTLIGHTS/FEATURED -->
+						    <div class="pagespan">
+							    <section class="wrap">
+								    <div class="wrap-header"><span>Spotlights</span></div>
 
-								<div class="frame" id="row1" data-intro="row1" data-position="left">
-									<ul class="clearfix">
-										<li>
-											<div title="title of panel">
-												<a href="//www.bus.ucf.edu" class="target_blank">
-													<img class="panel-img img-responsive" src="" alt="..." data-echo="/images/panel/blank1.jpg" width="320" height="300">
-													<p>Panel 1 title</p>
-												</a>
-											</div>
-										</li>
+								    <div class="frame" id="row1" data-intro="row1" data-position="left">
+									    <ul class="clearfix">
+										    <li>
+											    <div title="title of panel">
+												    <a href="//www.bus.ucf.edu" class="target_blank">
+													    <img class="panel-img img-responsive" src="" alt="..." data-echo="/images/panel/blank1.jpg" width="320" height="300">
+													    <p>Panel 1 title</p>
+												    </a>
+											    </div>
+										    </li>
 										
-										<li>
-											<div title="title of panel">
-												<a href="about.html" class="target_blank">
-													<img class="panel-img img-responsive" src="" alt="..." data-echo="/images/panel/blank2.jpg" width="300" height="280">
-													<p>Panel 2 title</p>
-												</a>
-											</div>
-										</li>
+										    <li>
+											    <div title="title of panel">
+												    <a href="about.html" class="target_blank">
+													    <img class="panel-img img-responsive" src="" alt="..." data-echo="/images/panel/blank2.jpg" width="300" height="280">
+													    <p>Panel 2 title</p>
+												    </a>
+											    </div>
+										    </li>
 										
-										<li>
-											<div title="title of panel">
-												<a href="//www.bus.ucf.edu" class="target_blank">
-													<img class="panel-img img-responsive" src="" alt="..." data-echo="/images/panel/blank3.jpg" width="300" height="280">
-													<p>Panel 3 title</p>
-												</a>
-											</div>
-										</li>
+										    <li>
+											    <div title="title of panel">
+												    <a href="//www.bus.ucf.edu" class="target_blank">
+													    <img class="panel-img img-responsive" src="" alt="..." data-echo="/images/panel/blank3.jpg" width="300" height="280">
+													    <p>Panel 3 title</p>
+												    </a>
+											    </div>
+										    </li>
 
-										<li>
-											<div title="title of panel">
-												<a href="//www.bus.ucf.edu" class="target_blank">
-													<img class="panel-img img-responsive" src="" alt="..." data-echo="/images/panel/blank4.jpg" width="300" height="280">
-													<p>Panel 4 title</p>
-												</a>
-											</div>
-										</li>
+										    <li>
+											    <div title="title of panel">
+												    <a href="//www.bus.ucf.edu" class="target_blank">
+													    <img class="panel-img img-responsive" src="" alt="..." data-echo="/images/panel/blank4.jpg" width="300" height="280">
+													    <p>Panel 4 title</p>
+												    </a>
+											    </div>
+										    </li>
 
-										<li>
-											<div title="title of panel">
-												<a href="//www.bus.ucf.edu" class="target_blank">
-													<img class="panel-img img-responsive" src="" alt="..." data-echo="/images/panel/blank5.jpg" width="300" height="280">
-													<p>Panel 5 title</p>
-												</a>
-											</div>
-										</li>
-									</ul>
-								</div><!--/frame -->
+										    <li>
+											    <div title="title of panel">
+												    <a href="//www.bus.ucf.edu" class="target_blank">
+													    <img class="panel-img img-responsive" src="" alt="..." data-echo="/images/panel/blank5.jpg" width="300" height="280">
+													    <p>Panel 5 title</p>
+												    </a>
+											    </div>
+										    </li>
+									    </ul>
+								    </div><!--/frame -->
 
-								<div class="scrollbar">
-									<div class="handle">
-										<div class="mousearea"><span></span></div>
-									</div>
-								</div><!--/scrollbar --> 
+								    <div class="scrollbar">
+									    <div class="handle">
+										    <div class="mousearea"><span></span></div>
+									    </div>
+								    </div><!--/scrollbar --> 
 
-								<div class="controls use-fastclick">
-									<button class="btn prevPage"><i class="fa fa-chevron-left"></i><i class="icon-chevron-left"></i></button><!--/back button-->
-									<button class="btn nextPage"><i class="fa fa-chevron-right"></i></button><!--/forward button-->
-								</div><!--/controls --> 
-							</section>
-						</div><!--/pagespan -->
+								    <div class="controls use-fastclick">
+									    <button class="btn prevPage"><i class="fa fa-chevron-left"></i><i class="icon-chevron-left"></i></button><!--/back button-->
+									    <button class="btn nextPage"><i class="fa fa-chevron-right"></i></button><!--/forward button-->
+								    </div><!--/controls --> 
+							    </section>
+						    </div><!--/pagespan -->
 
-						<img class="panel-img img-responsive" src="" alt="..." data-echo="/images/blank.jpg" width="300" height="280">
-						<img class="panel-img img-responsive" src="" alt="..." data-echo="/images/blank.jpg" width="300" height="280">
-						<img class="panel-img img-responsive" src="" alt="..." data-echo="/images/blank.jpg" width="300" height="280">
-						<img class="panel-img img-responsive" src="" alt="..." data-echo="/images/blank.jpg" width="300" height="280">
-
-					</div>
-				</div>
-			</div>
-
-			<div id="page3" class="pt-page">
-				<div class="scroll-pane">
-					<div class="pt-cover">
-						<div>
-							<h1>Cover 3</h1>
-						</div>
-					</div>
-
-					<div class="pt-body">
-
-						<a class="btnPrev"> Previous </a>
-						<a class="btnNext"> Next </a>
-
-						<h1>Panels - Page 2</h1>
-						<div>
-							<img class="panel-img img-responsive" src="" alt="..." data-echo="/images/blank.jpg" width="300" height="280">
 						    <img class="panel-img img-responsive" src="" alt="..." data-echo="/images/blank.jpg" width="300" height="280">
 						    <img class="panel-img img-responsive" src="" alt="..." data-echo="/images/blank.jpg" width="300" height="280">
 						    <img class="panel-img img-responsive" src="" alt="..." data-echo="/images/blank.jpg" width="300" height="280">
-						</div>
+						    <img class="panel-img img-responsive" src="" alt="..." data-echo="/images/blank.jpg" width="300" height="280">
 
-					</div>
-				</div>
-			</div>
+					    </div>
+				    </div>
+			    </div>
+			    <div id="page3" class="pt-page">
+				    <div class="scroll-pane">
+					    <div class="pt-cover">
+						    <div>
+							    <h1>Cover 3</h1>
+						    </div>
+					    </div>
 
-			<div id="page4" class="pt-page">
-				<div class="scroll-pane">
-					<div class="pt-cover">
-						<div>
-							<h1>Cover 4</h1>
-						</div>
-					</div>
+					    <div class="pt-body">
+
+						    <a class="btnPrev"> Previous </a>
+						    <a class="btnNext"> Next </a>
+
+						    <h1>Panels - Page 2</h1>
+						    <div>
+							    <img class="panel-img img-responsive" src="" alt="..." data-echo="/images/blank.jpg" width="300" height="280">
+						        <img class="panel-img img-responsive" src="" alt="..." data-echo="/images/blank.jpg" width="300" height="280">
+						        <img class="panel-img img-responsive" src="" alt="..." data-echo="/images/blank.jpg" width="300" height="280">
+						        <img class="panel-img img-responsive" src="" alt="..." data-echo="/images/blank.jpg" width="300" height="280">
+						    </div>
+
+					    </div>
+				    </div>
+			    </div>
+			    <div id="page4" class="pt-page">
+				    <div class="scroll-pane">
+					    <div class="pt-cover">
+						    <div>
+							    <h1>Cover 4</h1>
+						    </div>
+					    </div>
 					
-					<div class="pt-body">
-						<a class="btnPrev"> Previous </a>
+					    <div class="pt-body">
+						    <a class="btnPrev"> Previous </a>
 
-						<h1>Aft Page</h1>
-					</div>
-				</div>
+						    <h1>Aft Page</h1>
+					    </div>
+				    </div>
+			    </div>
+			    <div class="pt-page"></div> <!-- end marker (required) -->
+		    </div>
+
+        </section>
+
+        <aside id="sidebarRight" class="sidebarRight">
+			<div class="scrollableArea">
+				<a class="shutRight" href="">&#10006;</a>
+				<!-- Place whatever HTML you want in here -->
+				<h3>Right Content</h3>
 			</div>
+		</aside>
 
-			<div class="pt-page"></div> <!-- end marker (required) -->
-
-		</div>
 	</div>
 
 	<!-- Scripts: BEGIN -->
+
 	<script data-main="/scripts/main" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.11/require.min.js"></script> <!--// cdn //-->
 	<!--<script data-main="/scripts/main" src="/scripts/require.min.js"></script> // no cdn - local //-->
 	<script>
