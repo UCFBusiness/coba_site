@@ -1,6 +1,6 @@
 /* normalize.css v3.0.0 | MIT License | git.io/normalize */
 /* line 9, scss/vendors/bootstrap/_normalize.scss */
-html, body {
+html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -172,7 +172,6 @@ select {
 /* line 289, scss/vendors/bootstrap/_normalize.scss */
 button,
 html input[type="button"],
-body input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
@@ -181,8 +180,7 @@ input[type="submit"] {
 
 /* line 299, scss/vendors/bootstrap/_normalize.scss */
 button[disabled],
-html input[disabled],
-body input[disabled] {
+html input[disabled] {
   cursor: default;
 }
 
@@ -1401,7 +1399,7 @@ th {
 }
 
 /* line 22, scss/vendors/bootstrap/_scaffolding.scss */
-html, body {
+html {
   font-size: 62.5%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -10179,25 +10177,26 @@ button.close {
   content: "\f1e2";
 }
 
-/* line 7, scss/partials/_primary.scss */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+/*
+html {
+	height: 100% !important;
 }
 
-/* line 13, scss/partials/_primary.scss */
 body {
-  letter-spacing: 1px;
-  font-size: .85em;
-  font-weight: 400;
-  line-height: 1em;
-  color: #333;
-  position: relative;
-  z-index: 0;
-}
+	@extend html;
+	
+    padding: 0;
+	letter-spacing: 1px;
+	font-size: .85em;
+	font-weight: 400;
+	line-height: 1em;
+	color: #333;
 
-/* line 32, scss/partials/_primary.scss */
+	position: relative;
+	z-index: 0;
+}
+*/
+/* line 37, scss/partials/_primary.scss */
 .centered {
   position: fixed;
   top: 50%;
@@ -10206,7 +10205,7 @@ body {
   margin-left: -50%;
 }
 
-/* line 40, scss/partials/_primary.scss */
+/* line 45, scss/partials/_primary.scss */
 #main-container {
   position: relative;
 }
