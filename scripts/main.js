@@ -27,7 +27,7 @@ requirejs.config({
             'libs/jquery-ui-1.10.3.min'
         ],
         'modernizr': [
-            //'//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min',
+            '//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.6.2',
             // If CDN fails, load from this location
             'libs/modernizr-2.6.2'
         ],
