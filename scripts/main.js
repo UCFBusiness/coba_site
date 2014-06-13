@@ -41,11 +41,16 @@ requirejs.config({
         'transitions': 'js/pagetransitions',
         'echo': 'libs/echo.min',
         'pageslide': 'libs/jquery.pageslide',
+        //offcanvas
+        'offcanvas': 'libs/jquery.offcanvas.min',
+        'overthrow': 'libs/overthrow',
+        'hammer': 'libs/hammer',
+        'jhammer': 'libs/jquery.hammer',
         //pagescroll
         'mousewheel': 'libs/jquery.mousewheel',
         'mwintent': 'js/mwheelIntent',
         'jscroll': 'libs/jquery.jscrollpane.min',
-        //Sly
+        //sly
         'easing': 'libs/jquery.easing.min',
         'sly': 'libs/sly.min',
         'horizontal': 'js/sly.horizontal'
@@ -98,7 +103,7 @@ requirejs.config({
 // Enter global require code here...
 require(['modernizr'], function ()
 {
-    require(['transitions','bootstrap','echo'], function()
+    require(['transitions','bootstrap','echo','offcanvas','overthrow','hammer','jhammer'], function()
     {
         // Log that jquery was loaded into the global name-space.
         console.log('jQuery', $.fn.jquery, 'loaded!');
@@ -111,6 +116,10 @@ require(['modernizr'], function ()
         });
         //-----------------------------------------------
 
+        $('html').offcanvas({
+			hasSidebarRight: true
+		});
+
         // Lazyload images
         Echo.init({
             offset: 0,
@@ -118,6 +127,7 @@ require(['modernizr'], function ()
         });
         //Echo.render(); // is also available for non-scroll callbacks
         //-----------------------------------------------
+
 
         // Add scroll pane
         //$('.scroll-pane').jScrollPane();

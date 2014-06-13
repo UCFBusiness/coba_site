@@ -10246,7 +10246,7 @@ body {
 /* line 52, scss/modules/page-transitions/_page.scss */
 .pt-perspective {
   border: 1px solid red;
-  min-height: 320px;
+  min-height: 400px;
   height: 100%;
   -webkit-perspective: 1200px;
   -moz-perspective: 1200px;
@@ -10286,11 +10286,11 @@ body {
   border: 1px solid green;
   width: 30%;
   height: 100%;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
 }
-/* line 109, scss/modules/page-transitions/_page.scss */
+/* line 110, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page .pt-body, .pt-perspective .no-js body .pt-page-current .pt-body, .no-js body .pt-perspective .pt-page-current .pt-body {
   border: 1px solid green;
   width: 70%;
@@ -10299,25 +10299,25 @@ body {
   top: 0;
   left: 30%;
 }
-/* line 123, scss/modules/page-transitions/_page.scss */
+/* line 124, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page-current {
   visibility: visible;
   z-index: 1;
 }
-/* line 128, scss/modules/page-transitions/_page.scss */
+/* line 129, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page-ontop {
   z-index: 999;
 }
 
 @media (max-width: 999px) {
-  /* line 140, scss/modules/page-transitions/_page.scss */
+  /* line 141, scss/modules/page-transitions/_page.scss */
   .pt-perspective .pt-page .pt-cover, .pt-perspective .no-js body .pt-page-current .pt-cover, .no-js body .pt-perspective .pt-page-current .pt-cover {
     min-width: 300px;
     width: 100%;
     height: 300px;
     position: relative;
   }
-  /* line 147, scss/modules/page-transitions/_page.scss */
+  /* line 148, scss/modules/page-transitions/_page.scss */
   .pt-perspective .pt-page .pt-body, .pt-perspective .no-js body .pt-page-current .pt-body, .no-js body .pt-perspective .pt-page-current .pt-body {
     min-width: 300px;
     width: 100%;

@@ -54,7 +54,7 @@
     border: 1px solid red; // development line
 
 	//width: 100%;
-    min-height: 320px; // set to height of viewport
+    min-height: 400px; // set to height of viewport
 	height: 100%;
 	
 	-webkit-perspective: 1200px;
@@ -100,7 +100,8 @@
 			width: 30%;
 			height: 100%;
 
-			position: fixed;
+			//position: fixed;
+            position: relative;
 			top: 0;
 			left: 0;
 			//float: left;
