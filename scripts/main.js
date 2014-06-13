@@ -105,20 +105,26 @@ require(['modernizr'], function ()
 {
     require(['transitions','bootstrap','echo','offcanvas','overthrow','hammer','jhammer'], function()
     {
-        // Log that jquery was loaded into the global name-space.
-        console.log('jQuery', $.fn.jquery, 'loaded!');
-        //-----------------------------------------------
-
-        // Right-click disabled
-        $(document).bind('contextmenu', function (e)
+        jQuery(document).ready(function($)
         {
-            return false;
+            // Log that jquery was loaded into the global name-space
+            console.log('jQuery', $.fn.jquery, 'loaded!');
+            
+            // Add off-canvas
+            $("html").offcanvas({hasSidebarRight: true})
+
+            // Add scroll panes
+            //$('.scroll-pane').jScrollPane();
+
+            // Right-click disabled
+            $(document).bind('contextmenu', function (e)
+            {
+                return false;
+            });
         });
         //-----------------------------------------------
 
-        $('html').offcanvas({
-			hasSidebarRight: true
-		});
+        // Framework independent scripts-----------------
 
         // Lazyload images
         Echo.init({
@@ -128,9 +134,6 @@ require(['modernizr'], function ()
         //Echo.render(); // is also available for non-scroll callbacks
         //-----------------------------------------------
 
-
-        // Add scroll pane
-        //$('.scroll-pane').jScrollPane();
     })
 });
 

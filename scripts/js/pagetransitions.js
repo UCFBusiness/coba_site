@@ -25,7 +25,7 @@ var PageTransitions = (function ()
         // Build navigation menu dependant of pages built
         for (var i=0;i<$pages.length - 1;i++)
         {
-            $('#menav').append("<li><a id='pageLink" + i + "' class='btnGo'>" + (i + 1) + "</a></li>");
+            $('#pt-menu').append("<li><a id='pageLink" + i + "' class='btnGo'>" + (i + 1) + "</a></li>");
         }
 
         $pages.each(function ()

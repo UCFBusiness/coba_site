@@ -10177,6 +10177,16 @@ button.close {
   content: "\f1e2";
 }
 
+/* Colours */
+/* Responsive break points */
+/*1200px*/
+/*1000px*/
+/*600px*/
+/*530px*/
+/*450px*/
+/*400px*/
+/*320px*/
+/* border-radius */
 /*
 html {
 	height: 100% !important;
@@ -10205,54 +10215,388 @@ body {
   margin-left: -50%;
 }
 
-/* line 45, scss/partials/_primary.scss */
-#main-container {
-  position: relative;
+/* == Off.canvas == */
+/* line 3, scss/modules/_offcanvas.scss */
+html.offcanvas {
+  overflow: hidden;
 }
 
-/* Apply to all resolutions. Inherits to all layouts. */
+/* line 7, scss/modules/_offcanvas.scss */
+body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #272727;
+}
+
+/* line 16, scss/modules/_offcanvas.scss */
+.offcanvas body {
+  overflow: hidden;
+}
+
+/* line 20, scss/modules/_offcanvas.scss */
+.animatedSlide {
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  -ms-transition-property: -ms-transform;
+  -ms-transition-duration: 0.3s;
+  -ms-transition-timing-function: ease-out;
+  -moz-transition-property: -moz-transform;
+  -moz-transition-duration: 0.3s;
+  -moz-transition-timing-function: ease-out;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  -o-transition-property: -o-transform;
+  -o-transition-duration: 0.3s;
+  -o-transition-timing-function: ease-out;
+}
+
+/* line 41, scss/modules/_offcanvas.scss */
+.no-csstransforms3d .animatedSlide {
+  transition: left 0.3s ease-out, right 0.3s ease-out;
+  -ms-transition: left 0.3s ease-out, right 0.3s ease-out;
+  -moz-transition: left 0.3s ease-out, right 0.3s ease-out;
+  -webkit-transition: left 0.3s ease-out, right 0.3s ease-out;
+  -o-transition: left 0.3s ease-out, right 0.3s ease-out;
+}
+
+/*- Cover -*/
+/* line 50, scss/modules/_offcanvas.scss */
+.floated {
+  float: left;
+  width: 100%;
+}
+
+/* line 55, scss/modules/_offcanvas.scss */
+.padded {
+  padding: 2em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 59, scss/modules/_offcanvas.scss */
+.paddedLight {
+  padding: 1.2em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 64, scss/modules/_offcanvas.scss */
+.offcanvas .scrollableArea {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 74, scss/modules/_offcanvas.scss */
+.sidebarLeft.show, .sidebarRight.show {
+  z-index: 200;
+}
+
+/* Sliding side bars */
+/* line 79, scss/modules/_offcanvas.scss */
+.sidebarLeft, .sidebarRight {
+  float: left;
+  width: 20%;
+  word-wrap: break-word;
+  z-index: 100;
+  background-color: #272727;
+  /* hides close button unless JS is enabled */
+}
+/* line 87, scss/modules/_offcanvas.scss */
+.sidebarLeft .shutLeft, .sidebarLeft .shutRight, .sidebarRight .shutLeft, .sidebarRight .shutRight {
+  display: none;
+  position: absolute;
+  top: 0;
+  z-index: 90;
+  width: 1.6em;
+  height: 1.6em;
+  font-size: 2.5em;
+  line-height: 1.6em;
+  color: gainsboro;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0.3;
+}
+/* line 101, scss/modules/_offcanvas.scss */
+.sidebarLeft .shutLeft:hover, .sidebarLeft .shutRight:hover, .sidebarRight .shutLeft:hover, .sidebarRight .shutRight:hover {
+  opacity: 0.5;
+}
+
+/* Styles for both sidebars */
+/* line 108, scss/modules/_offcanvas.scss */
+.offcanvas .sidebarLeft, .offcanvas .sidebarRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20em;
+}
+/* line 114, scss/modules/_offcanvas.scss */
+.offcanvas .sidebarLeft .shutLeft, .offcanvas .sidebarLeft .shutRight, .offcanvas .sidebarRight .shutLeft, .offcanvas .sidebarRight .shutRight {
+  display: block;
+}
+@media screen and (max-width: 28.125em) {
+  /* line 108, scss/modules/_offcanvas.scss */
+  .offcanvas .sidebarLeft, .offcanvas .sidebarRight {
+    width: 16em;
+  }
+}
+
+/* line 122, scss/modules/_offcanvas.scss */
+.offcanvas .sidebarLeft {
+  left: 0;
+  transform: translate3d(-7em, 0, 0);
+  -ms-transform: translate3d(-7em, 0, 0);
+  -moz-transform: translate3d(-7em, 0, 0);
+  -webkit-transform: translate3d(-7em, 0, 0);
+  -o-transform: translate3d(-7em, 0, 0);
+}
+/* line 130, scss/modules/_offcanvas.scss */
+.offcanvas .sidebarLeft .shutLeft {
+  left: 0;
+}
+
+/* line 134, scss/modules/_offcanvas.scss */
+.offcanvas .sidebarRight {
+  right: 0;
+  transform: translate3d(7em, 0, 0);
+  -ms-transform: translate3d(7em, 0, 0);
+  -moz-transform: translate3d(7em, 0, 0);
+  -webkit-transform: translate3d(7em, 0, 0);
+  -o-transform: translate3d(7em, 0, 0);
+}
+/* line 142, scss/modules/_offcanvas.scss */
+.offcanvas .sidebarRight .shutRight {
+  right: 0;
+}
+
+/*
+.no-csstransforms3d .offcanvas .sidebarLeft {
+	left:-7em;
+}
+.no-csstransforms3d .offcanvas .sidebarRight {
+	right:-7em;
+}
+*/
+/* Main central area styles */
+/* line 157, scss/modules/_offcanvas.scss */
+.page {
+  word-wrap: break-word;
+  position: relative;
+  z-index: 500;
+}
+/* line 162, scss/modules/_offcanvas.scss */
+.page .scrollableArea {
+  position: absolute;
+  top: 4rem;
+  bottom: 0;
+  background: #fff;
+}
+@media screen and (max-width: 37.5em) {
+  /* line 162, scss/modules/_offcanvas.scss */
+  .page .scrollableArea {
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 28.125em) {
+  /* line 162, scss/modules/_offcanvas.scss */
+  .page .scrollableArea {
+    font-size: 85%;
+  }
+}
+@media screen and (max-width: 20em) {
+  /* line 162, scss/modules/_offcanvas.scss */
+  .page .scrollableArea {
+    font-size: 80%;
+  }
+}
+
+/* line 179, scss/modules/_offcanvas.scss */
+.offcanvas .page {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 183, scss/modules/_offcanvas.scss */
+.no-js .page {
+  float: left;
+  width: 60%;
+}
+
+/* Slid styles */
+/* line 189, scss/modules/_offcanvas.scss */
+.page.slidRight {
+  transform: translate3d(20em, 0, 0);
+  -ms-transform: translate3d(20em, 0, 0);
+  -moz-transform: translate3d(20em, 0, 0);
+  -webkit-transform: translate3d(20em, 0, 0);
+  -o-transform: translate3d(20em, 0, 0);
+}
+@media screen and (max-width: 28.125em) {
+  /* line 189, scss/modules/_offcanvas.scss */
+  .page.slidRight {
+    transform: translate3d(16em, 0, 0);
+    -ms-transform: translate3d(16em, 0, 0);
+    -moz-transform: translate3d(16em, 0, 0);
+    -webkit-transform: translate3d(16em, 0, 0);
+    -o-transform: translate3d(16em, 0, 0);
+  }
+}
+
+/* line 204, scss/modules/_offcanvas.scss */
+.page.slidLeft {
+  transform: translate3d(-20em, 0, 0);
+  -ms-transform: translate3d(-20em, 0, 0);
+  -moz-transform: translate3d(-20em, 0, 0);
+  -webkit-transform: translate3d(-20em, 0, 0);
+  -o-transform: translate3d(-20em, 0, 0);
+}
+@media screen and (max-width: 28.125em) {
+  /* line 204, scss/modules/_offcanvas.scss */
+  .page.slidLeft {
+    transform: translate3d(-16em, 0, 0);
+    -ms-transform: translate3d(-16em, 0, 0);
+    -moz-transform: translate3d(-16em, 0, 0);
+    -webkit-transform: translate3d(-16em, 0, 0);
+    -o-transform: translate3d(-16em, 0, 0);
+  }
+}
+
+/* line 219, scss/modules/_offcanvas.scss */
+.no-csstransforms3d .page.slidRight {
+  left: 20em;
+}
+@media screen and (max-width: 28.125em) {
+  /* line 219, scss/modules/_offcanvas.scss */
+  .no-csstransforms3d .page.slidRight {
+    left: 16em;
+  }
+}
+
+/* line 226, scss/modules/_offcanvas.scss */
+.no-csstransforms3d .page.slidLeft {
+  left: -20em;
+}
+@media screen and (max-width: 28.125em) {
+  /* line 226, scss/modules/_offcanvas.scss */
+  .no-csstransforms3d .page.slidLeft {
+    left: -16em;
+  }
+}
+
+/* line 234, scss/modules/_offcanvas.scss */
+.sidebarLeft.slidRight, .sidebarRight.slidLeft {
+  transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+}
+
+/* line 241, scss/modules/_offcanvas.scss */
+.no-csstransforms3d .sidebarLeft.slidRight {
+  left: 0;
+}
+
+/* line 244, scss/modules/_offcanvas.scss */
+.no-csstransforms3d .sidebarRight.slidLeft {
+  right: 0;
+}
+
+/* line 248, scss/modules/_offcanvas.scss */
+.topBar {
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+  word-wrap: break-word;
+  overflow: hidden;
+  background-color: #999999;
+}
+/* line 257, scss/modules/_offcanvas.scss */
+.topBar .slideRight, .topBar .slideLeft {
+  position: absolute;
+  top: 0;
+  width: 0.8em;
+  height: 0.8em;
+  font-size: 5em;
+  line-height: 0.84em;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+/* line 268, scss/modules/_offcanvas.scss */
+.topBar .slideRight:hover, .topBar .slideRight.pressed, .topBar .slideLeft:hover, .topBar .slideLeft.pressed {
+  color: white;
+}
+/* line 271, scss/modules/_offcanvas.scss */
+.topBar .slideRight.pressed, .topBar .slideLeft.pressed {
+  background: #828282;
+}
+/* line 275, scss/modules/_offcanvas.scss */
+.topBar .slideRight {
+  left: 0;
+}
+/* line 278, scss/modules/_offcanvas.scss */
+.topBar .slideLeft {
+  right: 0;
+}
+
 /* line 9, scss/modules/page-transitions/_page.scss */
 .pt-menu {
   background: #333;
   margin: 0;
   padding: 1em;
+  text-align: center;
 }
-/* line 14, scss/modules/page-transitions/_page.scss */
+/* line 15, scss/modules/page-transitions/_page.scss */
 .pt-menu li {
   display: inline;
   padding-right: 10px;
   font-size: 3em;
 }
-/* line 21, scss/modules/page-transitions/_page.scss */
+/* line 22, scss/modules/page-transitions/_page.scss */
 .pt-menu li > a:hover {
   cursor: pointer;
 }
 
-/* line 33, scss/modules/page-transitions/_page.scss */
+/* line 34, scss/modules/page-transitions/_page.scss */
 .no-js body {
   overflow: auto;
 }
-/* line 36, scss/modules/page-transitions/_page.scss */
+/* line 37, scss/modules/page-transitions/_page.scss */
 .no-js body .pt-page, .no-js body .pt-page-current {
   visibility: visible;
   z-index: 1;
 }
 
-/* line 47, scss/modules/page-transitions/_page.scss */
+/* line 48, scss/modules/page-transitions/_page.scss */
 .pt-page-ontop {
   z-index: 999;
 }
 
-/* line 52, scss/modules/page-transitions/_page.scss */
+/* line 53, scss/modules/page-transitions/_page.scss */
 .pt-perspective {
   border: 1px solid red;
+  position: relative;
+  width: 100%;
+  height: 90% !important;
   min-height: 400px;
-  height: 100%;
   -webkit-perspective: 1200px;
   -moz-perspective: 1200px;
   perspective: 1200px;
 }
-/* line 64, scss/modules/page-transitions/_page.scss */
+/* line 65, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page, .pt-perspective .no-js body .pt-page-current, .no-js body .pt-perspective .pt-page-current {
   border: 1px dashed red;
   background: #fff;
@@ -10273,10 +10617,9 @@ body {
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 88, scss/modules/page-transitions/_page.scss */
+/* line 89, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page .scroll-pane, .pt-perspective .no-js body .pt-page-current .scroll-pane, .no-js body .pt-perspective .pt-page-current .scroll-pane {
-  border: 1px solid blue;
-  min-width: 300px;
+  border: 2px solid blue;
   width: 100%;
   height: 100%;
   overflow: auto;
@@ -10284,47 +10627,44 @@ body {
 /* line 97, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page .pt-cover, .pt-perspective .no-js body .pt-page-current .pt-cover, .no-js body .pt-perspective .pt-page-current .pt-cover {
   border: 1px solid green;
-  width: 30%;
+  min-width: 32%;
   height: 100%;
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
 }
-/* line 110, scss/modules/page-transitions/_page.scss */
+/* line 107, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page .pt-body, .pt-perspective .no-js body .pt-page-current .pt-body, .no-js body .pt-perspective .pt-page-current .pt-body {
   border: 1px solid green;
-  width: 70%;
+  width: 67%;
   min-height: 100%;
   position: relative;
   top: 0;
-  left: 30%;
+  left: 33%;
 }
-/* line 124, scss/modules/page-transitions/_page.scss */
-.pt-perspective .pt-page-current {
-  visibility: visible;
-  z-index: 1;
-}
-/* line 129, scss/modules/page-transitions/_page.scss */
-.pt-perspective .pt-page-ontop {
-  z-index: 999;
-}
-
 @media (max-width: 999px) {
-  /* line 141, scss/modules/page-transitions/_page.scss */
+  /* line 120, scss/modules/page-transitions/_page.scss */
   .pt-perspective .pt-page .pt-cover, .pt-perspective .no-js body .pt-page-current .pt-cover, .no-js body .pt-perspective .pt-page-current .pt-cover {
-    min-width: 300px;
     width: 100%;
     height: 300px;
     position: relative;
   }
-  /* line 148, scss/modules/page-transitions/_page.scss */
+  /* line 126, scss/modules/page-transitions/_page.scss */
   .pt-perspective .pt-page .pt-body, .pt-perspective .no-js body .pt-page-current .pt-body, .no-js body .pt-perspective .pt-page-current .pt-body {
-    min-width: 300px;
     width: 100%;
-    position: relative;
     left: 0;
   }
 }
+/* line 134, scss/modules/page-transitions/_page.scss */
+.pt-perspective .pt-page-current {
+  visibility: visible;
+  z-index: 1;
+}
+/* line 139, scss/modules/page-transitions/_page.scss */
+.pt-perspective .pt-page-ontop {
+  z-index: 999;
+}
+
 /* animation sets */
 /* move from / to  */
 /* line 15, scss/modules/page-transitions/_animation.scss */
@@ -13495,10 +13835,8 @@ body {
   animation-delay: 1s;
 }
 
-/* Pages */
-/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
 /* Pagespan */
-/* line 65, scss/modules/sly/_page.scss */
+/* line 4, scss/modules/sly/_page-css.scss */
 .pagespan *,
 .pagespan *:after,
 .pagespan *:before {
@@ -13510,20 +13848,20 @@ body {
 }
 
 /* Wrapper */
-/* line 74, scss/modules/sly/_page.scss */
+/* line 13, scss/modules/sly/_page-css.scss */
 .pagespan .wrap {
   position: relative;
 }
 
 /* Wrapper Header */
-/* line 79, scss/modules/sly/_page.scss */
+/* line 18, scss/modules/sly/_page-css.scss */
 .pagespan .wrap-header {
   padding: 3px 6px;
   background: #eee;
   border: 1px solid #fff;
 }
 
-/* line 85, scss/modules/sly/_page.scss */
+/* line 24, scss/modules/sly/_page-css.scss */
 .pagespan .wrap-header span {
   font-weight: normal;
   color: #333;
@@ -13531,7 +13869,7 @@ body {
   text-transform: capitalize;
 }
 
-/* line 92, scss/modules/sly/_page.scss */
+/* line 31, scss/modules/sly/_page-css.scss */
 .pagespan .wrap-header span:last-child {
   float: right;
   font-weight: normal;
@@ -13539,7 +13877,7 @@ body {
 }
 
 /* Frame */
-/* line 99, scss/modules/sly/_page.scss */
+/* line 38, scss/modules/sly/_page-css.scss */
 .frame {
   margin: 0 0 1px;
   height: 224px;
@@ -13548,7 +13886,7 @@ body {
   overflow: hidden;
 }
 
-/* line 106, scss/modules/sly/_page.scss */
+/* line 45, scss/modules/sly/_page-css.scss */
 .frame ul {
   margin: 0;
   padding: 0;
@@ -13558,7 +13896,7 @@ body {
 }
 
 /* Panels */
-/* line 115, scss/modules/sly/_page.scss */
+/* line 54, scss/modules/sly/_page-css.scss */
 .frame ul li {
   /* all panels */
   background: #fff;
@@ -13573,7 +13911,7 @@ body {
   position: relative;
 }
 
-/* line 126, scss/modules/sly/_page.scss */
+/* line 65, scss/modules/sly/_page-css.scss */
 .frame ul li.active {
   /* active panel */
   /*background: #fff;*/
@@ -13581,7 +13919,7 @@ body {
 }
 
 /* Panel image */
-/* line 134, scss/modules/sly/_page.scss */
+/* line 73, scss/modules/sly/_page-css.scss */
 .frame ul li img {
   /*background: #fff url(/images/ajax.gif) no-repeat;*/
   background: #fff;
@@ -13592,7 +13930,7 @@ body {
 }
 
 /* Panel Caption */
-/* line 145, scss/modules/sly/_page.scss */
+/* line 84, scss/modules/sly/_page-css.scss */
 .frame p {
   margin: 0;
   padding: 10px 5px;
@@ -13609,13 +13947,13 @@ body {
   left: 0px;
 }
 
-/* line 160, scss/modules/sly/_page.scss */
+/* line 99, scss/modules/sly/_page-css.scss */
 .frame a {
   color: #fff;
 }
 
 /* Scrollbar */
-/* line 166, scss/modules/sly/_page.scss */
+/* line 105, scss/modules/sly/_page-css.scss */
 .scrollbar {
   margin: 1px 0 1px;
   height: 30px;
@@ -13623,7 +13961,7 @@ body {
   line-height: 0;
 }
 
-/* line 172, scss/modules/sly/_page.scss */
+/* line 111, scss/modules/sly/_page-css.scss */
 .scrollbar .handle {
   width: 20px;
   height: 100%;
@@ -13631,7 +13969,7 @@ body {
   cursor: pointer;
 }
 
-/* line 178, scss/modules/sly/_page.scss */
+/* line 117, scss/modules/sly/_page-css.scss */
 .scrollbar .handle .mousearea {
   position: absolute;
   top: -9px;
@@ -13641,7 +13979,7 @@ body {
 }
 
 /* Controls */
-/* line 188, scss/modules/sly/_page.scss */
+/* line 127, scss/modules/sly/_page-css.scss */
 .controls {
   margin: 0;
   text-align: center;
@@ -13649,25 +13987,25 @@ body {
 
 /*.controls .divider { display: inline-block; margin: 0 10px; }*/
 /* Button Controls */
-/* line 192, scss/modules/sly/_page.scss */
+/* line 131, scss/modules/sly/_page-css.scss */
 .controls button {
   background: rgba(255, 204, 0, 0.6);
   border: 0;
-  color: #ffcc00;
+  color: #333;
   opacity: .5;
 }
 
-/* line 193, scss/modules/sly/_page.scss */
+/* line 132, scss/modules/sly/_page-css.scss */
 .controls button:hover {
   opacity: 1;
 }
 
-/* line 194, scss/modules/sly/_page.scss */
+/* line 133, scss/modules/sly/_page-css.scss */
 .controls button:disabled {
-  opacity: .2;
+  opacity: 0;
 }
 
-/* line 196, scss/modules/sly/_page.scss */
+/* line 135, scss/modules/sly/_page-css.scss */
 .next, .prev, .forward, .backward, .prevPage, .nextPage {
   background: rgba(255, 204, 0, 0.3);
   display: block;
@@ -13681,17 +14019,17 @@ body {
   visibility: hidden;
 }
 
-/* line 208, scss/modules/sly/_page.scss */
+/* line 147, scss/modules/sly/_page-css.scss */
 .prev, .backward, .prevPage {
   left: 0;
 }
 
-/* line 209, scss/modules/sly/_page.scss */
+/* line 148, scss/modules/sly/_page-css.scss */
 .next, .forward, .nextPage {
   right: 0;
 }
 
-/* line 210, scss/modules/sly/_page.scss */
+/* line 149, scss/modules/sly/_page-css.scss */
 .next:hover, .prev:hover {
   background: rgba(255, 204, 0, 0.7);
   color: #fff;
@@ -13700,20 +14038,20 @@ body {
 /* Tablet(portrait) Layout. */
 @media screen and (max-width: 999px) {
   /* Frame */
-  /* line 217, scss/modules/sly/_page.scss */
+  /* line 156, scss/modules/sly/_page-css.scss */
   .frame {
     height: 240px;
     /*<== height of panel */
   }
 
-  /* line 220, scss/modules/sly/_page.scss */
+  /* line 159, scss/modules/sly/_page-css.scss */
   .frame ul li {
     width: 257px;
     /*<== width of panel */
   }
 
   /* Panel image */
-  /* line 225, scss/modules/sly/_page.scss */
+  /* line 164, scss/modules/sly/_page-css.scss */
   .frame ul li img {
     /* panel image */
     height: 240px;
@@ -13725,20 +14063,20 @@ body {
 /* Tablet(portrait) Layout. */
 @media all and (max-width: 599px) {
   /* Frame */
-  /* line 237, scss/modules/sly/_page.scss */
+  /* line 176, scss/modules/sly/_page-css.scss */
   .frame {
     height: 224px;
     /*<== height of panel */
   }
 
-  /* line 240, scss/modules/sly/_page.scss */
+  /* line 179, scss/modules/sly/_page-css.scss */
   .frame ul li {
     width: 240px;
     /*<== width of panel */
   }
 
   /* Panel image */
-  /* line 245, scss/modules/sly/_page.scss */
+  /* line 184, scss/modules/sly/_page-css.scss */
   .frame ul li img {
     height: 224px;
     /*<== height of panel image */
@@ -13747,7 +14085,7 @@ body {
   }
 
   /* Button Controls */
-  /* line 252, scss/modules/sly/_page.scss */
+  /* line 191, scss/modules/sly/_page-css.scss */
   .next, .prev, .forward, .backward, .prevPage, .nextPage {
     visibility: visible;
     height: 252px;
@@ -13757,14 +14095,14 @@ body {
 /* Tablet(landscape) and Small Desktop Layout. */
 @media screen and (min-width: 1000px) {
   /* Frame */
-  /* line 264, scss/modules/sly/_page.scss */
+  /* line 203, scss/modules/sly/_page-css.scss */
   .frame ul li {
     /*opacity: 0.55;
     filter: Alpha(opacity=55);*/
     /*IE8 and earlier */
   }
 
-  /* line 268, scss/modules/sly/_page.scss */
+  /* line 207, scss/modules/sly/_page-css.scss */
   .frame ul li:hover {
     /*border: 1px solid #eee;
     opacity: 1;
@@ -13772,7 +14110,7 @@ body {
     /*IE8 and earlier */
   }
 
-  /* line 273, scss/modules/sly/_page.scss */
+  /* line 212, scss/modules/sly/_page-css.scss */
   .frame ul li.active {
     /*active panel*/
     /*opacity: 1;
@@ -13780,28 +14118,24 @@ body {
     /*IE8 and earlier */
   }
 
-  /* line 278, scss/modules/sly/_page.scss */
+  /* line 217, scss/modules/sly/_page-css.scss */
   .frame ul li.long-panel {
     width: 480px;
   }
 
   /* Scrollbar */
-  /* line 282, scss/modules/sly/_page.scss */
+  /* line 221, scss/modules/sly/_page-css.scss */
   .scrollbar {
     height: 3px;
   }
 
   /* Button Controls */
-  /* line 285, scss/modules/sly/_page.scss */
+  /* line 224, scss/modules/sly/_page-css.scss */
   .next, .prev, .forward, .backward, .prevPage, .nextPage {
     visibility: visible;
     height: 224px;
     /*<== match height of panel*/
   }
-}
-/* Laptop Layout. */
-@media screen and (min-width: 1300px) {
-  /* Button Controls */
 }
 /* 3D Effects */
 /* line 3, scss/modules/sly/_effects.scss */

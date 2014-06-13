@@ -2,14 +2,15 @@
 // Page Transitions
 // --------------------------------------------------
 // All Viewports
-/* Apply to all resolutions. Inherits to all layouts. */
+// Apply to all resolutions. Inherits to all layouts.
 
-
-// Menu styles // ---------------------------------------     
+// Menu styles //
+   
 .pt-menu {
 	background: #333;
 	margin: 0;
 	padding: 1em;
+    text-align: center;
 
 	li {
 		display: inline;
@@ -26,7 +27,7 @@
 }
 
 
-// Page styles // --------------------------------------- 
+// Page styles //
 
 .no-js  {
 	
@@ -50,12 +51,12 @@
 
 
 .pt-perspective {
-	//position: relative;
     border: 1px solid red; // development line
 
-	//width: 100%;
-    min-height: 400px; // set to height of viewport
-	height: 100%;
+    position: relative;
+    width: 100%;
+    height: 90% !important; // set to height of viewport
+    min-height: 400px;
 	
 	-webkit-perspective: 1200px;
 	-moz-perspective: 1200px;
@@ -64,7 +65,7 @@
 	.pt-page {
 		border: 1px dashed red; // development line
 
-		background: #fff;
+        background: #fff;
 		width: 100%;
 		height: 100%;
 		position: absolute;
@@ -84,11 +85,10 @@
 		-webkit-transform-style: preserve-3d;
 		-moz-transform-style: preserve-3d;
 		transform-style: preserve-3d;
-		
+
 		.scroll-pane {
-			border: 1px solid blue; // development line
+			border: 2px solid blue; // development line
 			
-			min-width: 300px;
 			width: 100%;
 			height: 100%;
 			overflow: auto;
@@ -97,28 +97,38 @@
 		.pt-cover {
 			border: 1px solid green; // development line
 			
-			width: 30%;
+			min-width: 32%;
 			height: 100%;
-
-			//position: fixed;
-            position: relative;
+			position: fixed;
 			top: 0;
 			left: 0;
-			//float: left;
 		}
 
 		.pt-body {
 			border: 1px solid green; // development line
 
-			//padding: 5px;
-			width: 70%;
+			width: 67%;
 			min-height: 100%;
-
 			position: relative;
 			top: 0;
-			left: 30%; // >= pt-cover width
-			//float: left;
+			left: 33%; // >= pt-cover width
 		}
+
+
+        // Tablet //
+        @media (max-width: 999px){
+            .pt-cover {
+				width: 100%;
+				height: 300px;
+				position: relative;
+			}
+
+			.pt-body {
+				width: 100%;
+				left: 0;
+			}
+        }
+
 	}
 	
 	.pt-page-current {
@@ -131,27 +141,3 @@
 	}
 }
 
-// Tablet //
-@media (max-width: 999px){
-
-	.pt-perspective {
-		
-		.pt-page {
-
-			.pt-cover {
-				min-width: 300px;
-				width: 100%;
-				height: 300px;
-				position: relative;
-			}
-
-			.pt-body {
-				min-width: 300px;
-				width: 100%;
-				position: relative;
-
-				left: 0;
-			}
-		}
-	}
-}

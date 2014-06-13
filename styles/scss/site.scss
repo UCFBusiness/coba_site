@@ -1,14 +1,21 @@
 // Compass
-//@import "compass";
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/css3/images";
+@import "compass/css3/box-sizing";
 
 // Bootstrap
 @import "vendors/bootstrap";
 @import "vendors/font-awesome";
 
+// Helpers
+@import "helpers/variables";
+
 // Partials
 @import "partials/primary";
 
 // Modules
+@import "modules/offcanvas";
 @import "modules/page-transitions/base";
 @import "modules/sly/base";
 @import "modules/pageslide";

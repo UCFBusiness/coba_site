@@ -28,7 +28,7 @@
         body {height:100%;padding:0;letter-spacing:1px;position:relative;z-index:0}
     </style>
 	<link rel="stylesheet" href="/styles/site.css">
-    <link rel="stylesheet" href="/styles/offcanvas.css">
+    <!--<link rel="stylesheet" href="/styles/offcanvas.css">-->
 	<!-- Styles: FINIS -->
 	
 	<!-- Google Analytics Code -->
@@ -39,7 +39,7 @@
 		<p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
-	<div id="main-container">
+	<!--<div id="main-container">-->
 		
 		<aside id="sidebarLeft" class="sidebarLeft">
 			<div class="scrollableArea">
@@ -54,50 +54,47 @@
             <header class="topBar">
 				<a id="leftBurger" class="slideRight" href="">&#9776;</a>
 				<a id="rightBurger" class="slideLeft" href="">&#9776;</a>
-				<ul id="menav" class="pt-menu"></ul>
+				<ul id="pt-menu" class="pt-menu"></ul>
 			</header>
 
 		    <div id="pt-main" class="pt-perspective">
-                
 			    <div id="page1" class="pt-page">
-				    <div class="scrollableArea">
+				    <div class="scroll-pane">
 					    <div class="pt-cover">
 						    <h1>Cover</h1>
 						    <p>Message: <span id="msg"></span></p>
 						    <p><a href="//ucfmba.ucf.edu/evening-mba" class="btn btn-primary btn-lg target_blank">Click Me</a></p>
-						    <!--<p><input id="textInput" type="text" /></p>
-						    <p>Text: <span id="nameDiv"></span></p>-->
+						    
 						    <p>First Name: <input ng-model="firstName" type="text" /></p>
 						    <p>Last Name: <input ng-model="lastName" type="text" /></p>
 						    <p>Hello {{firstName}} {{lastName}}</p>
 					    </div>
 					    <div class="pt-body">
 						    <a class="btnNext"> Next </a>
-						    <h1>Start Page</h1>
-						    <h2>
-							    <span class="glyphicon glyphicon-star"></span> Star
-						    </h2>
+						    <h1>Start - Page 1</h1>
+						    <h2><span class="glyphicon glyphicon-star"></span> Star</h2>
 					    </div>
 				    </div>
 			    </div>
 			    <div id="page2" class="pt-page">
-				    <div class="scrollableArea">
+				    <div class="scroll-pane">
 					    <div class="pt-cover">
 						    <div>
 							    <h1>Cover 2</h1>
+                                <!--<p><input id="textInput" type="text" /></p>
+						        <p>Text: <span id="nameDiv"></span></p>-->
 						    </div>
 					    </div>
 					    <div class="pt-body">
 						    <a class="btnPrev"> Previous </a>
 						    <a class="btnNext"> Next </a>
 
-						    <h1>Panels - Page 1</h1>
+						    <h1>Panels - Page 2</h1>
 						
 						    <!--// ROW - SPOTLIGHTS/FEATURED -->
 						    <div class="pagespan">
 							    <section class="wrap">
 								    <div class="wrap-header"><span>Spotlights</span></div>
-
 								    <div class="frame" id="row1" data-intro="row1" data-position="left">
 									    <ul class="clearfix">
 										    <li>
@@ -146,13 +143,11 @@
 										    </li>
 									    </ul>
 								    </div><!--/frame -->
-
 								    <div class="scrollbar">
 									    <div class="handle">
 										    <div class="mousearea"><span></span></div>
 									    </div>
 								    </div><!--/scrollbar --> 
-
 								    <div class="controls use-fastclick">
 									    <button class="btn prevPage"><i class="fa fa-chevron-left"></i><i class="icon-chevron-left"></i></button><!--/back button-->
 									    <button class="btn nextPage"><i class="fa fa-chevron-right"></i></button><!--/forward button-->
@@ -168,51 +163,41 @@
 						    <img class="panel-img img-responsive" src="" alt="..." data-echo="/images/blank.jpg" width="300" height="280">
 						    <img class="panel-img img-responsive" src="" alt="..." data-echo="/images/blank.jpg" width="300" height="280">
 						    <img class="panel-img img-responsive" src="" alt="..." data-echo="/images/blank.jpg" width="300" height="280">
-
 					    </div>
 				    </div>
 			    </div>
 			    <div id="page3" class="pt-page">
-				    <div class="scrollableArea">
+				    <div class="scroll-pane">
 					    <div class="pt-cover">
 						    <div>
 							    <h1>Cover 3</h1>
 						    </div>
 					    </div>
-
 					    <div class="pt-body">
-
 						    <a class="btnPrev"> Previous </a>
 						    <a class="btnNext"> Next </a>
 
-						    <h1>Panels - Page 2</h1>
-						    <div>
-							    <img class="panel-img img-responsive" src="" alt="..." data-echo="/images/blank.jpg" width="300" height="280">
-						        <img class="panel-img img-responsive" src="" alt="..." data-echo="/images/blank.jpg" width="300" height="280">
-						        <img class="panel-img img-responsive" src="" alt="..." data-echo="/images/blank.jpg" width="300" height="280">
-						        <img class="panel-img img-responsive" src="" alt="..." data-echo="/images/blank.jpg" width="300" height="280">
-						    </div>
-
+						    <h1>Panels - Page 3</h1>
+							<img class="panel-img img-responsive" src="" alt="..." data-echo="/images/blank.jpg" width="300" height="280">
 					    </div>
 				    </div>
 			    </div>
 			    <div id="page4" class="pt-page">
-				    <div class="scrollableArea">
+				    <div class="scroll-pane">
 					    <div class="pt-cover">
 						    <div>
 							    <h1>Cover 4</h1>
 						    </div>
 					    </div>
-					
 					    <div class="pt-body">
 						    <a class="btnPrev"> Previous </a>
 
-						    <h1>Aft Page</h1>
+						    <h1>Aft - Page 4</h1>
+                            <img class="panel-img img-responsive" src="" alt="..." data-echo="/images/blank.jpg" width="300" height="280">
 					    </div>
 				    </div>
 			    </div>
 			    <div class="pt-page"></div> <!-- end marker (required) -->
-                
 		    </div>
 
         </section>
@@ -225,7 +210,7 @@
 			</div>
 		</aside>
 
-	</div>
+	<!--</div>-->
 
 	<!-- Scripts: BEGIN -->
 
