@@ -82,7 +82,7 @@ body {
 	width: 20%;
 	word-wrap:break-word;
 	z-index: 100;
-	//background-color: $darkGrey;
+	background-color: $darkGrey; // do not remove
 	
 	/* hides close button unless JS is enabled */
 	.shutLeft, .shutRight {

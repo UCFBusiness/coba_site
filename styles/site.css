@@ -10311,6 +10311,7 @@ body {
   width: 20%;
   word-wrap: break-word;
   z-index: 100;
+  background-color: #272727;
   /* hides close button unless JS is enabled */
 }
 /* line 88, scss/modules/_offcanvas.scss */
