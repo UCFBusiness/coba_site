@@ -10221,23 +10221,23 @@ html.offcanvas {
   overflow: hidden;
 }
 
-/* line 7, scss/modules/_offcanvas.scss */
+/*
 body {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #272727;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: $darkGrey;
 }
-
-/* line 16, scss/modules/_offcanvas.scss */
+*/
+/* line 17, scss/modules/_offcanvas.scss */
 .offcanvas body {
   overflow: hidden;
 }
 
-/* line 20, scss/modules/_offcanvas.scss */
+/* line 21, scss/modules/_offcanvas.scss */
 .animatedSlide {
   transition-property: transform;
   transition-duration: 0.3s;
@@ -10256,7 +10256,7 @@ body {
   -o-transition-timing-function: ease-out;
 }
 
-/* line 41, scss/modules/_offcanvas.scss */
+/* line 42, scss/modules/_offcanvas.scss */
 .no-csstransforms3d .animatedSlide {
   transition: left 0.3s ease-out, right 0.3s ease-out;
   -ms-transition: left 0.3s ease-out, right 0.3s ease-out;
@@ -10266,13 +10266,13 @@ body {
 }
 
 /*- Cover -*/
-/* line 50, scss/modules/_offcanvas.scss */
+/* line 51, scss/modules/_offcanvas.scss */
 .floated {
   float: left;
   width: 100%;
 }
 
-/* line 55, scss/modules/_offcanvas.scss */
+/* line 56, scss/modules/_offcanvas.scss */
 .padded {
   padding: 2em;
   -webkit-box-sizing: border-box;
@@ -10280,7 +10280,7 @@ body {
   box-sizing: border-box;
 }
 
-/* line 59, scss/modules/_offcanvas.scss */
+/* line 60, scss/modules/_offcanvas.scss */
 .paddedLight {
   padding: 1.2em;
   -webkit-box-sizing: border-box;
@@ -10288,7 +10288,7 @@ body {
   box-sizing: border-box;
 }
 
-/* line 64, scss/modules/_offcanvas.scss */
+/* line 65, scss/modules/_offcanvas.scss */
 .offcanvas .scrollableArea {
   position: absolute;
   top: 0;
@@ -10299,22 +10299,21 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-/* line 74, scss/modules/_offcanvas.scss */
+/* line 75, scss/modules/_offcanvas.scss */
 .sidebarLeft.show, .sidebarRight.show {
   z-index: 200;
 }
 
 /* Sliding side bars */
-/* line 79, scss/modules/_offcanvas.scss */
+/* line 80, scss/modules/_offcanvas.scss */
 .sidebarLeft, .sidebarRight {
   float: left;
   width: 20%;
   word-wrap: break-word;
   z-index: 100;
-  background-color: #272727;
   /* hides close button unless JS is enabled */
 }
-/* line 87, scss/modules/_offcanvas.scss */
+/* line 88, scss/modules/_offcanvas.scss */
 .sidebarLeft .shutLeft, .sidebarLeft .shutRight, .sidebarRight .shutLeft, .sidebarRight .shutRight {
   display: none;
   position: absolute;
@@ -10329,31 +10328,31 @@ body {
   text-align: center;
   opacity: 0.3;
 }
-/* line 101, scss/modules/_offcanvas.scss */
+/* line 102, scss/modules/_offcanvas.scss */
 .sidebarLeft .shutLeft:hover, .sidebarLeft .shutRight:hover, .sidebarRight .shutLeft:hover, .sidebarRight .shutRight:hover {
   opacity: 0.5;
 }
 
 /* Styles for both sidebars */
-/* line 108, scss/modules/_offcanvas.scss */
+/* line 109, scss/modules/_offcanvas.scss */
 .offcanvas .sidebarLeft, .offcanvas .sidebarRight {
   position: absolute;
   top: 0;
   bottom: 0;
   width: 20em;
 }
-/* line 114, scss/modules/_offcanvas.scss */
+/* line 115, scss/modules/_offcanvas.scss */
 .offcanvas .sidebarLeft .shutLeft, .offcanvas .sidebarLeft .shutRight, .offcanvas .sidebarRight .shutLeft, .offcanvas .sidebarRight .shutRight {
   display: block;
 }
 @media screen and (max-width: 28.125em) {
-  /* line 108, scss/modules/_offcanvas.scss */
+  /* line 109, scss/modules/_offcanvas.scss */
   .offcanvas .sidebarLeft, .offcanvas .sidebarRight {
     width: 16em;
   }
 }
 
-/* line 122, scss/modules/_offcanvas.scss */
+/* line 123, scss/modules/_offcanvas.scss */
 .offcanvas .sidebarLeft {
   left: 0;
   transform: translate3d(-7em, 0, 0);
@@ -10362,12 +10361,12 @@ body {
   -webkit-transform: translate3d(-7em, 0, 0);
   -o-transform: translate3d(-7em, 0, 0);
 }
-/* line 130, scss/modules/_offcanvas.scss */
+/* line 131, scss/modules/_offcanvas.scss */
 .offcanvas .sidebarLeft .shutLeft {
   left: 0;
 }
 
-/* line 134, scss/modules/_offcanvas.scss */
+/* line 135, scss/modules/_offcanvas.scss */
 .offcanvas .sidebarRight {
   right: 0;
   transform: translate3d(7em, 0, 0);
@@ -10376,7 +10375,7 @@ body {
   -webkit-transform: translate3d(7em, 0, 0);
   -o-transform: translate3d(7em, 0, 0);
 }
-/* line 142, scss/modules/_offcanvas.scss */
+/* line 143, scss/modules/_offcanvas.scss */
 .offcanvas .sidebarRight .shutRight {
   right: 0;
 }
@@ -10390,52 +10389,51 @@ body {
 }
 */
 /* Main central area styles */
-/* line 157, scss/modules/_offcanvas.scss */
+/* line 158, scss/modules/_offcanvas.scss */
 .page {
   word-wrap: break-word;
   position: relative;
   z-index: 500;
 }
-/* line 162, scss/modules/_offcanvas.scss */
+/* line 163, scss/modules/_offcanvas.scss */
 .page .scrollableArea {
   position: absolute;
   top: 4rem;
   bottom: 0;
-  background: #fff;
 }
 @media screen and (max-width: 37.5em) {
-  /* line 162, scss/modules/_offcanvas.scss */
+  /* line 163, scss/modules/_offcanvas.scss */
   .page .scrollableArea {
     font-size: 90%;
   }
 }
 @media screen and (max-width: 28.125em) {
-  /* line 162, scss/modules/_offcanvas.scss */
+  /* line 163, scss/modules/_offcanvas.scss */
   .page .scrollableArea {
     font-size: 85%;
   }
 }
 @media screen and (max-width: 20em) {
-  /* line 162, scss/modules/_offcanvas.scss */
+  /* line 163, scss/modules/_offcanvas.scss */
   .page .scrollableArea {
     font-size: 80%;
   }
 }
 
-/* line 179, scss/modules/_offcanvas.scss */
+/* line 180, scss/modules/_offcanvas.scss */
 .offcanvas .page {
   width: 100%;
   height: 100%;
 }
 
-/* line 183, scss/modules/_offcanvas.scss */
+/* line 184, scss/modules/_offcanvas.scss */
 .no-js .page {
   float: left;
   width: 60%;
 }
 
 /* Slid styles */
-/* line 189, scss/modules/_offcanvas.scss */
+/* line 190, scss/modules/_offcanvas.scss */
 .page.slidRight {
   transform: translate3d(20em, 0, 0);
   -ms-transform: translate3d(20em, 0, 0);
@@ -10444,7 +10442,7 @@ body {
   -o-transform: translate3d(20em, 0, 0);
 }
 @media screen and (max-width: 28.125em) {
-  /* line 189, scss/modules/_offcanvas.scss */
+  /* line 190, scss/modules/_offcanvas.scss */
   .page.slidRight {
     transform: translate3d(16em, 0, 0);
     -ms-transform: translate3d(16em, 0, 0);
@@ -10454,7 +10452,7 @@ body {
   }
 }
 
-/* line 204, scss/modules/_offcanvas.scss */
+/* line 205, scss/modules/_offcanvas.scss */
 .page.slidLeft {
   transform: translate3d(-20em, 0, 0);
   -ms-transform: translate3d(-20em, 0, 0);
@@ -10463,7 +10461,7 @@ body {
   -o-transform: translate3d(-20em, 0, 0);
 }
 @media screen and (max-width: 28.125em) {
-  /* line 204, scss/modules/_offcanvas.scss */
+  /* line 205, scss/modules/_offcanvas.scss */
   .page.slidLeft {
     transform: translate3d(-16em, 0, 0);
     -ms-transform: translate3d(-16em, 0, 0);
@@ -10473,29 +10471,29 @@ body {
   }
 }
 
-/* line 219, scss/modules/_offcanvas.scss */
+/* line 220, scss/modules/_offcanvas.scss */
 .no-csstransforms3d .page.slidRight {
   left: 20em;
 }
 @media screen and (max-width: 28.125em) {
-  /* line 219, scss/modules/_offcanvas.scss */
+  /* line 220, scss/modules/_offcanvas.scss */
   .no-csstransforms3d .page.slidRight {
     left: 16em;
   }
 }
 
-/* line 226, scss/modules/_offcanvas.scss */
+/* line 227, scss/modules/_offcanvas.scss */
 .no-csstransforms3d .page.slidLeft {
   left: -20em;
 }
 @media screen and (max-width: 28.125em) {
-  /* line 226, scss/modules/_offcanvas.scss */
+  /* line 227, scss/modules/_offcanvas.scss */
   .no-csstransforms3d .page.slidLeft {
     left: -16em;
   }
 }
 
-/* line 234, scss/modules/_offcanvas.scss */
+/* line 235, scss/modules/_offcanvas.scss */
 .sidebarLeft.slidRight, .sidebarRight.slidLeft {
   transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
@@ -10504,26 +10502,25 @@ body {
   -o-transform: translate3d(0, 0, 0);
 }
 
-/* line 241, scss/modules/_offcanvas.scss */
+/* line 242, scss/modules/_offcanvas.scss */
 .no-csstransforms3d .sidebarLeft.slidRight {
   left: 0;
 }
 
-/* line 244, scss/modules/_offcanvas.scss */
+/* line 245, scss/modules/_offcanvas.scss */
 .no-csstransforms3d .sidebarRight.slidLeft {
   right: 0;
 }
 
-/* line 248, scss/modules/_offcanvas.scss */
+/* line 249, scss/modules/_offcanvas.scss */
 .topBar {
   position: relative;
   width: 100%;
   z-index: 1000;
   word-wrap: break-word;
   overflow: hidden;
-  background-color: #999999;
 }
-/* line 257, scss/modules/_offcanvas.scss */
+/* line 258, scss/modules/_offcanvas.scss */
 .topBar .slideRight, .topBar .slideLeft {
   position: absolute;
   top: 0;
@@ -10535,19 +10532,19 @@ body {
   text-decoration: none;
   text-align: center;
 }
-/* line 268, scss/modules/_offcanvas.scss */
+/* line 269, scss/modules/_offcanvas.scss */
 .topBar .slideRight:hover, .topBar .slideRight.pressed, .topBar .slideLeft:hover, .topBar .slideLeft.pressed {
   color: white;
 }
-/* line 271, scss/modules/_offcanvas.scss */
+/* line 272, scss/modules/_offcanvas.scss */
 .topBar .slideRight.pressed, .topBar .slideLeft.pressed {
   background: #828282;
 }
-/* line 275, scss/modules/_offcanvas.scss */
+/* line 276, scss/modules/_offcanvas.scss */
 .topBar .slideRight {
   left: 0;
 }
-/* line 278, scss/modules/_offcanvas.scss */
+/* line 279, scss/modules/_offcanvas.scss */
 .topBar .slideLeft {
   right: 0;
 }
@@ -10599,7 +10596,6 @@ body {
 /* line 65, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page, .pt-perspective .no-js body .pt-page-current, .no-js body .pt-perspective .pt-page-current {
   border: 1px dashed red;
-  background: #fff;
   width: 100%;
   height: 100%;
   position: absolute;

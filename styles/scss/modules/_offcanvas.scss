@@ -3,7 +3,7 @@
 html.offcanvas {
 	overflow: hidden;
 }
-
+/*
 body {
 	position: absolute;
 	top: 0;
@@ -13,6 +13,7 @@ body {
 	width: 100%;
 	background-color: $darkGrey;
 }
+*/
 .offcanvas body {
 	overflow: hidden;
 }
@@ -81,7 +82,7 @@ body {
 	width: 20%;
 	word-wrap:break-word;
 	z-index: 100;
-	background-color: $darkGrey;
+	//background-color: $darkGrey;
 	
 	/* hides close button unless JS is enabled */
 	.shutLeft, .shutRight {
@@ -163,7 +164,7 @@ body {
 		position: absolute;
 		top: 4rem;
 		bottom: 0;
-		background: #fff;
+		//background: #fff;
 		
 		@media screen and (max-width: $mediumLargeBreak) {
 			font-size: 90%;
@@ -252,7 +253,7 @@ body {
 	z-index:1000;
 	word-wrap:break-word;
 	overflow:hidden;
-	background-color: $mediumGrey;
+	//background-color: $mediumGrey;
 	
 	.slideRight, .slideLeft {
 		position:absolute;
