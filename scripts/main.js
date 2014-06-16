@@ -10,6 +10,7 @@ console.log( 'START: main.js' );
 requirejs.config({
     baseUrl: 'scripts',
     paths: {
+        'domReady': 'domReady',
         // The Libraries:
         'angular': [
             '//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min',
@@ -103,26 +104,25 @@ requirejs.config({
 // Enter global require code here...
 require(['modernizr'], function ()
 {
-    require(['transitions','bootstrap','echo','offcanvas','overthrow','hammer','jhammer'], function()
+    require(['jquery','transitions','bootstrap','echo','offcanvas','overthrow','hammer','jhammer'], function($)
     {
-        jQuery(document).ready(function($)
-        {
-            // Log that jquery was loaded into the global name-space
-            console.log('jQuery', $.fn.jquery, 'loaded!');
+        // Log that jquery was loaded into the global name-space
+        console.log('jQuery', $.fn.jquery, 'loaded!');
+
+        // jQuery dependent scripts-----------------
             
-            // Add off-canvas
-            $("html").offcanvas({hasSidebarRight: true})
+        // Add off-canvas
+        $("html").offcanvas({hasSidebarRight: true})
 
-            // Add scroll panes
-            //$('.scroll-pane').jScrollPane();
+        // Add scroll panes
+        //$('.scroll-pane').jScrollPane();
 
-            // Right-click disabled
-            $(document).bind('contextmenu', function (e)
-            {
-                return false;
-            });
+        // Right-click disabled
+        $(document).bind('contextmenu', function (e)
+        {
+            return false;
         });
-        //-----------------------------------------------
+        //----------------------------------------------- 
 
         // Framework independent scripts-----------------
 

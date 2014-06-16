@@ -1,4 +1,4 @@
-define(['jquery', 'debounced', 'easing', 'sly', 'horizontal', 'pageslide'], function ($) {
+define(['jquery','debounced','easing','sly','horizontal','pageslide'], function ($) {
     // runs 1st
     var screenwidth = parseInt($(this).width());
     var screenheight = parseInt($(this).height());

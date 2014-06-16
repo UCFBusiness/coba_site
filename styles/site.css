@@ -10586,15 +10586,16 @@ body {
 /* line 53, scss/modules/page-transitions/_page.scss */
 .pt-perspective {
   border: 1px solid red;
-  position: relative;
+  background: #ddd;
   width: 100%;
-  height: 90% !important;
+  height: 91% !important;
   min-height: 400px;
+  position: relative;
   -webkit-perspective: 1200px;
   -moz-perspective: 1200px;
   perspective: 1200px;
 }
-/* line 65, scss/modules/page-transitions/_page.scss */
+/* line 66, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page, .pt-perspective .no-js body .pt-page-current, .no-js body .pt-perspective .pt-page-current {
   border: 1px dashed red;
   width: 100%;
@@ -10614,14 +10615,14 @@ body {
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 89, scss/modules/page-transitions/_page.scss */
+/* line 90, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page .scroll-pane, .pt-perspective .no-js body .pt-page-current .scroll-pane, .no-js body .pt-perspective .pt-page-current .scroll-pane {
   border: 2px solid blue;
   width: 100%;
   height: 100%;
   overflow: auto;
 }
-/* line 97, scss/modules/page-transitions/_page.scss */
+/* line 98, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page .pt-cover, .pt-perspective .no-js body .pt-page-current .pt-cover, .no-js body .pt-perspective .pt-page-current .pt-cover {
   border: 1px solid green;
   min-width: 32%;
@@ -10630,7 +10631,7 @@ body {
   top: 0;
   left: 0;
 }
-/* line 107, scss/modules/page-transitions/_page.scss */
+/* line 108, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page .pt-body, .pt-perspective .no-js body .pt-page-current .pt-body, .no-js body .pt-perspective .pt-page-current .pt-body {
   border: 1px solid green;
   width: 67%;
@@ -10640,24 +10641,24 @@ body {
   left: 33%;
 }
 @media (max-width: 999px) {
-  /* line 120, scss/modules/page-transitions/_page.scss */
+  /* line 121, scss/modules/page-transitions/_page.scss */
   .pt-perspective .pt-page .pt-cover, .pt-perspective .no-js body .pt-page-current .pt-cover, .no-js body .pt-perspective .pt-page-current .pt-cover {
     width: 100%;
     height: 300px;
     position: relative;
   }
-  /* line 126, scss/modules/page-transitions/_page.scss */
+  /* line 127, scss/modules/page-transitions/_page.scss */
   .pt-perspective .pt-page .pt-body, .pt-perspective .no-js body .pt-page-current .pt-body, .no-js body .pt-perspective .pt-page-current .pt-body {
     width: 100%;
     left: 0;
   }
 }
-/* line 134, scss/modules/page-transitions/_page.scss */
+/* line 135, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page-current {
   visibility: visible;
   z-index: 1;
 }
-/* line 139, scss/modules/page-transitions/_page.scss */
+/* line 140, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page-ontop {
   z-index: 999;
 }
@@ -13881,6 +13882,7 @@ body {
   /*<== height of panel */
   width: 100%;
   overflow: hidden;
+  z-index: 8;
 }
 
 /* line 45, scss/modules/sly/_page-css.scss */
@@ -13942,6 +13944,7 @@ body {
   position: absolute;
   bottom: 0px;
   left: 0px;
+  z-index: 9;
 }
 
 /* line 99, scss/modules/sly/_page-css.scss */
@@ -14006,14 +14009,13 @@ body {
 .next, .prev, .forward, .backward, .prevPage, .nextPage {
   background: rgba(255, 204, 0, 0.3);
   display: block;
-  float: left;
   width: 40px;
   height: 224px;
   /*<== match height of panel*/
   font-size: 30px;
   position: absolute;
   top: 0;
-  visibility: hidden;
+  z-index: 9;
 }
 
 /* line 147, scss/modules/sly/_page-css.scss */
@@ -14084,7 +14086,6 @@ body {
   /* Button Controls */
   /* line 191, scss/modules/sly/_page-css.scss */
   .next, .prev, .forward, .backward, .prevPage, .nextPage {
-    visibility: visible;
     height: 252px;
     /*<== match height of panel*/
   }
@@ -14129,7 +14130,6 @@ body {
   /* Button Controls */
   /* line 224, scss/modules/sly/_page-css.scss */
   .next, .prev, .forward, .backward, .prevPage, .nextPage {
-    visibility: visible;
     height: 224px;
     /*<== match height of panel*/
   }
