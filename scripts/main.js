@@ -40,8 +40,9 @@ requirejs.config({
         //--------------------------------------------
         'debounced': 'libs/jquery.debouncedresize',
         'transitions': 'js/pagetransitions',
-        'echo': 'libs/echo.min',
         'pageslide': 'libs/jquery.pageslide',
+        //lazyloading
+        'lazyloader': 'libs/jquery.bttrlazyloading.min',
         //offcanvas
         'offcanvas': 'libs/jquery.offcanvas.min',
         'overthrow': 'libs/overthrow',
@@ -54,7 +55,7 @@ requirejs.config({
         //sly
         'easing': 'libs/jquery.easing.min',
         'sly': 'libs/sly.min',
-        'horizontal': 'js/sly.horizontal'
+        'sly-horizontal': 'js/sly.horizontal'
     },
     shim: 
     {
@@ -70,7 +71,19 @@ requirejs.config({
         {
             deps: ['jquery']
         },
+        'easing':
+        {
+            deps: ['jquery']
+        },
         'debounced':
+        {
+            deps: ['jquery']
+        },
+        'pageslide':
+        {
+            deps: ['jquery']
+        },
+        'lazyloader':
         {
             deps: ['jquery']
         },
@@ -82,19 +95,11 @@ requirejs.config({
         {
             deps: ['jquery','mousewheel','mwintent']
         },
-        'pageslide':
-        {
-            deps: ['jquery']
-        },
-        'easing':
-        {
-            deps: ['jquery']
-        },
         'sly':
         {
             deps: ['jquery', 'easing']
         },
-        'horizontal':
+        'sly-horizontal':
         {
             deps: ['sly']
         }
@@ -104,36 +109,33 @@ requirejs.config({
 // Enter global require code here...
 require(['modernizr'], function ()
 {
-    require(['jquery','transitions','bootstrap','echo','offcanvas','overthrow','hammer','jhammer'], function($)
+    require(['jquery', 'bootstrap', 'lazyloader', 'offcanvas', 'overthrow', 'hammer', 'jhammer', 'transitions'], function ($)
     {
         // Log that jquery was loaded into the global name-space
         console.log('jQuery', $.fn.jquery, 'loaded!');
 
-        // jQuery dependent scripts-----------------
-            
         // Add off-canvas
-        $("html").offcanvas({hasSidebarRight: true})
-
-        // Add scroll panes
-        //$('.scroll-pane').jScrollPane();
-
+        $("html").offcanvas({
+            hasSidebarRight: true
+        });
+        
         // Right-click disabled
         $(document).bind('contextmenu', function (e)
         {
             return false;
         });
-        //----------------------------------------------- 
-
-        // Framework independent scripts-----------------
-
+        
         // Lazyload images
-        Echo.init({
-            offset: 0,
-            throttle: 250
+        $('.img-responsive').bttrlazyloading({
+            //placeholder: 'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==',
+            backgroundcolor: 'transparent',
+            animation: 'fadeIn',
+            container: '.scroll-pane'
         });
-        //Echo.render(); // is also available for non-scroll callbacks
-        //-----------------------------------------------
 
+        // Add scroll panes
+        //$('.scroll-pane').jScrollPane();
+        //----------------------------------------------- 
     })
 });
 

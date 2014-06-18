@@ -52,7 +52,10 @@
 
 /* Panels */
 .frame ul li { /* all panels */
-	background: #fff;
+	@include background(
+        linear-gradient(top left, #ddd, #eff),
+        radial-gradient(#c00, #fff 100px)
+        );
 	width: 240px; /*<== width of panel */
 	height: 100%;
 	margin: 0 1px 0;
@@ -64,6 +67,7 @@
 }
 .frame ul li.active { /* active panel */
 	/*background: #fff;*/
+    background: #ffcc00;
 	color: #fff;
 	
 }
