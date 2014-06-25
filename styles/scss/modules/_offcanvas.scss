@@ -1,8 +1,11 @@
 /* == Off.canvas == */
 
-html.offcanvas {
-	overflow: hidden;
+@media screen and (max-width: $largeBreak) {
+    html.offcanvas {
+	    overflow: hidden;
+    }
 }
+
 /*
 body {
 	position: absolute;
@@ -47,7 +50,7 @@ body {
 	-o-transition: left 0.3s ease-out, right 0.3s ease-out; 
 }
 
-/*- Cover -*/
+/*- Cover -
 .floated {
 	float: left;
 	width: 100%;
@@ -61,6 +64,7 @@ body {
 	padding: 1.2em;
 	@include box-sizing(border-box);
 }
+*/
 
 .offcanvas .scrollableArea {
 	position:absolute;
@@ -190,8 +194,8 @@ body {
 	height: 100%;
 }
 .no-js .page {
-	float: left;
-	width: 60%;
+	width: 100%;
+	height: 100%;
 }
 
 /* Slid styles */

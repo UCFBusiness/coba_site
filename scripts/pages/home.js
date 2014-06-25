@@ -66,6 +66,11 @@ define(['jquery', 'debounced', 'easing', 'sly', 'sly-horizontal', 'pageslide', '
                 var screenwidth = parseInt($(this).width());
                 var screenheight = parseInt($(this).height());
 
+                $(".pt-perspective").css("height", function (index) {
+                    var topBar = parseInt($('.topBar').height());
+                    return screenheight - topBar;
+                });
+
                 if (screenwidth < 1000) // load tablet scripts
                 {
                     require([], function () {

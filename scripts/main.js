@@ -28,9 +28,9 @@ requirejs.config({
             'libs/jquery-ui-1.10.3.min'
         ],
         'modernizr': [
-            '//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.6.2',
+            //'//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.6.2',
             // If CDN fails, load from this location
-            'libs/modernizr-2.6.2'
+            'libs/modernizr-2.6.2.min'
         ],
         'bootstrap': [
             '//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min',
@@ -117,6 +117,12 @@ require(['modernizr'], function ()
         // Add off-canvas
         $("html").offcanvas({
             hasSidebarRight: true
+        });
+
+        var screenheight = parseInt($(this).height());
+        $(".pt-perspective").css("height", function (index) {
+            var topBar = parseInt($('.topBar').height());
+            return screenheight - topBar;
         });
         
         // Right-click disabled
