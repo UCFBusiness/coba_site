@@ -73,23 +73,23 @@ body {
 }
 
 .sidebarLeft.show, .sidebarRight.show {
-	z-index: 200;
+	//z-index: 200;
+    z-index: 2;
 }
 
 /* Sliding side bars */
 .sidebarLeft, .sidebarRight {
-	float: left;
+    background-color: $darkGrey; // do not remove
 	width: 30%;
+    float: left;
 	word-wrap: break-word;
-	z-index: 100;
-	background-color: $darkGrey; // do not remove
+	//z-index: 100;
+    z-index: 1;
+	
 	
 	/* hides close button unless JS is enabled */
 	.shutLeft, .shutRight {
 		display: none;
-		position: absolute;
-		top: 0;
-		z-index: 90;
 		width: 1.6em;
 		height: 1.6em;
 		font-size: 1.5em;
@@ -98,6 +98,11 @@ body {
 		text-decoration: none;
 		text-align: center;
 		opacity: 0.3;
+
+        position: absolute;
+		top: 0;
+		//z-index: 90;
+        z-index: 0;
 		
 		&:hover {
 			opacity: 0.5;
@@ -158,7 +163,8 @@ body {
 .page {
 	word-wrap: break-word;
 	position: relative;
-	z-index: 500;
+	//z-index: 500;
+    z-index: 3;
 	
 	.scrollableArea {
 		position: absolute;
@@ -254,7 +260,7 @@ body {
 	position: relative;
 	//height:4em;
 	width: 100%;
-	z-index: 1000;
+	//z-index: 1000;
 	word-wrap: break-word;
 	overflow: hidden;
 	//background-color: $mediumGrey;
