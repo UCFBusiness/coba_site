@@ -22,11 +22,12 @@ var PageTransitions = (function ()
 
     function init()
     {
-        // Build navigation menu dependant of pages built
+        // Navigation Menu - dependant of pages/cats built
         for (var i=0;i<$pages.length - 1;i++)
         {
-            $('#pt-menu').append("<li><a id='pageLink" + i + "' class='btnGo'>" + (i + 1) + "</a></li>");
+            $('ul#pt-menu').append("<li><a id='pageLink" + i + "' class='btnGo'>" + (i + 1) + "</a></li>");
         }
+        //------------------------------------------------
 
         $pages.each(function ()
         {
@@ -35,6 +36,9 @@ var PageTransitions = (function ()
         });
 
         $pages.eq(current).addClass('pt-page-current');
+        $('#pageLink' + current).addClass('active');
+
+        // Buttons //
 
         $('.btnPrev').click(function (e)
         {
@@ -44,6 +48,9 @@ var PageTransitions = (function ()
             }
 
             e.preventDefault();
+            var pos = current;
+            $('#pageLink' + pos).removeClass('active');
+            $('#pageLink' + (--pos)).addClass('active');
             prevPage(14);
         });
 
@@ -55,32 +62,10 @@ var PageTransitions = (function ()
             }
 
             e.preventDefault();
+            var pos = current;
+            $('#pageLink' + pos).removeClass('active');
+            $('#pageLink' + (++pos)).addClass('active');
             nextPage(13);
-        });
-
-        $('.btnShare').click(function (e)
-        {
-            if (isAnimating)
-            {
-                return false;
-            }
-
-            e.preventDefault();
-            nextPage(33);
-        })
-
-
-        $('.btnGo').click(function (e)
-        {
-            var page = $(this).attr("id").match(/\d+/);
-
-            if (isAnimating)
-            {
-                return false;
-            }
-
-            e.preventDefault();
-            gotoPage(page);
         });
 
         $('.btnUp').click(function (e)
@@ -92,8 +77,38 @@ var PageTransitions = (function ()
 
             e.preventDefault();
             nextPage(3);
-        })
+        });
 
+        $('.btnShare').click(function (e)
+        {
+            if (isAnimating)
+            {
+                return false;
+            }
+
+            e.preventDefault();
+            nextPage(33);
+        });
+
+        $('.btnGo').click(function (e)
+        {
+            if (isAnimating)
+            {
+                return false;
+            }
+            
+            e.preventDefault();
+            var $page = $(this),
+                pos = $page.attr("id").match(/\d+/);
+            if (pos != current){
+                $('#pageLink' + current).removeClass('active');
+                $(this).addClass('active');
+                gotoPage(pos);
+            }else
+            {
+                return false;
+            }
+        });
     }
 
     function gotoPage(page)
@@ -104,11 +119,15 @@ var PageTransitions = (function ()
             //next
             animation = 13;
         }
-        else
+        else if (current > page)
         {
             //previous
             animation = 14;
-        }
+        }else
+        {
+            //same
+            return false;
+        };
 
         if (isAnimating)
         {
@@ -127,8 +146,6 @@ var PageTransitions = (function ()
         {
             current = 0;
         }
-
-        //alert(current);
 
         var $nextPage = $pages.eq(current).addClass('pt-page-current'),
 			outClass = '', inClass = '';
@@ -403,7 +420,6 @@ var PageTransitions = (function ()
                 outClass = 'pt-page-rotateSlideOut';
                 inClass = 'pt-page-rotateSlideIn';
                 break;
-
         }
 
         $currPage.addClass(outClass).on(animEndEventName, function ()
@@ -726,7 +742,6 @@ var PageTransitions = (function ()
                 outClass = 'pt-page-rotateSlideOut';
                 inClass = 'pt-page-rotateSlideIn';
                 break;
-
         }
 
         $currPage.addClass(outClass).on(animEndEventName, function ()
@@ -753,12 +768,10 @@ var PageTransitions = (function ()
         {
             onEndAnimation($currPage, $prevPage);
         }
-
     }
 
     function nextPage(animation)
     {
-
         if (isAnimating)
         {
             return false;
@@ -1051,7 +1064,6 @@ var PageTransitions = (function ()
                 outClass = 'pt-page-rotateSlideOut';
                 inClass = 'pt-page-rotateSlideIn';
                 break;
-
         }
 
         $currPage.addClass(outClass).on(animEndEventName, function ()
@@ -1078,7 +1090,6 @@ var PageTransitions = (function ()
         {
             onEndAnimation($currPage, $nextPage);
         }
-
     }
 
     function onEndAnimation($outpage, $inpage)
