@@ -9,12 +9,13 @@
 // Helpers
 @import "helpers/variables";
 
-// Partials
-@import "partials/print";
-
 // Modules
-@import "modules/offcanvas";
 @import "modules/bttrlazyloading/base";
 @import "modules/page-transitions/base";
+@import "modules/offcanvas";
 @import "modules/sly/base";
 @import "modules/pageslide";
+
+// Partials
+@import "partials/print";
+@import "partials/cover";

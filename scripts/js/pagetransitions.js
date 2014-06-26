@@ -23,9 +23,10 @@ var PageTransitions = (function ()
     function init()
     {
         // Navigation Menu - dependant of pages/cats built
+        var cats = ['HOME','PROGRAMS','ALUMNI','RECRUITERS &amp; COMPANIES'];
         for (var i=0;i<$pages.length - 1;i++)
         {
-            $('ul#pt-menu').append("<li><a id='pageLink" + i + "' class='btnGo'>" + (i + 1) + "</a></li>");
+            $('ul#pt-menu').append("<li><a id='pageLink" + i + "' class='btnGo'>" + cats[i] + "</a></li>");
         }
         //------------------------------------------------
 
@@ -50,7 +51,7 @@ var PageTransitions = (function ()
             e.preventDefault();
             var pos = current;
             $('#pageLink' + pos).removeClass('active');
-            $('#pageLink' + (--pos)).addClass('active');
+            $('#pageLink' + --pos).addClass('active');
             prevPage(14);
         });
 
@@ -64,7 +65,7 @@ var PageTransitions = (function ()
             e.preventDefault();
             var pos = current;
             $('#pageLink' + pos).removeClass('active');
-            $('#pageLink' + (++pos)).addClass('active');
+            $('#pageLink' + ++pos).addClass('active');
             nextPage(13);
         });
 
