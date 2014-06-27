@@ -26,7 +26,8 @@ var PageTransitions = (function ()
         var cats = ['HOME','PROGRAMS','ALUMNI','RECRUITERS &amp; COMPANIES'];
         for (var i=0;i<$pages.length - 1;i++)
         {
-            $('ul#pt-menu').append("<li><a id='pageLink" + i + "' class='btnGo'>" + cats[i] + "</a></li>");
+            //$('ul#pt-menu').append("<li><a id='pageLink" + i + "' class='btnGo'>" + cats[i] + "</a></li>");
+            $('ul#pt-menu').append("<li><a id='pageLink" + i + "' class='btnGo'>" + (i+1) + "</a></li>");
         }
         //------------------------------------------------
 
