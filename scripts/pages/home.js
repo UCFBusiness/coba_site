@@ -20,8 +20,8 @@ define(['jquery', 'debounced', 'easing', 'sly', 'sly-horizontal', 'pageslide', '
             //-- Slide to the left; if slide is model, you'll have to call $.pageslide.close() to close.
             $("a.target_blank").pageslide({ direction: "left", modal: true });
             $("#slidecontent").css("height", function (index) {
-                var toolBar = parseInt($('#toolbar').height());
-                return screenheight - toolBar;
+                //var toolBar = parseInt($('#toolbar').height());
+                return screenheight;
             });
 
             if (screenwidth < 1000) // load tablet scripts
@@ -67,8 +67,8 @@ define(['jquery', 'debounced', 'easing', 'sly', 'sly-horizontal', 'pageslide', '
                 var screenheight = parseInt($(this).height());
 
                 $(".pt-perspective").css("height", function (index) {
-                    var topBar = parseInt($('.topBar').height());
-                    return screenheight - topBar;
+                    //var topBar = parseInt($('.topBar').height());
+                    return screenheight;
                 });
 
                 if (screenwidth < 1000) // load tablet scripts
