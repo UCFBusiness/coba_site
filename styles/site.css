@@ -13384,37 +13384,39 @@ MIT License, https://github.com/shprink/BttrLazyLoading/blob/master/LICENSE
 
 /* line 17, scss/modules/page-transitions/_page.scss */
 .pt-menu {
+  position: absolute;
+  bottom: 40px;
   margin: 0;
   padding: 1em;
   text-align: center;
 }
-/* line 23, scss/modules/page-transitions/_page.scss */
+/* line 25, scss/modules/page-transitions/_page.scss */
 .pt-menu li {
   display: inline;
   padding-right: 10px;
   font-size: 1em;
 }
-/* line 28, scss/modules/page-transitions/_page.scss */
+/* line 30, scss/modules/page-transitions/_page.scss */
 .pt-menu li .active {
   color: #cc9900;
 }
-/* line 34, scss/modules/page-transitions/_page.scss */
+/* line 36, scss/modules/page-transitions/_page.scss */
 .pt-menu li > a:hover {
   text-decoration: none;
   cursor: pointer;
 }
 
-/* line 49, scss/modules/page-transitions/_page.scss */
+/* line 51, scss/modules/page-transitions/_page.scss */
 .no-js body {
   overflow: auto;
 }
-/* line 52, scss/modules/page-transitions/_page.scss */
+/* line 54, scss/modules/page-transitions/_page.scss */
 .no-js body .pt-page, .no-js body .pt-page-current {
   visibility: visible;
   z-index: 1;
 }
 
-/* line 63, scss/modules/page-transitions/_page.scss */
+/* line 65, scss/modules/page-transitions/_page.scss */
 .pt-perspective {
   border: 1px solid red;
   background: #fff;
@@ -13425,7 +13427,7 @@ MIT License, https://github.com/shprink/BttrLazyLoading/blob/master/LICENSE
   -moz-perspective: 1200px;
   perspective: 1200px;
 }
-/* line 79, scss/modules/page-transitions/_page.scss */
+/* line 81, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page, .pt-perspective .no-js body .pt-page-current, .no-js body .pt-perspective .pt-page-current {
   background: #fff;
   outline: 0;
@@ -13446,14 +13448,14 @@ MIT License, https://github.com/shprink/BttrLazyLoading/blob/master/LICENSE
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 104, scss/modules/page-transitions/_page.scss */
+/* line 106, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page .scroll-pane, .pt-perspective .no-js body .pt-page-current .scroll-pane, .no-js body .pt-perspective .pt-page-current .scroll-pane {
   outline: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
 }
-/* line 113, scss/modules/page-transitions/_page.scss */
+/* line 115, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page .pt-cover, .pt-perspective .no-js body .pt-page-current .pt-cover, .no-js body .pt-perspective .pt-page-current .pt-cover {
   width: 440px;
   height: 100%;
@@ -13462,7 +13464,7 @@ MIT License, https://github.com/shprink/BttrLazyLoading/blob/master/LICENSE
   left: 0;
 }
 @media (max-width: 999px) {
-  /* line 124, scss/modules/page-transitions/_page.scss */
+  /* line 126, scss/modules/page-transitions/_page.scss */
   .pt-perspective .pt-page .pt-cover, .pt-perspective .no-js body .pt-page-current .pt-cover, .no-js body .pt-perspective .pt-page-current .pt-cover {
     border: 1px solid #eee;
     width: 100%;
@@ -13471,23 +13473,23 @@ MIT License, https://github.com/shprink/BttrLazyLoading/blob/master/LICENSE
   }
 }
 @media (min-width: 1000px) {
-  /* line 134, scss/modules/page-transitions/_page.scss */
+  /* line 136, scss/modules/page-transitions/_page.scss */
   .pt-perspective .pt-page .pt-body, .pt-perspective .no-js body .pt-page-current .pt-body, .no-js body .pt-perspective .pt-page-current .pt-body {
     position: relative;
     padding-left: 440px;
   }
 }
-/* line 141, scss/modules/page-transitions/_page.scss */
+/* line 143, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page-current {
   visibility: visible;
   z-index: 1;
 }
-/* line 146, scss/modules/page-transitions/_page.scss */
+/* line 148, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page-ontop {
   z-index: 999;
 }
 
-/* line 151, scss/modules/page-transitions/_page.scss */
+/* line 153, scss/modules/page-transitions/_page.scss */
 .btnNext {
   position: absolute;
   top: 50%;
@@ -13495,7 +13497,7 @@ MIT License, https://github.com/shprink/BttrLazyLoading/blob/master/LICENSE
   color: #000;
 }
 
-/* line 158, scss/modules/page-transitions/_page.scss */
+/* line 160, scss/modules/page-transitions/_page.scss */
 .btnPrev {
   position: absolute;
   top: 50%;
