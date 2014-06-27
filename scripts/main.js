@@ -120,17 +120,19 @@ require(['modernizr'], function ()
         });
 
         var screenheight = parseInt($(this).height());
-        $(".pt-perspective").css("height", function (index) {
-            var topBar = parseInt($('.topBar').height());
-            return screenheight - topBar;
+        $(".pt-perspective").css("height", function (index)
+        {
+            //var topBar = parseInt($('.topBar').height());
+            //return screenheight - topBar;
+            return screenheight;
         });
-        
+
         // Right-click disabled
         $(document).bind('contextmenu', function (e)
         {
             return false;
         });
-        
+
         // Lazyload images
         $('.img-responsive').bttrlazyloading({
             //placeholder: 'data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==',

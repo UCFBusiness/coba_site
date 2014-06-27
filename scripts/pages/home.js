@@ -1,11 +1,13 @@
-define(['jquery', 'debounced', 'easing', 'sly', 'sly-horizontal', 'pageslide', 'domReady!'], function ($) {
+define(['jquery', 'debounced', 'easing', 'sly', 'sly-horizontal', 'pageslide', 'domReady!'], function ($)
+{
     // runs 1st
     var screenwidth = parseInt($(this).width());
     var screenheight = parseInt($(this).height());
     var msg = "Hello World, this is a private method.";
     var gr = 1.618; // Golden Ratio
 
-    var PrivateMessage = function () {
+    var PrivateMessage = function ()
+    {
         return msg;
     };
 
@@ -19,20 +21,24 @@ define(['jquery', 'debounced', 'easing', 'sly', 'sly-horizontal', 'pageslide', '
 
             //-- Slide to the left; if slide is model, you'll have to call $.pageslide.close() to close.
             $("a.target_blank").pageslide({ direction: "left", modal: true });
-            $("#slidecontent").css("height", function (index) {
-                //var toolBar = parseInt($('#toolbar').height());
-                return screenheight;
+            $("#slidecontent").css("height", function (index)
+            {
+                var toolBar = parseInt($('#toolbar').height());
+                return screenheight - toolBar;
+                //return screenheight;
             });
 
             if (screenwidth < 1000) // load tablet scripts
             {
-                require([], function () {
+                require([], function ()
+                {
                     //-- screen-size ----------------------------------
                     $('#msg').text(screenwidth + ' x ' + screenheight + ' - tablet');
 
                     if (screenwidth < 700) // load mobile scripts
                     {
-                        require([], function () {
+                        require([], function ()
+                        {
                             //-- screen-size ----------------------------------
                             $("#msg").text(screenwidth + " x " + screenheight + " - mobile");
                         });
@@ -42,14 +48,17 @@ define(['jquery', 'debounced', 'easing', 'sly', 'sly-horizontal', 'pageslide', '
 
             if (screenwidth >= 1000) // load desktop scripts
             {
-                require([], function () {
+                require([], function ()
+                {
                     //-- screen-size ----------------------------------
                     $("#msg").text(screenwidth + " x " + screenheight + " - desktop");
 
                     //-- resize to fit -------------------------------
-                    $("#pageslide").css("width", function (index) {
-                        var cover = parseInt($("div.cover").width());
-                        return screenwidth - cover;
+                    $("#pageslide").css("width", function (index)
+                    {
+                        //var cover = parseInt($("section.pt-cover").width());
+                        //return screenwidth - cover;
+                        return screenwidth;
                     });
                 });
             }
@@ -62,24 +71,29 @@ define(['jquery', 'debounced', 'easing', 'sly', 'sly-horizontal', 'pageslide', '
             // On Smart PageResize...
             // fires only after user is done resizing the window
             // ---------------------------------------------------            
-            $(window).on('debouncedresize', function (event) {
+            $(window).on('debouncedresize', function (event)
+            {
                 var screenwidth = parseInt($(this).width());
                 var screenheight = parseInt($(this).height());
 
-                $(".pt-perspective").css("height", function (index) {
+                $(".pt-perspective").css("height", function (index)
+                {
                     //var topBar = parseInt($('.topBar').height());
+                    //return screenheight - topBar;
                     return screenheight;
                 });
 
                 if (screenwidth < 1000) // load tablet scripts
                 {
-                    require([], function () {
+                    require([], function ()
+                    {
                         //-- screen-size ----------------------------------
                         $('#msg').text(screenwidth + ' x ' + screenheight + ' - tablet');
 
                         if (screenwidth < 700) // load mobile scripts
                         {
-                            require([], function () {
+                            require([], function ()
+                            {
                                 //-- screen-size ----------------------------------
                                 $("#msg").text(screenwidth + " x " + screenheight + " - mobile");
                             });
@@ -89,7 +103,8 @@ define(['jquery', 'debounced', 'easing', 'sly', 'sly-horizontal', 'pageslide', '
 
                 if (screenwidth >= 1000) // load desktop scripts
                 {
-                    require([], function () {
+                    require([], function ()
+                    {
                         //-- screen-size ----------------------------------
                         $("#msg").text(screenwidth + " x " + screenheight + " - desktop");
                     });
