@@ -9,64 +9,87 @@ console.log( 'START: main.js' );
 requirejs.config({
     baseUrl: 'scripts',
     paths: {
-        'domReady': 'domReady',
-        // The Libraries:
-        'angular': [
+        /**-----------------------------------
+         Frameworks/Libraries
+        -----------------------------------**/
+
+        'angular': [ // angular does not support AMD out of the box, put it in a shim
             '//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min',
-        // If CDN fails, load from this location
+            // If CDN fails, load from this location
             'libs/angular.min'
-        ],
-        'jquery': [
-            '//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min',
-        // If CDN fails, load from this location
-            'libs/jquery-2.0.3.min'
-        ],
-        'jqueryui': [
-            '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min',
-        // If CDN fails, load from this location
-            'libs/jquery-ui-1.10.3.min'
-        ],
-        'modernizr': [
-        //'//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.6.2',
-        // If CDN fails, load from this location
-            'libs/modernizr-2.6.2.min'
         ],
         'bootstrap': [
             '//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min',
-        // If CDN fails, load from this location
+            // If CDN fails, load from this location
             'libs/bootstrap.min'
         ],
-        //--------------------------------------------
+        'jquery': [
+            '//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min',
+            // If CDN fails, load from this location
+            'libs/jquery-2.0.3.min'
+        ],
+        'jquery-ui': [
+            '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min',
+            // If CDN fails, load from this location
+            'libs/jquery-ui-1.10.3.min'
+        ],
+        'modernizr': [
+            //'//ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.6.2',
+            // If CDN fails, load from this location
+            'libs/modernizr-2.6.2.min'
+        ],
+        'domReady': 'libs/domReady',
+
+        /**-----------------------------------
+         jQuery Plugins
+        -----------------------------------**/
+
         'debounced': 'libs/jquery.debouncedresize',
-        'transitions': 'js/pagetransitions',
-        'pageslide': 'libs/jquery.pageslide',
-        //lazyloading
         'lazyloader': 'libs/jquery.bttrlazyloading.min',
-        //offcanvas
+        // offcanvas ---------------------------------
         'offcanvas': 'libs/jquery.offcanvas',
         'overthrow': 'libs/overthrow',
         'hammer': 'libs/hammer',
         'jhammer': 'libs/jquery.hammer',
-        //pagescroll
+        // pagescroll --------------------------------
         'mousewheel': 'libs/jquery.mousewheel',
-        'mousewintent': 'libs/mwheelIntent',
+        'mwintent': 'libs/mwheelIntent',
         'jscroll': 'libs/jquery.jscrollpane.min',
-        //sly
+        // -------------------------------------------
+        'pageslide': 'libs/jquery.pageslide',
+        'transitions': 'js/pagetransitions',
+        // sly ----------------------------------------
         'easing': 'libs/jquery.easing.min',
         'sly': 'libs/sly.min',
         'sly-horizontal': 'js/sly.horizontal'
+        // -------------------------------------------
     },
     shim:
     {
-        'jqueryui':
+        'angular':
         {
-            deps: ['jquery']
+            exports: 'angular'
         },
         'bootstrap':
         {
-            deps: ['jquery']
+            deps: ['jquery'],
+            exports: 'bootstrap'
         },
-        'transitions':
+        'jquery':
+        {
+            exports: '$'
+        },
+        'jquery-ui':
+        {
+            deps: ['jquery'],
+            exports: 'jqueryui'
+        },
+        'modernizr':
+        {
+            exports: 'modernizr'
+        },
+        // -------------------------------------------
+        'debounced':
         {
             deps: ['jquery']
         },
@@ -74,13 +97,9 @@ requirejs.config({
         {
             deps: ['jquery']
         },
-        'debounced':
+        'jscroll':
         {
-            deps: ['jquery']
-        },
-        'pageslide':
-        {
-            deps: ['jquery']
+            deps: ['jquery', 'mousewheel', 'mwintent']
         },
         'lazyloader':
         {
@@ -90,9 +109,9 @@ requirejs.config({
         {
             deps: ['jquery']
         },
-        'jscroll':
+        'pageslide':
         {
-            deps: ['jquery', 'mousewheel', 'mwintent']
+            deps: ['jquery']
         },
         'sly':
         {
@@ -101,7 +120,12 @@ requirejs.config({
         'sly-horizontal':
         {
             deps: ['sly']
+        },
+        'transitions':
+        {
+            deps: ['jquery']
         }
+        // -------------------------------------------
     }
 });
 
@@ -113,9 +137,15 @@ require(['modernizr'], function ()
         // Log that jquery was loaded into the global name-space
         console.log('jQuery', $.fn.jquery, 'loaded!');
 
+        // Right-click disabled
+        $(document).bind('contextmenu', function (e)
+        {
+            return false;
+        });
+
         domReady(function ()
         {
-            require(['bootstrap', 'lazyloader', 'offcanvas', 'overthrow', 'hammer', 'jhammer', 'transitions'], function ()
+            require(['angular', 'bootstrap', 'lazyloader', 'offcanvas', 'overthrow', 'hammer', 'jhammer', 'transitions'], function ()
             {
                 // Add off-canvas
                 $("html").offcanvas({
@@ -128,12 +158,6 @@ require(['modernizr'], function ()
                     //var topBar = parseInt($('.topBar').height());
                     //return screenheight - topBar;
                     return screenheight;
-                });
-
-                // Right-click disabled
-                $(document).bind('contextmenu', function (e)
-                {
-                    return false;
                 });
 
                 // Lazyload website images

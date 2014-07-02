@@ -58,8 +58,10 @@
                         <div class="cover-header">
 						    <h1>Cover</h1>
 						    <p>Message: <span id="msg"></span></p>
-                            
-                            <!-- page links here-->
+                            <br>
+                            <p>First Name: <input ng-model="firstName" type="text" /></p>
+						    <p>Last Name: <input ng-model="lastName" type="text" /></p>
+						    <p>Hello {{firstName}} {{lastName}}</p>
                             
                         </div><!--/.cover-header -->
 
@@ -102,12 +104,10 @@
 						<div class="cover-header">
 							<h1>Cover 2</h1>
                             <p><a href="//ucfmba.ucf.edu/evening-mba" class="btn btn-primary btn-lg target_blank">Click Me</a></p>
-						    <p>First Name: <input ng-model="firstName" type="text" /></p>
-						    <p>Last Name: <input ng-model="lastName" type="text" /></p>
-						    <p>Hello {{firstName}} {{lastName}}</p>
 
                             <!--<p><input id="textInput" type="text" /></p>
 						    <p>Text: <span id="nameDiv"></span></p>-->
+
 						</div><!--/.cover-header -->
 
                         <div class="cover-body">
@@ -326,7 +326,7 @@
 		require(['main'], function ()
 		{
 			// Once the 'main' script is loaded, load up scripts specific to this page
-			require(['pages/home', 'angular'], function (Page)
+			require(['pages/home'], function (Page)
 			{
 				Page.onLoad();
 				Page.onResize();
