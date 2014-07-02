@@ -8,7 +8,7 @@
             hasSidebarRight : false,
             animated       	: true,
             oldPhones	   	: true,
-            enableTouch		: true,
+            enableTouch		: false, // change to true
             enableKeys		: true
         }, options);
 
