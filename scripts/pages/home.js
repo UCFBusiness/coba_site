@@ -1,8 +1,9 @@
-define(['jquery', 'domReady!', 'debounced', 'easing', 'sly', 'sly-horizontal', 'pageslide'], function ($)
+define(['jquery', 'domReady!', 'debounced', 'easing', 'pageslide'], function ($)
 {
     // runs 1st
     var screenwidth = parseInt($(this).width());
     var screenheight = parseInt($(this).height());
+
     var msg = "Hello World, this is a private method.";
     var gr = 1.618; // Golden Ratio
 
@@ -12,7 +13,7 @@ define(['jquery', 'domReady!', 'debounced', 'easing', 'sly', 'sly-horizontal', '
     };
 
     //-- Test jQuery
-    $('#msg').text(' runs on jQuery');
+    //$('#msg').text(' runs on jQuery');
 
     var PrivateMethods = {
         onLoad: function () // runs 2nd

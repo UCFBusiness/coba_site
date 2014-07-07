@@ -17408,7 +17408,7 @@ body {
   overflow: hidden;
   /* Specify the width of your pageslide here */
   width: 100%;
-  padding: 0px 3px;
+  padding: 0 1px 2px 1px;
 }
 
 /* line 19, scss/modules/_pageslide.scss */
@@ -17429,16 +17429,39 @@ body {
   float: left;
 }
 
-/* line 28, scss/modules/_pageslide.scss */
+/* line 27, scss/modules/_pageslide.scss */
+#closebutton:after {
+  content: '<<';
+  padding: 10px;
+}
+
+/* line 32, scss/modules/_pageslide.scss */
 #slidecontent {
   margin-top: 1px;
   height: 100%;
   width: 100%;
 }
 
-/* line 34, scss/modules/_pageslide.scss */
+/* line 38, scss/modules/_pageslide.scss */
 .modal {
   display: none;
+}
+
+/* line 40, scss/modules/_pageslide.scss */
+.scroll-wrapper {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+}
+/* line 50, scss/modules/_pageslide.scss */
+.scroll-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
 }
 
 @media print {

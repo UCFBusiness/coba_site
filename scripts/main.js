@@ -60,8 +60,8 @@ requirejs.config({
         'transitions': 'js/pagetransitions',
         // sly ----------------------------------------
         'easing': 'libs/jquery.easing.min',
-        'sly': 'libs/sly.min',
-        'sly-horizontal': 'js/sly.horizontal'
+        //'sly': 'libs/sly.min',
+        //'sly-horizontal': 'js/sly.horizontal'
         // -------------------------------------------
     },
     shim:
@@ -109,17 +109,13 @@ requirejs.config({
         {
             deps: ['jquery']
         },
+        'mwintent':
+        {
+            deps: ['jquery', 'mousewheel']
+        },
         'pageslide':
         {
             deps: ['jquery']
-        },
-        'sly':
-        {
-            deps: ['jquery', 'easing']
-        },
-        'sly-horizontal':
-        {
-            deps: ['sly']
         },
         'transitions':
         {

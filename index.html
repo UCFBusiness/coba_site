@@ -23,7 +23,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 	
 	<!-- Styles: BEGIN -->
-    <style>html {height:100% !important; -webkit-text-size-adjust:auto; -moz-text-size-adjust:auto; -ms-text-size-adjust:auto;}body {height:100%;padding:0;letter-spacing:1px;position:relative;z-index:0} .devline {border: 1px dashed red;margin:0;padding:0;}
+    <style>html {height:100% !important;-webkit-text-size-adjust:auto;-moz-text-size-adjust:auto;-ms-text-size-adjust:auto} body {height:100%;padding:0;letter-spacing:1px;position:relative;z-index:0} .devline {border:1px dashed red;margin:0;padding:0}
     </style>
 	<link rel="stylesheet" href="/styles/site.css">
 	<!-- Styles: FINIS -->
@@ -56,13 +56,22 @@
                     
 					<section class="pt-cover cover-bg-pegasus">
                         <div class="cover-header">
-						    <h1>Cover</h1>
+						    <hgroup>
+                                <h1>Cover</h1>
+                                <h2><span class="glyphicon glyphicon-star"></span> Star</h2>
+                            </hgroup>
 						    <p>Message: <span id="msg"></span></p>
                             <br>
                             <p>First Name: <input ng-model="firstName" type="text" /></p>
 						    <p>Last Name: <input ng-model="lastName" type="text" /></p>
 						    <p>Hello {{firstName}} {{lastName}}</p>
-                            
+
+                            <!--<div class="scroll-wrapper">
+                                <br>
+                                <p><a href="//ucfmba.ucf.edu/evening-mba" class="btn btn-primary btn-lg target_blank">Click Me</a></p>
+		                        <iframe src="//davidwalsh.name" border="0" />
+	                        </div>-->
+
                         </div><!--/.cover-header -->
 
                         <div class="cover-body">
@@ -78,14 +87,18 @@
 					</section>
 
                     <section class="pt-body">
-                        Column 1
                         <!--Content: BEGIN-->
-					    <h1>Start - Page 1</h1>
-					    <h2><span class="glyphicon glyphicon-star"></span> Star</h2>
-                        <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
-                        <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
-					    <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
-                        <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
+
+                        <a href="//www.bus.ucf.edu" class="target_blank">
+                            <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/panel/blank1.jpg" alt="ucf" width="300" height="280">
+                            <p>Panel 1 title</p>
+                        </a>
+
+                        <a href="about.html" class="target_blank">
+                            <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/panel/blank2.jpg" alt="ucf" width="300" height="280">
+                            <p>Panel 2 title</p>
+                        </a>
+
                         <!--Content: FINIS-->
                     </section>
                     
@@ -123,81 +136,8 @@
 					</section>
                     
                     <section class="pt-body">
+                        <!--Content: BEGIN-->
                         <h1>Panels - Page 2</h1>
-                        
-                        <!--// ROW - SPOTLIGHTS/FEATURED -->
-                        <div class="pagespan">
-                            <section class="wrap">
-                                <div class="wrap-header"><span>Spotlights</span></div>
-                                <div class="frame" id="row1" data-intro="row1" data-position="left">
-                                    <ul class="clearfix">
-                                        <li>
-                                            <div title="title of panel">
-                                                <a href="//www.bus.ucf.edu" class="target_blank">
-                                                    <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/panel/blank1.jpg" alt="ucf" width="300" height="280">
-                                                    <p>Panel 1 title</p>
-                                                </a>
-                                            </div>
-                                        </li>
-                                            
-                                        <li>
-                                            <div title="title of panel">
-                                                <a href="about.html" class="target_blank">
-                                                    <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/panel/blank2.jpg" alt="ucf" width="300" height="280">
-                                                    <p>Panel 2 title</p>
-                                                </a>
-                                            </div>
-                                        </li>
-                                            
-                                        <li>
-                                            <div title="title of panel">
-                                                <a href="//www.bus.ucf.edu" class="target_blank">
-                                                    <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/panel/blank3.jpg" alt="ucf" width="300" height="280">
-                                                    <p>Panel 3 title</p>
-                                                </a>
-                                            </div>
-                                        </li>
-    
-                                        <li>
-                                            <div title="title of panel">
-                                                <a href="//www.bus.ucf.edu" class="target_blank">
-                                                    <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/panel/blank4.jpg" alt="ucf" width="300" height="280">
-                                                    <p>Panel 4 title</p>
-                                                </a>
-                                            </div>
-                                        </li>
-    
-                                        <li>
-                                            <div title="title of panel">
-                                                <a href="//www.bus.ucf.edu" class="target_blank">
-                                                    <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/panel/blank5.jpg" alt="ucf" width="300" height="280">
-                                                    <p>Panel 5 title</p>
-                                                </a>
-                                            </div>
-                                        </li>
-    
-                                        <li>
-                                            <div title="title of panel">
-                                                <a href="//www.bus.ucf.edu" class="target_blank">
-                                                    <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/panel/blank5.jpg" alt="ucf" width="300" height="280">
-                                                    <p>Panel 6 title</p>
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div><!--/frame -->
-                                <div class="scrollbar">
-                                    <div class="handle">
-                                        <div class="mousearea"><span></span></div>
-                                    </div>
-                                </div><!--/scrollbar -->
-                                <div class="controls use-fastclick">
-                                    <button class="btn prevPage"><i class="fa fa-chevron-left"></i></button><!--/back button-->
-                                    <button class="btn nextPage"><i class="fa fa-chevron-right"></i></button><!--/forward button-->
-                                </div><!--/controls --> 
-                            </section>
-                        </div><!--/pagespan -->
-                            
                         <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
                         <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
 					    <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
@@ -206,7 +146,7 @@
                         <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
 					    <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
                         <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
-				
+                        <!--Content: FINIS-->
                     </section>
 
                 </div>
@@ -239,8 +179,17 @@
 					</section>
                     
                     <section class="pt-body">
-					   <h1>Panels - Page 3</h1>
-					   <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
+                        <!--Content: BEGIN-->
+                        <h1>Panels - Page 3</h1>
+                        <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
+                        <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
+					    <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
+                        <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
+                        <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
+                        <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
+					    <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
+                        <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
+                        <!--Content: FINIS-->
                     </section>
                     
 				</div>
@@ -259,7 +208,6 @@
 						<div class="cover-header">
 							<h1>Cover 4</h1>
 						</div>
-
                         <div class="cover-body">
 					        <div class="cover-body-inner">
 						        <h1 class="cover-title">College <span>of</span> Business <br>Administration</h1>
@@ -273,9 +221,18 @@
 					</section>
                     
 					<section class="pt-body">
-						<h1>Aft - Page 4</h1>
+                        <!--Content: BEGIN-->
+                        <h1>Aft - Page 4</h1>
                         <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
-					</section>
+                        <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
+					    <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
+                        <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
+                        <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
+                        <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
+					    <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
+                        <img class="panel-img img-responsive" data-bttrlazyloading-sm-src="/images/blank.jpg" alt="ucf" width="300" height="280">
+                        <!--Content: FINIS-->
+                    </section>
                     
 				</div>
                 </div>
