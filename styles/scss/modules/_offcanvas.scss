@@ -56,24 +56,6 @@ body {
 	-o-transition: left 0.3s ease-out, right 0.3s ease-out; 
 }
 
-/*- Cover -
-.floated {
-	float: left;
-	width: 100%;
-}
-
-.padded {
-	padding: 2em;
-	@include box-sizing(border-box);
-}
-.paddedLight {
-	padding: 1.2em;
-	@include box-sizing(border-box);
-}
-*/
-
-
-
 .offcanvas .scrollableArea {
 
     //position:relative;
@@ -85,6 +67,7 @@ body {
 
     //new
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
     
     @media screen and (max-width: $largeBreak) {
         position:absolute;

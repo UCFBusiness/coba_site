@@ -13447,6 +13447,17 @@ MIT License, https://github.com/shprink/BttrLazyLoading/blob/master/LICENSE
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
+        /*
+        // Tablet //
+        @media (max-width: 999px){
+
+            .pt-cover {
+                border: 1px solid #eee; //<-- development line
+                width: 100%;
+                height: 440px;
+                position: relative;
+            }
+        }*/
 }
 /* line 103, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page .scroll-pane, .pt-perspective .no-js body .pt-page-current .scroll-pane, .no-js body .pt-perspective .pt-page-current .scroll-pane {
@@ -13464,33 +13475,38 @@ MIT License, https://github.com/shprink/BttrLazyLoading/blob/master/LICENSE
   left: 0;
 }
 @media (max-width: 999px) {
-  /* line 121, scss/modules/page-transitions/_page.scss */
+  /* line 110, scss/modules/page-transitions/_page.scss */
   .pt-perspective .pt-page .pt-cover, .pt-perspective .no-js body .pt-page-current .pt-cover, .no-js body .pt-perspective .pt-page-current .pt-cover {
-    border: 1px solid #eee;
     width: 100%;
     height: 440px;
     position: relative;
   }
 }
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* line 110, scss/modules/page-transitions/_page.scss */
+  .pt-perspective .pt-page .pt-cover, .pt-perspective .no-js body .pt-page-current .pt-cover, .no-js body .pt-perspective .pt-page-current .pt-cover {
+    position: fixed;
+  }
+}
 @media (min-width: 1000px) {
-  /* line 131, scss/modules/page-transitions/_page.scss */
+  /* line 147, scss/modules/page-transitions/_page.scss */
   .pt-perspective .pt-page .pt-body, .pt-perspective .no-js body .pt-page-current .pt-body, .no-js body .pt-perspective .pt-page-current .pt-body {
     position: relative;
     padding-left: 440px;
   }
 }
-/* line 138, scss/modules/page-transitions/_page.scss */
+/* line 154, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page-current {
   visibility: visible;
   z-index: 1;
 }
-/* line 143, scss/modules/page-transitions/_page.scss */
+/* line 159, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page-ontop {
   z-index: 999;
 }
 
 /**/
-/* line 149, scss/modules/page-transitions/_page.scss */
+/* line 165, scss/modules/page-transitions/_page.scss */
 .btnNext {
   position: absolute;
   top: 50%;
@@ -13499,7 +13515,7 @@ MIT License, https://github.com/shprink/BttrLazyLoading/blob/master/LICENSE
   cursor: pointer;
 }
 
-/* line 157, scss/modules/page-transitions/_page.scss */
+/* line 173, scss/modules/page-transitions/_page.scss */
 .btnPrev {
   position: absolute;
   top: 50%;
@@ -16728,22 +16744,7 @@ body {
   -o-transition: left 0.3s ease-out, right 0.3s ease-out;
 }
 
-/*- Cover -
-.floated {
-	float: left;
-	width: 100%;
-}
-
-.padded {
-	padding: 2em;
-	@include box-sizing(border-box);
-}
-.paddedLight {
-	padding: 1.2em;
-	@include box-sizing(border-box);
-}
-*/
-/* line 77, scss/modules/_offcanvas.scss */
+/* line 59, scss/modules/_offcanvas.scss */
 .offcanvas .scrollableArea {
   position: absolute;
   top: 0;
@@ -16751,9 +16752,10 @@ body {
   bottom: 0;
   left: 0;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 @media screen and (max-width: 62.5em) {
-  /* line 77, scss/modules/_offcanvas.scss */
+  /* line 59, scss/modules/_offcanvas.scss */
   .offcanvas .scrollableArea {
     position: absolute;
     top: 0;
@@ -16765,13 +16767,13 @@ body {
   }
 }
 
-/* line 102, scss/modules/_offcanvas.scss */
+/* line 85, scss/modules/_offcanvas.scss */
 .sidebarLeft.show, .sidebarRight.show {
   z-index: 2;
 }
 
 /* Sliding side bars */
-/* line 108, scss/modules/_offcanvas.scss */
+/* line 91, scss/modules/_offcanvas.scss */
 .sidebarLeft, .sidebarRight {
   background-color: #272727;
   width: 30%;
@@ -16780,7 +16782,7 @@ body {
   z-index: 1;
   /* hides close button unless JS is enabled */
 }
-/* line 118, scss/modules/_offcanvas.scss */
+/* line 101, scss/modules/_offcanvas.scss */
 .sidebarLeft .shutLeft, .sidebarLeft .shutRight, .sidebarRight .shutLeft, .sidebarRight .shutRight {
   border: 1px solid red;
   display: none;
@@ -16795,31 +16797,31 @@ body {
   top: 0;
   z-index: 3;
 }
-/* line 136, scss/modules/_offcanvas.scss */
+/* line 119, scss/modules/_offcanvas.scss */
 .sidebarLeft .shutLeft:hover, .sidebarLeft .shutRight:hover, .sidebarRight .shutLeft:hover, .sidebarRight .shutRight:hover {
   opacity: 0.5;
 }
 
 /* Styles for both sidebars */
-/* line 143, scss/modules/_offcanvas.scss */
+/* line 126, scss/modules/_offcanvas.scss */
 .offcanvas .sidebarLeft, .offcanvas .sidebarRight {
   position: absolute;
   top: 0;
   bottom: 0;
   width: 40em;
 }
-/* line 149, scss/modules/_offcanvas.scss */
+/* line 132, scss/modules/_offcanvas.scss */
 .offcanvas .sidebarLeft .shutLeft, .offcanvas .sidebarLeft .shutRight, .offcanvas .sidebarRight .shutLeft, .offcanvas .sidebarRight .shutRight {
   display: block;
 }
 @media screen and (max-width: 28.125em) {
-  /* line 143, scss/modules/_offcanvas.scss */
+  /* line 126, scss/modules/_offcanvas.scss */
   .offcanvas .sidebarLeft, .offcanvas .sidebarRight {
     width: 20em;
   }
 }
 
-/* line 157, scss/modules/_offcanvas.scss */
+/* line 140, scss/modules/_offcanvas.scss */
 .offcanvas .sidebarLeft {
   left: 0;
   transform: translate3d(-7em, 0, 0);
@@ -16828,12 +16830,12 @@ body {
   -webkit-transform: translate3d(-7em, 0, 0);
   -o-transform: translate3d(-7em, 0, 0);
 }
-/* line 165, scss/modules/_offcanvas.scss */
+/* line 148, scss/modules/_offcanvas.scss */
 .offcanvas .sidebarLeft .shutLeft {
   left: 0;
 }
 
-/* line 169, scss/modules/_offcanvas.scss */
+/* line 152, scss/modules/_offcanvas.scss */
 .offcanvas .sidebarRight {
   right: 0;
   transform: translate3d(7em, 0, 0);
@@ -16842,7 +16844,7 @@ body {
   -webkit-transform: translate3d(7em, 0, 0);
   -o-transform: translate3d(7em, 0, 0);
 }
-/* line 177, scss/modules/_offcanvas.scss */
+/* line 160, scss/modules/_offcanvas.scss */
 .offcanvas .sidebarRight .shutRight {
   right: 0;
 }
@@ -16856,32 +16858,32 @@ body {
 }
 */
 /* Main central area styles */
-/* line 192, scss/modules/_offcanvas.scss */
+/* line 175, scss/modules/_offcanvas.scss */
 .page {
   word-wrap: break-word;
   position: relative;
   z-index: 3;
 }
-/* line 198, scss/modules/_offcanvas.scss */
+/* line 181, scss/modules/_offcanvas.scss */
 .page .scrollableArea {
   position: absolute;
   bottom: 0;
 }
 
-/* line 206, scss/modules/_offcanvas.scss */
+/* line 189, scss/modules/_offcanvas.scss */
 .offcanvas .page {
   width: 100%;
   height: 100%;
 }
 
-/* line 210, scss/modules/_offcanvas.scss */
+/* line 193, scss/modules/_offcanvas.scss */
 .no-js .page {
   width: 100%;
   height: 100%;
 }
 
 /* Slid styles */
-/* line 216, scss/modules/_offcanvas.scss */
+/* line 199, scss/modules/_offcanvas.scss */
 .page.slidRight {
   transform: translate3d(40em, 0, 0);
   -ms-transform: translate3d(40em, 0, 0);
@@ -16890,7 +16892,7 @@ body {
   -o-transform: translate3d(40em, 0, 0);
 }
 @media screen and (max-width: 28.125em) {
-  /* line 216, scss/modules/_offcanvas.scss */
+  /* line 199, scss/modules/_offcanvas.scss */
   .page.slidRight {
     transform: translate3d(20em, 0, 0);
     -ms-transform: translate3d(20em, 0, 0);
@@ -16900,7 +16902,7 @@ body {
   }
 }
 
-/* line 231, scss/modules/_offcanvas.scss */
+/* line 214, scss/modules/_offcanvas.scss */
 .page.slidLeft {
   transform: translate3d(-40em, 0, 0);
   -ms-transform: translate3d(-40em, 0, 0);
@@ -16909,7 +16911,7 @@ body {
   -o-transform: translate3d(-40em, 0, 0);
 }
 @media screen and (max-width: 28.125em) {
-  /* line 231, scss/modules/_offcanvas.scss */
+  /* line 214, scss/modules/_offcanvas.scss */
   .page.slidLeft {
     transform: translate3d(-20em, 0, 0);
     -ms-transform: translate3d(-20em, 0, 0);
@@ -16919,29 +16921,29 @@ body {
   }
 }
 
-/* line 246, scss/modules/_offcanvas.scss */
+/* line 229, scss/modules/_offcanvas.scss */
 .no-csstransforms3d .page.slidRight {
   left: 40em;
 }
 @media screen and (max-width: 28.125em) {
-  /* line 246, scss/modules/_offcanvas.scss */
+  /* line 229, scss/modules/_offcanvas.scss */
   .no-csstransforms3d .page.slidRight {
     left: 20em;
   }
 }
 
-/* line 253, scss/modules/_offcanvas.scss */
+/* line 236, scss/modules/_offcanvas.scss */
 .no-csstransforms3d .page.slidLeft {
   left: -40em;
 }
 @media screen and (max-width: 28.125em) {
-  /* line 253, scss/modules/_offcanvas.scss */
+  /* line 236, scss/modules/_offcanvas.scss */
   .no-csstransforms3d .page.slidLeft {
     left: -20em;
   }
 }
 
-/* line 261, scss/modules/_offcanvas.scss */
+/* line 244, scss/modules/_offcanvas.scss */
 .sidebarLeft.slidRight, .sidebarRight.slidLeft {
   transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
@@ -16950,17 +16952,17 @@ body {
   -o-transform: translate3d(0, 0, 0);
 }
 
-/* line 268, scss/modules/_offcanvas.scss */
+/* line 251, scss/modules/_offcanvas.scss */
 .no-csstransforms3d .sidebarLeft.slidRight {
   left: 0;
 }
 
-/* line 271, scss/modules/_offcanvas.scss */
+/* line 254, scss/modules/_offcanvas.scss */
 .no-csstransforms3d .sidebarRight.slidLeft {
   right: 0;
 }
 
-/* line 277, scss/modules/_offcanvas.scss */
+/* line 260, scss/modules/_offcanvas.scss */
 .topBar {
   min-height: 4em;
   width: 100%;
@@ -16970,7 +16972,7 @@ body {
   left: 0;
   z-index: 30;
 }
-/* line 291, scss/modules/_offcanvas.scss */
+/* line 274, scss/modules/_offcanvas.scss */
 .topBar .slideRight, .topBar .slideLeft {
   position: absolute;
   top: 0;
@@ -16979,19 +16981,19 @@ body {
   text-decoration: none;
   text-align: center;
 }
-/* line 302, scss/modules/_offcanvas.scss */
+/* line 285, scss/modules/_offcanvas.scss */
 .topBar .slideRight:hover, .topBar .slideRight.pressed, .topBar .slideLeft:hover, .topBar .slideLeft.pressed {
   color: #262626;
 }
-/* line 305, scss/modules/_offcanvas.scss */
+/* line 288, scss/modules/_offcanvas.scss */
 .topBar .slideRight.pressed, .topBar .slideLeft.pressed {
   background: #828282;
 }
-/* line 309, scss/modules/_offcanvas.scss */
+/* line 292, scss/modules/_offcanvas.scss */
 .topBar .slideRight {
   left: 30px;
 }
-/* line 312, scss/modules/_offcanvas.scss */
+/* line 295, scss/modules/_offcanvas.scss */
 .topBar .slideLeft {
   right: 30px;
 }
@@ -17473,18 +17475,16 @@ body {
     display: normal;
   }
 }
-/* line 5, scss/partials/_cover.scss */
+/*
 .cover {
-  width: 440px;
-  height: 100%;
-  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.3);
-  /* shadow */
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
-
+    width: 440px;
+    height: 100%;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.3); //<--shadow
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:100;
+}*/
 /* line 16, scss/partials/_cover.scss */
 .cover-header {
   position: absolute;

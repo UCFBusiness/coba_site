@@ -1,0 +1,52 @@
+// --------------------------------------------------
+// Primary Styles (above the fold elements only)
+// --------------------------------------------------
+
+html {height:100% !important}
+
+.js {
+    //overflow: hidden;
+}
+
+.no-js {
+
+    body {
+		overflow: auto;
+		
+		.pt-page {
+			visibility: visible;
+			z-index: 1;
+		}
+
+		.pt-page-current {
+			@extend .pt-page;
+		}
+	}
+    
+    .page {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+body {
+    @extend html;
+
+    padding:0;
+    letter-spacing:1px;
+    position:absolute;
+    z-index:0
+}
+
+/* Main central area styles */
+.page {
+    word-wrap: break-word;
+    position: relative;
+    z-index: 3;
+	
+    .scrollableArea {
+        top: 4em;
+        position: absolute;
+        bottom: 0;
+    }
+}

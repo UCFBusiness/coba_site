@@ -9,11 +9,11 @@ html {height:100% !important}
 body {height:100%;padding:0;letter-spacing:1px;position:absolute;z-index:0}
 
 // .js {
-// 	overflow: hidden;
+//  overflow: hidden;
 // }
 
 // --------------------------------------------------
-
+/*
 .centered {
 	position: fixed;
 	top: 50%;
@@ -22,6 +22,18 @@ body {height:100%;padding:0;letter-spacing:1px;position:absolute;z-index:0}
 	margin-left: -50%;
 }
 
-// #main-container {
-// 	position: relative;
-// }
+- Cover -
+.floated {
+	float: left;
+	width: 100%;
+}
+
+.padded {
+	padding: 2em;
+	@include box-sizing(border-box);
+}
+.paddedLight {
+	padding: 1.2em;
+	@include box-sizing(border-box);
+}
+*/
