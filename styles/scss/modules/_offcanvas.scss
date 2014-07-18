@@ -1,8 +1,8 @@
 /* == Off.canvas == */
 
-@media screen and (max-width: $largeBreak) {
+@media screen and (max-width: 1024px) {
     html.offcanvas {
-	    //overflow: hidden;
+	    overflow: hidden;
     }
 }
 
@@ -21,9 +21,10 @@ body {
 	//overflow: hidden;
     overflow-y: auto;
 
-    @media screen and (min-width: 1000px){
+    // Small Desktop //
+    @media screen 
+    and (min-width: 1025px){
         overflow-x: hidden;
-        //-webkit-overflow-scrolling: touch;
     }
 }
 
