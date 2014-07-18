@@ -13447,17 +13447,6 @@ MIT License, https://github.com/shprink/BttrLazyLoading/blob/master/LICENSE
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
-        /*
-        // Tablet //
-        @media (max-width: 999px){
-
-            .pt-cover {
-                border: 1px solid #eee; //<-- development line
-                width: 100%;
-                height: 440px;
-                position: relative;
-            }
-        }*/
 }
 /* line 103, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page .scroll-pane, .pt-perspective .no-js body .pt-page-current .scroll-pane, .no-js body .pt-perspective .pt-page-current .scroll-pane {
@@ -13468,45 +13457,65 @@ MIT License, https://github.com/shprink/BttrLazyLoading/blob/master/LICENSE
 }
 /* line 110, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page .pt-cover, .pt-perspective .no-js body .pt-page-current .pt-cover, .no-js body .pt-perspective .pt-page-current .pt-cover {
-  width: 440px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 100%;
+  height: 440px;
+  position: relative;
 }
-@media (max-width: 999px) {
+@media screen and (min-width: 1025px) {
   /* line 110, scss/modules/page-transitions/_page.scss */
   .pt-perspective .pt-page .pt-cover, .pt-perspective .no-js body .pt-page-current .pt-cover, .no-js body .pt-perspective .pt-page-current .pt-cover {
-    width: 100%;
-    height: 440px;
-    position: relative;
+    width: 380px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media screen and (min-width: 1300px) {
   /* line 110, scss/modules/page-transitions/_page.scss */
   .pt-perspective .pt-page .pt-cover, .pt-perspective .no-js body .pt-page-current .pt-cover, .no-js body .pt-perspective .pt-page-current .pt-cover {
-    position: fixed;
+    width: 440px;
+    height: 100%;
   }
 }
-@media (min-width: 1000px) {
-  /* line 147, scss/modules/page-transitions/_page.scss */
+@media (min-width: 1025px) {
+  /* line 134, scss/modules/page-transitions/_page.scss */
   .pt-perspective .pt-page .pt-body, .pt-perspective .no-js body .pt-page-current .pt-body, .no-js body .pt-perspective .pt-page-current .pt-body {
     position: relative;
-    padding-left: 440px;
+    padding-left: 380px;
   }
 }
-/* line 154, scss/modules/page-transitions/_page.scss */
+/* line 140, scss/modules/page-transitions/_page.scss */
+.pt-perspective .pt-page .pt-body, .pt-perspective .no-js body .pt-page-current .pt-body, .no-js body .pt-perspective .pt-page-current .pt-body {
+  width: 100%;
+  position: relative;
+}
+@media (min-width: 1025px) {
+  /* line 140, scss/modules/page-transitions/_page.scss */
+  .pt-perspective .pt-page .pt-body, .pt-perspective .no-js body .pt-page-current .pt-body, .no-js body .pt-perspective .pt-page-current .pt-body {
+    position: relative;
+    padding-left: 380px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  /* line 140, scss/modules/page-transitions/_page.scss */
+  .pt-perspective .pt-page .pt-body, .pt-perspective .no-js body .pt-page-current .pt-body, .no-js body .pt-perspective .pt-page-current .pt-body {
+    width: 440px;
+    height: 100%;
+  }
+}
+/* line 159, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page-current {
   visibility: visible;
   z-index: 1;
 }
-/* line 159, scss/modules/page-transitions/_page.scss */
+/* line 164, scss/modules/page-transitions/_page.scss */
 .pt-perspective .pt-page-ontop {
   z-index: 999;
 }
 
 /**/
-/* line 165, scss/modules/page-transitions/_page.scss */
+/* line 170, scss/modules/page-transitions/_page.scss */
 .btnNext {
   position: absolute;
   top: 50%;
@@ -13515,7 +13524,7 @@ MIT License, https://github.com/shprink/BttrLazyLoading/blob/master/LICENSE
   cursor: pointer;
 }
 
-/* line 173, scss/modules/page-transitions/_page.scss */
+/* line 178, scss/modules/page-transitions/_page.scss */
 .btnPrev {
   position: absolute;
   top: 50%;
