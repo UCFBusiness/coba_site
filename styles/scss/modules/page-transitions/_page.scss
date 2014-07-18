@@ -145,16 +145,19 @@
 	}
 }
 
+/**/
 .btnNext {
     position: absolute; 
     top: 50%; 
-    right: 0; 
+    right: 20px; 
     color: #000;
+    cursor: pointer;
 }
 
 .btnPrev {
     position: absolute; 
     top: 50%; 
-    left: 0; 
+    left: 20px; 
     color: #000;
+    cursor: pointer;
 }
