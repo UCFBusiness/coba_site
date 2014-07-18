@@ -16689,12 +16689,12 @@ body {
 	background-color: $darkGrey;
 }
 */
-/* line 21, scss/modules/_offcanvas.scss */
+/* line 20, scss/modules/_offcanvas.scss */
 .offcanvas body {
   overflow-y: auto;
 }
 @media screen and (min-width: 1000px) {
-  /* line 21, scss/modules/_offcanvas.scss */
+  /* line 20, scss/modules/_offcanvas.scss */
   .offcanvas body {
     overflow-x: hidden;
   }
@@ -16793,7 +16793,7 @@ body {
   opacity: 0.3;
   position: absolute;
   top: 0;
-  z-index: 0;
+  z-index: 3;
 }
 /* line 136, scss/modules/_offcanvas.scss */
 .sidebarLeft .shutLeft:hover, .sidebarLeft .shutRight:hover, .sidebarRight .shutLeft:hover, .sidebarRight .shutRight:hover {
@@ -16974,15 +16974,14 @@ body {
 .topBar .slideRight, .topBar .slideLeft {
   position: absolute;
   top: 0;
-  font-size: 1.5em;
+  font-size: 1.9em;
   line-height: 0.84em;
-  color: #000;
   text-decoration: none;
   text-align: center;
 }
 /* line 302, scss/modules/_offcanvas.scss */
 .topBar .slideRight:hover, .topBar .slideRight.pressed, .topBar .slideLeft:hover, .topBar .slideLeft.pressed {
-  color: white;
+  color: #262626;
 }
 /* line 305, scss/modules/_offcanvas.scss */
 .topBar .slideRight.pressed, .topBar .slideLeft.pressed {
