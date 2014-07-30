@@ -1,0 +1,186 @@
+//
+//== Page Transitions
+//
+//## Apply to all resolutions. Inherits to all layouts.
+
+.page-data {
+    display: none;
+}
+
+.wrapper-inner {background:#fff;margin:0;padding:0;width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+
+
+//== Menu styles
+//
+//## Includes an extra `.active` modifier class for showing selected items.
+
+.pt-menu {
+    margin: 0;
+	padding: 1em;
+    text-align: center;
+
+    position: absolute;
+    bottom: 40px;
+	
+	li {
+		display: inline;
+		padding-right: 10px;
+		font-size: 1em;
+        
+        .active {
+            color: #cc9900;
+        }
+		
+		&> a {
+    
+			&:hover {
+				text-decoration: none;
+                cursor: pointer;
+			}
+		}
+	}
+}
+
+
+//== Page styles
+//
+//##
+
+.no-js  {
+	
+	body {
+		overflow: auto;
+		
+		.pt-page {
+			visibility: visible;
+			z-index: 1;
+		}
+
+		.pt-page-current {
+			@extend .pt-page;
+		}
+	}
+}
+
+.pt-perspective {
+    border: 1px solid red; //<-- development line
+
+    //background: #fff; //<-- image background
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+	
+	-webkit-perspective: 1200px;
+	-moz-perspective: 1200px;
+	perspective: 1200px;
+
+	.pt-page {
+        background: #fff; //<-- white page canvas
+        outline:0;
+		width: 100%;
+		height: 100%;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		visibility: hidden;
+		overflow: hidden;
+		
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+		backface-visibility: hidden;
+		
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+
+		.scroll-pane {
+            outline:0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+		}
+		
+		.pt-cover {
+            width: 100%;
+            height: 440px;
+            position: relative;
+
+            // Small Desktop //
+            @media screen 
+            and (min-width: 1025px){
+                width: 380px;
+			    height: 100%;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+            }
+
+            // Notebook //
+            @media screen 
+            and (min-width: 1300px){
+                width: 440px;
+			    height: 100%;
+            }
+		}
+
+        // Small Desktop //
+        @media screen 
+        and (min-width: 1025px){
+            .pt-body {
+                position:relative; 
+                padding-left: 380px;
+            }
+        }
+
+        .pt-body {
+            width: 100%;
+            position: relative;
+
+            // Small Desktop //
+            @media (min-width: 1025px){
+                position:relative; 
+                padding-left: 380px;
+            }
+
+            // Notebook //
+            @media screen 
+            and (min-width: 1300px){
+                width: 440px;
+			    height: 100%;
+            }
+        }
+	}
+	
+	.pt-page-current {
+		visibility: visible;
+		z-index: 1;
+	}
+	
+	.pt-page-ontop {
+		z-index: 999;
+	}
+}
+
+/**/
+.btnNext {
+    position: absolute; 
+    top: 50%; 
+    right: 20px; 
+    color: #000;
+    cursor: pointer;
+}
+
+.btnPrev {
+    position: absolute; 
+    top: 50%; 
+    left: 20px; 
+    color: #000;
+    cursor: pointer;
+}

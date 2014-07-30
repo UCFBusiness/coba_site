@@ -1,0 +1,19 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <name> -- <role> -- <twitter>
+    Moses Henriquez -- web manager -- @mohenriquez
+    Jonathan Gabriel -- senior information specialist -- @jongabriel
+
+# THANKS
+
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, Javascript, CSS3
+    Angular, jQuery, Modernizr
+    SASS, Compass
+    ASP.NET MVC

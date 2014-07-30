@@ -1,0 +1,18 @@
+//
+// Internet Explorer
+// --------------------------------------------------
+
+/* Stylesheet for IE8 */
+// Base styles
+// --------------------------------------------------
+
+html.lt-ie9 { 
+
+    body {
+        background: #333;
+        
+        .class {
+            color: red;
+        }
+    }
+}
